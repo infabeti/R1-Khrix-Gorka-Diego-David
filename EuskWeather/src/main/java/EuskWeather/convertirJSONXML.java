@@ -16,109 +16,88 @@ import org.json.XML;
 
 public class convertirJSONXML {
 
-	 	static String[] archivos = { "index", "estaciones", "espacios-naturales", "municipios" };
-	    static String[] contenedores = { "index", "estación", "espacio-natural", "municipio" };
+	 	static String[] nombreArchivos = { "index", "estaciones", "espacios-naturales", "municipios" };
+	    static String[] nomNodo = { "index", "estación", "espacio-natural", "municipio" };
 
 	    public static void main(String[] args) throws FileNotFoundException, IOException, JSONException {
-		for (int num = 0; num < 62; num++) {
-		    String direccionArchivoEntrada = "./ficheros//" + num + ".json";
-		    String direccionArchivoSalida = "./ficherosXML//" + num + ".xml";
-		    // Lee el archivo JSON
-		    long tiempoInicial = System.currentTimeMillis();
-		    String jsonOrigen = leerArchivo(direccionArchivoEntrada); // Lee el archivo
-		    long tiempoFinal = System.currentTimeMillis();
-		    long duracion = tiempoFinal - tiempoInicial;
-		    System.out.println("Duración de la lectura del archivo: " + duracion + " mlseg"); // Estadística
+	    	for (int i = 0; i < nombreArchivos.length; i++) {
+	    		String direccionArchivoEntrada = "./archJSON//" + nombreArchivos[i] + ".json";
+	    		String direccionArchivoSalida = "./ficherosXML//" + nombreArchivos[i] + ".xml";
+	    		// Lee el archivo JSON
+		  
+	    		String jsonOrigen = leerArchivo(direccionArchivoEntrada); // Lee el archivo
 
-		    tiempoInicial = System.currentTimeMillis();
-		    String jsonPreparado = prepararArchivo(jsonOrigen, Integer.toString(num));
-		    tiempoFinal = System.currentTimeMillis();
-		    duracion = tiempoFinal - tiempoInicial;
-		    System.out.println(
-			    "Duración de preparar el archivo quitando cabecera y borrando final: " + duracion + " mlseg"); // Estadística
+	    		String jsonPreparado = prepararArchivo(jsonOrigen, nomNodo[i]);
 
-//		    // Eliminar etiquetas duplicadas y borrar las vacias
-//		    tiempoInicial = System.currentTimeMillis();
-//		    String jsonCorregido = renombrarEtiquetasDuplicadas(jsonPreparado);
-//		    tiempoFinal = System.currentTimeMillis();
-//		    duracion = tiempoFinal - tiempoInicial;
-//		    System.out.println("Duración de renombrar etiquetas duplicadas y borrar vacias: " + duracion + " mlseg"); // Estadística
+	    		// Convierte JSON a XML
+	    		String xml = convertir(jsonPreparado, "root");// Establezco el nombre del tag raiz del XML
 
-		    // Convierte JSON a XML
-		    tiempoInicial = System.currentTimeMillis();
-		    String xml = convertir(jsonPreparado, "root");// Establezco el nombre del tag raiz del XML
-		    tiempoFinal = System.currentTimeMillis();
-		    duracion = tiempoFinal - tiempoInicial;
-		    System.out.println("Duración de la conversión: " + duracion + " mlseg"); // Estadística
-
-		    // Escribe el archivo XML
-		    tiempoInicial = System.currentTimeMillis();
-		    escribirArchivo(direccionArchivoSalida, xml);
-		    tiempoFinal = System.currentTimeMillis();
-		    duracion = tiempoFinal - tiempoInicial;
-		    System.out.println("Duración de escritura de archivo: " + duracion + " mlseg"); // Estadística
-		}
+	    		// Escribe el archivo XML
+	    		escribirArchivo(direccionArchivoSalida, xml);
+	    		
+	    		System.out.println("Archivo " + nombreArchivos[i] + ".json convertido a " + nombreArchivos[i] + ".xml correctamente");
+	    	}
 	    }
 
 	    public static String leerArchivo(String rutaArchivo) throws FileNotFoundException, IOException {
-		StringBuilder acumuladoCadena = new StringBuilder();
-		InputStream in = new FileInputStream(rutaArchivo);
-//		Charset encoding = Charset.defaultCharset();
-		Charset encoding = Charset.forName("UTF-8"); // Codifico el archivo con UTF-8
+	    	StringBuilder acumuladoCadena = new StringBuilder();
+	    	FileInputStream in = new FileInputStream(rutaArchivo);
+	    	Charset encoding = Charset.forName("UTF-8"); // Codifico el archivo con UTF-8
 
-		Reader lector = new InputStreamReader(in, encoding);
+	    	Reader lector = new InputStreamReader(in, encoding);
 
-		int r = 0;
-		while ((r = lector.read()) != -1) {// OJO! uso read() mejor que readLine()
-		    // porque puedo procesar archivos más largos con read()
-		    char ch = (char) r;
-		    acumuladoCadena.append(ch);
-		}
+	    	int r = 0;
+	    	while ((r = lector.read()) != -1) {// OJO! uso read() mejor que readLine()
+	    		// porque puedo procesar archivos más largos con read()
+	    		char ch = (char) r;
+	    		acumuladoCadena.append(ch);
+	    	}	
 
-		in.close();
-		lector.close();
+	    	in.close();
+	    	lector.close();
 
-		return acumuladoCadena.toString();
+	    	return acumuladoCadena.toString();
 	    }
 
 	    public static String prepararArchivo(String archivo, String contenedor) {
-		String archivoSinCabecera = "";
-		String archivoSinFinal = "";
-		String archivoFinal = "";
-		boolean encontrado = false;
-		String[] campos;
+	    	String archivoSinCabecera = "";
+	    	String archivoSinFinal = "";
+	    	String archivoFinal = "";
+	    	boolean encontrado = false;
+	    	String[] campos;
 
-		for (int i = 0; i < archivo.length(); i++) {
-		    if (archivo.charAt(i) == '{' && !encontrado) {
-			archivoSinCabecera = archivo.substring(i);
-			encontrado = true;
-		    }
-		}
-		campos = archivoSinCabecera.split("}");
-		archivoSinFinal += campos[0];
-		for (int i = 1; i < campos.length - 1; i++) {
-		    archivoSinFinal += "\n}" + campos[i];
-		}
+	    	for (int i = 0; i < archivo.length(); i++) {
+	    		if (archivo.charAt(i) == '{' && !encontrado) {
+	    			archivoSinCabecera = archivo.substring(i);
+	    			encontrado = true;
+	    		}
+	    	}
+		
+	    	campos = archivoSinCabecera.split("}");
+	    	archivoSinFinal += campos[0];
+	    	for (int i = 1; i < campos.length - 1; i++) {
+	    		archivoSinFinal += "\n}" + campos[i];
+	    	}
 
-		if (archivo.charAt(0) == '{')
-		    archivoFinal = archivoSinFinal + "}\n]\n}";
-		else
-		    archivoFinal = "{\n" + "\"" + contenedor + "\"" + ": [ \n" + archivoSinFinal + "\n}\n]\n}";
+	    	if (archivo.charAt(0) == '{')
+	    		archivoFinal = archivoSinFinal + "}\n]\n}";
+	    	else
+	    		archivoFinal = "{\n" + "\"" + contenedor + "\"" + ": [ \n" + archivoSinFinal + "\n}\n]\n}";
 
-		return archivoFinal;
+	    	return archivoFinal;
 	    }
 
 	    public static String renombrarEtiquetasDuplicadas(String archivo) {
-		String archivoCorregido = "";
-		String archivoFinal = "";
-		int contador1 = 0;
-		int contador2 = 0;
-		int contador3 = 0;
-		String[] campos;
-		String[] lineas;
-		campos = archivo.split("}");
-		for (int i = 0; i < campos.length; i++) {
-		    lineas = campos[i].split(" : ");
+	    	String archivoCorregido = "";
+	    	String archivoFinal = "";
+	    	int contador1 = 0;
+	    	int contador2 = 0;
+	    	int contador3 = 0;
+	    	String[] campos;
+	    	String[] lineas;
+	    	campos = archivo.split("}");
+	    	for (int i = 0; i < campos.length; i++) {
+	    		lineas = campos[i].split(" : ");
 		    for (int j = 0; j < lineas.length; j++) {
 			if (lineas[j].toString().contains("\"turismDescription\"") && contador1 > 0) {
 			    archivoCorregido += "\"turismDescription" + contador1 + "\"" + " : ";
