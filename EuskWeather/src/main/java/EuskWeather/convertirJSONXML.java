@@ -9,6 +9,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.nio.charset.Charset;
+import java.text.Format;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -16,64 +17,57 @@ import org.json.XML;
 
 public class convertirJSONXML {
 
-	    public static void main(String[] args) {
+	    public static void main(String[] args) throws FileNotFoundException, IOException {
 	    	String[] nombreArchivos = { "index", "estaciones", "espacios-naturales", "municipios" };
 		    String[] nomNodo = { "index", "estacion", "espacioNatural", "municipio" };
+		    String archivoJSON = "", archivoXML = "", archJson = "", archJsonSinCabecera = "", archJsonDefinitivo = "";
+		    String contXML = "";
+		    FileWriter ficheroXML = null;
 	    	for (int i = 0; i < nombreArchivos.length; i++) {
-	    		String archivoJSON = "./archJSON//" + nombreArchivos[i] + ".json";
-	    		String archivoXML = "./ficherosXML//" + nombreArchivos[i] + ".xml";
+	    		archivoJSON = "./archJSON//" + nombreArchivos[i] + ".json";
+	    		archivoXML = "./ficherosXML//" + nombreArchivos[i] + ".xml";
 	    		
-	    		// Lee el archivo JSON
-	    		String jsonOrigen = leerArchivo(archivoJSON); // Lee el archivo
+	    		//INICIO DE LA PREPARACION DE NUESTRO JSON
+	    		archJson = leerArchivo(archivoJSON); // Lee el archivo
+	    		archJsonSinCabecera = repararJSONSinCabecera(archJson, nomNodo[i]);
+	    		archJsonDefinitivo = distinguirEtiquetasRepes(archJsonSinCabecera);
+	    		//AQUI YA TENDREMOS NUESTRO JSON PERTINENTE PREPARADO
+	    		
+	    		//INICIO DE LA CONVERSION JSON-->XML
+	    		JSONObject objetoJson = new JSONObject(archJsonDefinitivo);
+	    		contXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><nodoRaiz>" + org.json.XML.toString(objetoJson) + "</nodoRaiz>";
 
-	    		String jsonPreparado = repararJSONSinCabecera(jsonOrigen, nomNodo[i]);
-
-	    		String jsonCorregido = renombrarEtiquetasDuplicadas(jsonPreparado);
-	    		
-	    		// Convierte JSON a XML
-	    		
-	    		JSONObject objetoJson = new JSONObject(jsonCorregido);
-	    		String xml = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><nodoRaiz>" + org.json.XML.toString(objetoJson) + "</nodoRaiz>";
-
-	    		// Escribe el archivo XML
-	    		FileWriter ficheroXML;
-				try {
-					ficheroXML = new FileWriter(archivoXML);
-					BufferedWriter out = new BufferedWriter(ficheroXML);
-		    		out.write(xml);
-		    		
-		    		ficheroXML.close();
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-	    		
-	    		
+	    		ficheroXML = new FileWriter(archivoXML);
+		    	try (BufferedWriter out = new BufferedWriter(ficheroXML)) {
+		    	    out.write(contXML);
+		    	}
+		    	ficheroXML.close();
+				//FIN CONVERSION JSON-->XML
 	    		System.out.println("Archivo " + nombreArchivos[i] + ".json convertido a " + nombreArchivos[i] + ".xml correctamente");
 	    	}
 	    }
 
 	    public static String leerArchivo(String ruta) {
-	    	StringBuilder acum = null;
 	    	FileInputStream archJson;
+	    	String acumString = "";
 			try {
-				acum = new StringBuilder();
+				StringBuilder acum = new StringBuilder();
 				archJson = new FileInputStream(ruta);
-				Charset encoding = Charset.forName("UTF-8");
-		    	InputStreamReader isr = new InputStreamReader(archJson, encoding);
+				
+		    	InputStreamReader isr = new InputStreamReader(archJson, Charset.forName("Windows-1252"));
 		    	int cont = 0;
 		    	while ((cont = isr.read()) != -1) {
 		    		char ch = (char) cont;
 		    		acum.append(ch);
 		    	}	
+		    	acumString = acum.toString();
 		    	archJson.close();
 		    	isr.close();
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+				System.out.println(e.getMessage());
 			}
 	    	
-	    	return acum.toString();
+	    	return acumString;
 	    }
 
 	    public static String repararJSONSinCabecera(String archJson, String nomNodo) {
@@ -117,64 +111,50 @@ public class convertirJSONXML {
 	    	}
 	    	return jsonReparado;
 	    }
+	    
 
-	    public static String renombrarEtiquetasDuplicadas(String archJson) {
-	    	String archivoCorregido = "";
-	    	String archivoFinal = "";
-	    	int contador1 = 0;
-	    	int contador2 = 0;
-	    	int contador3 = 0;
-	    	String[] acumString;
-	    	String[] nodosJson;
+	    public static String distinguirEtiquetasRepes(String archJson) {
+	    	String contenidoSinRepes = "", jsonDef = "";
+	    	String[] acumString, nodosJson;
+	    	int distintivoEtiRepetida = 0;
+	    	
 	    	acumString = archJson.split("}");
 	    	for (int i = 0; i < acumString.length; i++) {
 	    		nodosJson = acumString[i].split(" : ");
 	    		for (int j = 0; j < nodosJson.length; j++) {
-	    			if (nodosJson[j].toString().contains("\"turismDescription\"") && contador1 > 0) {
-	    				archivoCorregido += "\"turismDescription" + contador1 + "\"" + " : ";
-	    				contador1++;
-	    			/*} else if (nodosJson[j].toString().contains("\"address\"") && contador2 > 0) {
-	    				archivoCorregido += nodosJson[j].substring(0, nodosJson[j].length() - 9) + "\"address" + contador2 + "\"" + " : ";
-	    				contador2++;
-	    			} else if (nodosJson[j].toString().contains("\"phone\"") && contador3 > 0) {
-	    				archivoCorregido += nodosJson[j].substring(0, nodosJson[j].length() - 7) + "\"phone" + contador3 + "\"" + " : ";
-	    				contador3++;*/
-	    			} else if (nodosJson[j].toString().contains("\"turismDescription\"") && contador1 == 0) {
-	    				archivoCorregido += nodosJson[j] + " : " + nodosJson[j + 1].substring(0, nodosJson[j + 1].length() - 19);
-	    				contador1++;
-	    			/*} else if (nodosJson[j].toString().contains("\"address\"") && contador2 == 0) {
-	    				archivoCorregido += nodosJson[j] + " : ";
-	    				contador2++;
-	    			} else if (nodosJson[j].toString().contains("\"phone\"") && contador3 == 0) {
-	    				archivoCorregido += nodosJson[j] + " : ";
-	    				contador3++;*/
+	    			if (nodosJson[j].toString().contains("\"turismDescription\"") && distintivoEtiRepetida > 0) {
+	    				contenidoSinRepes += "\"turismDescription" + distintivoEtiRepetida + "\"" + " : ";
+	    				distintivoEtiRepetida++;
+	    			} else if (nodosJson[j].toString().contains("\"turismDescription\"") && distintivoEtiRepetida == 0) {
+	    				contenidoSinRepes += nodosJson[j] + " : " + nodosJson[j + 1].substring(0, nodosJson[j + 1].length() - 19);
+	    				distintivoEtiRepetida++;
 	    			} else {
-	    				archivoCorregido += nodosJson[j];
+	    				contenidoSinRepes += nodosJson[j];
 	    				if (nodosJson[j].charAt(nodosJson[j].length() - 1) != (char) 10) {
-	    					archivoCorregido += " : ";
+	    					contenidoSinRepes += " : ";
 	    				}
 	    			}
 	    		}
-	    		archivoCorregido = archivoCorregido.substring(0, archivoCorregido.length() - 2);
-
-	    		nodosJson = null;
-	    		contador1 = 0;
-	    		contador2 = 0;
-	    		contador3 = 0;
-	    		archivoCorregido += "}";
+	    		contenidoSinRepes = contenidoSinRepes.substring(0, contenidoSinRepes.length() - 2);
+	    		nodosJson = null; //Vaciamos el array para cada iteracion
+	    		distintivoEtiRepetida = 0;
+	    		contenidoSinRepes += "}"; //Finalizamos el nodo con su pertinente caracter
 	    	}
-	    	archivoCorregido = archivoCorregido.substring(0, archivoCorregido.length() - 1);
-	    	archivoCorregido += "]\n}";
-	    	// Eliminar etiquetas vacias
-	    	nodosJson = archivoCorregido.split(",");
+	    	contenidoSinRepes = contenidoSinRepes.substring(0, contenidoSinRepes.length() - 1);
+	    	contenidoSinRepes += "]\n}";
+	    	nodosJson = contenidoSinRepes.split(",");
 	    	for (int i = 0; i < nodosJson.length; i++) {
 	    		if (!nodosJson[i].toString().contains("\"\"")) {
-	    			archivoFinal += nodosJson[i] + ",";
+	    			//Si encuentra una etiqueta vacia aqui le agregamos una ','
+	    			jsonDef += nodosJson[i] + ",";
 	    		}
 	    	}
-	    	archivoFinal = archivoFinal.substring(0, archivoFinal.length() - 1); // Le quita la última ","
+	    	/*
+	    	 * Esta linea sera necesaria ya que debido al procedimiento anterior al final tendremos
+	    	 * una ',' que tendremos que eliminar para no dar fallo a la hora de convertirlo a XML
+	    	 */
+	    	jsonDef = jsonDef.substring(0, jsonDef.length() - 1);
 
-	    	return archivoFinal;
+	    	return jsonDef;
 	    }
-
 }
