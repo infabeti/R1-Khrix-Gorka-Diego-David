@@ -8,9 +8,9 @@ public class introducirDato {
 		session.beginTransaction();
 		
 		aa table = new aa();
-		table.setDato1("Test2");
-		table.setDato2("Introducir Dato2");
-		table.setDato3("Correcto");
+		table.setDato1("TestDiego");
+		table.setDato2("DatoDiego");
+		table.setDato3("Perfect");
 		
 		session.save(table);
 		

@@ -15,7 +15,6 @@ import javax.net.ssl.TrustManager;
 import javax.net.ssl.X509TrustManager;
 
 import com.mysql.jdbc.Connection;
-import com.mysql.jdbc.ResultSet;
 import com.mysql.jdbc.Statement;
 
 /**
@@ -86,7 +85,7 @@ public class guardarJson {
 			java.sql.PreparedStatement ps = con.prepareStatement(sql);
 			Statement ps2 = (Statement) conexion.conexionBBDD().createStatement();
 
-			ResultSet rs = (ResultSet) ps2.executeQuery("select Url from datosmetereologicos.indextuneado3");
+			java.sql.ResultSet rs = (java.sql.ResultSet) ps2.executeQuery("select Url from datosmetereologicos.indextuneado3");
 
 			while (rs.next()) {
 				// System.out.println(rs.getString(1));
@@ -110,7 +109,7 @@ public class guardarJson {
 			java.sql.PreparedStatement ps = con.prepareStatement(sql);
 			Statement ps2 = (Statement) conexion.conexionBBDD().createStatement();
 
-			ResultSet rs = (ResultSet) ps2.executeQuery("select Nombre from datosmetereologicos.indextuneado3");
+			java.sql.ResultSet rs = (java.sql.ResultSet) ps2.executeQuery("select Nombre from datosmetereologicos.indextuneado3");
 
 			while (rs.next()) {
 				// System.out.println(rs.getString(1));
