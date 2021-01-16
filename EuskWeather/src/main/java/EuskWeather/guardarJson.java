@@ -17,20 +17,7 @@ import javax.net.ssl.X509TrustManager;
 import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.Statement;
 
-/**
- * Ejemplo de descarga de un fichero de imagen desde la web.
- * 
- * @author chuidiang
- * 
- */
 public class guardarJson {
-
-	/**
-	 * Descarga un fichero jpeg y lo guarda en e:/foto.jpg
-	 * 
-	 * @param args
-	 * @throws Exception
-	 */
 
 	public static void main(String[] args) throws Exception {
 		ArrayList<String> arraylist;
@@ -54,8 +41,7 @@ public class guardarJson {
 				// Se obtiene el inputStream de la foto web y se abre el fichero
 				// local.
 				InputStream is = urlCon.getInputStream();
-				FileOutputStream fos = new FileOutputStream("./ficheros//"
-						+ i + ".json");
+				FileOutputStream fos = new FileOutputStream("./ficheros//" + i + ".json");
 
 				// Lectura de la foto de la web y escritura en fichero local
 				byte[] array = new byte[1000]; // buffer temporal de lectura.
@@ -84,15 +70,12 @@ public class guardarJson {
 		try {
 			java.sql.PreparedStatement ps = con.prepareStatement(sql);
 			Statement ps2 = (Statement) conexion.conexionBBDD().createStatement();
-
 			java.sql.ResultSet rs = (java.sql.ResultSet) ps2.executeQuery("select Url from datosmetereologicos.indextuneado3");
 
 			while (rs.next()) {
 				// System.out.println(rs.getString(1));
 				nLineas.add(rs.getString(1));
-
 			}
-
 		} catch (Exception e) {
 			System.err.println("Consulta no valida");
 		}
@@ -108,15 +91,12 @@ public class guardarJson {
 		try {
 			java.sql.PreparedStatement ps = con.prepareStatement(sql);
 			Statement ps2 = (Statement) conexion.conexionBBDD().createStatement();
-
 			java.sql.ResultSet rs = (java.sql.ResultSet) ps2.executeQuery("select Nombre from datosmetereologicos.indextuneado3");
 
 			while (rs.next()) {
 				// System.out.println(rs.getString(1));
 				nombres.add(rs.getString(1));
-
 			}
-
 		} catch (Exception e) {
 			System.err.println("Consulta no valida");
 		}
@@ -124,23 +104,21 @@ public class guardarJson {
 	}
 
 	public static void trustAllCerts() throws Exception {
-
 		TrustManager[] trustAllCerts = new TrustManager[] { new X509TrustManager() {
 
 			@Override
 			public java.security.cert.X509Certificate[] getAcceptedIssuers() {
-
 				return null;
 			}
 
 			@Override
 			public void checkClientTrusted(X509Certificate[] certs, String authType) {
-
+				
 			}
 
 			@Override
 			public void checkServerTrusted(X509Certificate[] certs, String authType) {
-
+				
 			}
 		} };
 
@@ -154,14 +132,11 @@ public class guardarJson {
 
 			@Override
 			public boolean verify(String hostname, SSLSession session) {
-
 				return true;
 			}
 		};
-
 		// Install the all-trusting host verifier
 		HttpsURLConnection.setDefaultHostnameVerifier(allHostsValid);
-
 	}
-
+	
 }
