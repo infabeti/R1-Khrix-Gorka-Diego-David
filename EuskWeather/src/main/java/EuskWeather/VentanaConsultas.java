@@ -1,4 +1,4 @@
-package aaa;
+package EuskWeather;
 
 import javax.swing.JFrame;
 import javax.swing.JTextField;
