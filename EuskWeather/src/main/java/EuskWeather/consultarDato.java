@@ -6,17 +6,17 @@ import java.util.List;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import javax.persistence.Entity;
+import javax.swing.JTextArea;
 
 public class consultarDato {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	public static String consultarUsuarios(String sql) {
 		List<Usuario[]> result = null;
 		String resultado = null;
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		session.beginTransaction();
 		
-		result = session.createSQLQuery("select * from Usuarios").list();
+		result = session.createSQLQuery(sql).list();
 
 		try {
 		for (Object[] row : result) {
@@ -32,7 +32,7 @@ public class consultarDato {
 		session.getTransaction().commit();
 		session.close();
 
-		System.out.println(resultado);
+		return resultado;
 	}
 
 }
