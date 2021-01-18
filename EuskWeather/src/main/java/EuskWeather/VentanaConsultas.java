@@ -137,7 +137,7 @@ public class VentanaConsultas extends JFrame{
 						
 						resultadocons = (String) entrada.readObject();
 						
-						System.out.println(resultadocons);
+						textArea.setText(resultadocons);
 						
 					} catch (IOException | ClassNotFoundException e) {
 						// TODO Auto-generated catch block
