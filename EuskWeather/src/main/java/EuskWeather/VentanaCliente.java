@@ -18,7 +18,7 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-public class VentanaConsultas extends JFrame{
+public class VentanaCliente extends JFrame{
 	
 	private JPanel contentPane;
 	private JTextField txtId;
@@ -35,11 +35,11 @@ public class VentanaConsultas extends JFrame{
 	private ObjectOutputStream salida = null;
 	
 	public static void main(String[] args) {
-		VentanaConsultas vc = new VentanaConsultas();
+		VentanaCliente vc = new VentanaCliente();
 		vc.setVisible(true);
 	}
 	
-	public VentanaConsultas() {
+	public VentanaCliente() {
 		
 			
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -49,7 +49,7 @@ public class VentanaConsultas extends JFrame{
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JButton btnBuscar = new JButton("CONTAR USUARIOS");
+		JButton btnBuscar = new JButton("VER USUARIOS");
 		btnBuscar.setBounds(10, 11, 127, 23);
 		contentPane.add(btnBuscar);
 		
