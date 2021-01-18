@@ -7,14 +7,17 @@ public class introducirDato {
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		session.beginTransaction();
 		
-		aa table = new aa();
-		table.setDato1("TestEuskweather");
-		table.setDato2("DatoEuskweather");
-		table.setDato3("EuskweatherApp");
+		Usuario table = new Usuario();
+		table.setIdUsuario(51);
+		table.setNomApellido("prueba");
+		table.setDireccion("calle de prueba");
+		table.setMail("mail");
+		table.setNickUsuario("nick");
+		table.setContrasenia("12");
 		
 		session.save(table);
 		
 		session.getTransaction().commit();
-		HibernateUtil.shutdown();
+		session.close();
 	}
 }

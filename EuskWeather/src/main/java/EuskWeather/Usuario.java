@@ -2,13 +2,32 @@ package EuskWeather;
 
 import java.io.Serializable;
 
-public class Usuario implements Serializable{
+import javax.persistence.*;
+import org.hibernate.annotations.OptimisticLockType;
 
+@Entity
+@Table(name = "usuarios", uniqueConstraints = {@UniqueConstraint(columnNames = "idUsuario"),@UniqueConstraint(columnNames = "nomApellidos"),
+		@UniqueConstraint(columnNames = "direccion"),@UniqueConstraint(columnNames = "mail"),@UniqueConstraint(columnNames = "nickUsuario"),
+		@UniqueConstraint(columnNames = "contrasenia")})
+
+public class Usuario implements Serializable{
+	@Id
+	@Column(name = "idUsuario", unique = true, nullable = false)
 	private int idUsuario;
+	
+	@Column(name = "nomApellidos", unique = false, nullable = false, length = 40)
 	private String nomApellido;
+	
+	@Column(name = "direccion", unique = false, nullable = false, length = 100)
 	private String direccion;
+	
+	@Column(name = "mail", unique = false, nullable = false, length = 40)
 	private String mail;
+	
+	@Column(name = "nickUsuario", unique = false, nullable = false, length = 20)
 	private String nickUsuario;
+	
+	@Column(name = "contrasenia", unique = false, nullable = false, length = 20)
 	private String contrasenia;
 	
 	public Usuario() {

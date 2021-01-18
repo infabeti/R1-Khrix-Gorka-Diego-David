@@ -5,14 +5,12 @@ import javax.persistence.*;
 import org.hibernate.annotations.OptimisticLockType;
 
 @Entity
-@org.hibernate.annotations.Entity(dynamicUpdate = true, optimisticLock = OptimisticLockType.ALL)
 @Table(name = "Tabla1", uniqueConstraints = {@UniqueConstraint(columnNames = "Numero"),@UniqueConstraint(columnNames = "dato1"),
 		@UniqueConstraint(columnNames = "dato2"),
 		@UniqueConstraint(columnNames = "dato3")})
 
 public class aa {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "Numero", unique = true, nullable = false)
 	private Integer Numero;
 	
