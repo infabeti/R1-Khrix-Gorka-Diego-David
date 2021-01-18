@@ -2,22 +2,26 @@ package EuskWeather;
 
 import org.hibernate.Session;
 
-public class introducirDato {
+public class actualizarDato {
+	
 	public static void main(String[] args) {
+       
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		session.beginTransaction();
 		
 		Usuario table = new Usuario();
-		table.setIdUsuario(52);
-		table.setNomApellido("prueba2");
-		table.setDireccion("calle de prueba2");
-		table.setMail("mail2");
-		table.setNickUsuario("nick2");
-		table.setContrasenia("123");
+		table.setIdUsuario(51);
+		table.setNomApellido("prueba");
+		table.setDireccion("calle de prueba");
+		table.setMail("mailActualizado");
+		table.setNickUsuario("nick");
+		table.setContrasenia("12");
 		
-		session.save(table);
+		session.update(table);
 		
 		session.getTransaction().commit();
 		session.close();
-	}
+
+    }
+
 }
