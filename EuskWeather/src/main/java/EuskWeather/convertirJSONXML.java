@@ -54,7 +54,7 @@ public class convertirJSONXML {
 				StringBuilder acum = new StringBuilder();
 				archJson = new FileInputStream(ruta);
 				
-		    	InputStreamReader isr = new InputStreamReader(archJson, Charset.forName("Windows-1252"));
+		    	InputStreamReader isr = new InputStreamReader(archJson, Charset.forName("utf-8")); //Windows-1252
 		    	int cont = 0;
 		    	while ((cont = isr.read()) != -1) {
 		    		char ch = (char) cont;

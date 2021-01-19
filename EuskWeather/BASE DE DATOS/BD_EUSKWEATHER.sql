@@ -6,41 +6,41 @@ create table Provincias
 	(idProv int primary key auto_increment, nombreProv varchar(40) not null);
     
 create table Municipios
-	(idMuni int primary key auto_increment, nombreMuni varchar(40) not null,
-    alcalde varchar(40) not null, webMunicipio varchar(40),
+	(idMuni int, nombreMuni varchar(40) primary key,
+    alcalde varchar(120), webMunicipio varchar(40),
     idProvincia int not null,
     constraint fk_idProvincia foreign key(idProvincia) references Provincias(idProv) on update cascade on delete cascade);
     
 create table EstacionMeteorologica
-	(idEstacion int primary key auto_increment, nombreEstacion varchar(40) not null,
+	(idEstacion int, nombreEstacion varchar(40) primary key,
     latitud double not null, longitud double not null,
     direccion varchar(80) not null,
-    idMunicipio int not null,
-    constraint fk_idMunicipio foreign key(idMunicipio) references Municipios(idMuni) on update cascade on delete cascade);
+    nomMunicipio varchar(40) not null,
+    constraint fk_nomMunicipio foreign key(nomMunicipio) references Municipios(nombreMuni) on update cascade on delete cascade);
 
 create table InformacionMeteorologica
-	(idInfo int primary key auto_increment, fechaInfo Date not null,
+	(idInfo int, fechaInfo Date primary key,
     presionAtm double not null, temperatura double not null,
-    saturacionO2 int not null, idEstacionMeteo int not null,
-    constraint fk_idEstacionMeteo foreign key(idEstacionMeteo) references EstacionMeteorologica(idEstacion) on update cascade on delete cascade);
+    saturacionO2 int not null, nomEstMet varchar(40) not null,
+    constraint fk_nomEstMet foreign key(nomEstMet) references EstacionMeteorologica(nombreEstacion) on update cascade on delete cascade);
 
 create table EspaciosNaturales
-	(idEspNat int primary key auto_increment, nombreEspNat varchar(50) not null,
+	(idEspNat int, nombreEspNat varchar(50) primary key,
     descripcion varchar(150) not null, 
     tipoEspNat enum('Playas', 'Pantanos', 'Rios') not null);
     
 create table ContieneEspNat
-	(idMunicipio int, idEspacioNatural int,
-    constraint fk_idMunicipio_ foreign key(idMunicipio) references Municipios(idMuni) on update cascade on delete cascade,
-    constraint fk_idEspacioNatural foreign key(idEspacioNatural) references EspaciosNaturales(idEspNat) on update cascade on delete cascade,
-	constraint pk_idMunicipio_idEspacioNatural primary key(idMunicipio, idEspacioNatural));
+	(nombreMunicipio varchar(40), nomEspNat varchar(50),
+    constraint fk_nombreMunicipio_ foreign key(nombreMunicipio) references Municipios(nombreMuni) on update cascade on delete cascade,
+    constraint fk_nomEspNat foreign key(nomEspNat) references EspaciosNaturales(nombreEspNat) on update cascade on delete cascade,
+	constraint pk_idMunicipio_idEspacioNatural primary key(nombreMunicipio, nomEspNat));
     
 create table Usuarios
 	(idUser int primary key, nombreApellido varchar(50) not null, direccion varchar(100) not null,
     mail varchar(50) not null, nickUsuario varchar(40) not null, contrasenia varchar(40) not null);
     
 create table Fotos
-	(idFoto int primary key, idMunicipio int not null, idUsuario int not null,
-    constraint fk_idMunicipio_2 foreign key(idMunicipio) references Municipios(idMuni) on update cascade on delete cascade,
+	(idFoto int primary key, nombreMunicipio varchar(40) not null, idUsuario int not null,
+    constraint fk_nombreMunicipio_2 foreign key(nombreMunicipio) references Municipios(nombreMuni) on update cascade on delete cascade,
     constraint fk_idUsuario foreign key(idUsuario) references Usuarios(idUser) on update cascade on delete cascade);
     

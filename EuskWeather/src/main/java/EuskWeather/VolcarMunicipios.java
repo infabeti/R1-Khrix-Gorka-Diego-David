@@ -14,15 +14,15 @@ import org.hibernate.Session;
 public class VolcarMunicipios {
 
 		public static void main(String[] args) {
-			String ficheroXML = "./ficherosXML//municipios.xml";
-
-			String xml = convertirJSONXML.leerArchivo(ficheroXML); // Lee el archivo
 			
-			ArrayList<Municipio> municipios = lecturaDatos(xml); // Extrae los datos y crea los objetos
-//			for(int i = 0; i < objetos.length; i++) {
-//				System.out.println(objetos[i].getNombreMuni());
+			String xml = convertirJSONXML.leerArchivo("./ficherosXML//municipios.xml"); 
+			
+			ArrayList<Municipio> municipios = lecturaDatos(xml);
+//			for(Municipio m: municipios) {
+//				System.out.println(m.getNombreMuni());
 //			}
-			volcarInformacion(municipios); // Guarda los objetos en la BBDD
+			volcarInformacion(municipios);
+			
 		}
 
 		public static ArrayList<Municipio> lecturaDatos(String archivo) {
@@ -89,8 +89,10 @@ public class VolcarMunicipios {
 				Session session = HibernateUtil.getSessionFactory().openSession();
 				session.beginTransaction();
 				session.save(objetos.get(i));
-				session.getTransaction().commit();	
+				session.getTransaction().commit();
+				session.close();
+				
 			}
-			
+			HibernateUtil.shutdown();
 		}
 }
