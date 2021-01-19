@@ -28,7 +28,7 @@ public class convertirJSONXML {
 	    		archivoXML = "./ficherosXML//" + nombreArchivos[i] + ".xml";
 	    		
 	    		//INICIO DE LA PREPARACION DE NUESTRO JSON
-	    		archJson = leerArchivo(archivoJSON); // Lee el archivo
+	    		archJson = leerArchivo(archivoJSON, "Windows-1252"); // Lee el archivo
 	    		archJsonSinCabecera = repararJSONSinCabecera(archJson, nomNodo[i]);
 	    		archJsonDefinitivo = distinguirEtiquetasRepes(archJsonSinCabecera);
 	    		//AQUI YA TENDREMOS NUESTRO JSON PERTINENTE PREPARADO
@@ -47,14 +47,14 @@ public class convertirJSONXML {
 	    	}
 	    }
 
-	    public static String leerArchivo(String ruta) {
+	    public static String leerArchivo(String ruta, String codificacion) {
 	    	FileInputStream archJson;
 	    	String acumString = "";
 			try {
 				StringBuilder acum = new StringBuilder();
 				archJson = new FileInputStream(ruta);
 				
-		    	InputStreamReader isr = new InputStreamReader(archJson, Charset.forName("utf-8")); //Windows-1252
+		    	InputStreamReader isr = new InputStreamReader(archJson, Charset.forName(codificacion)); //Windows-1252
 		    	int cont = 0;
 		    	while ((cont = isr.read()) != -1) {
 		    		char ch = (char) cont;

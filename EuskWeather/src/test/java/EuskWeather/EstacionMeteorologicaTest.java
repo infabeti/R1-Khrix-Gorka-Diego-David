@@ -7,16 +7,16 @@ import org.junit.Test;
 public class EstacionMeteorologicaTest {
 
 	private EstacionMeteorologica emVacio = new EstacionMeteorologica();
-	private EstacionMeteorologica emParam = new EstacionMeteorologica(1, 1, "EstBilbao", 2.52, -3.1, "zabalbide kalea");
+	private EstacionMeteorologica emParam = new EstacionMeteorologica(1, "EstBilbao", 2.52, -3.1, "zabalbide kalea", "Bilbao");
 
 	@Test
 	public void testConstructor() {
 		assertEquals(emParam.getIdEstacion(), 1);
-		assertEquals(emParam.getIdMuni(), 1);
 		assertEquals(emParam.getNombreEstacion(), "EstBilbao");
 		assertEquals(emParam.getLatidud(), 2.52, 1);
 		assertEquals(emParam.getLongitud(), -3.1, 1);
 		assertEquals(emParam.getDireccion(), "zabalbide kalea");
+		assertEquals(emParam.getNomMunicipio(), "Bilbao");
 	}
 	
 	@Test
@@ -26,9 +26,9 @@ public class EstacionMeteorologicaTest {
 	}
 	
 	@Test
-	public void testGetSetIdMuni() {
-		emVacio.setIdMuni(1);
-		assertEquals(emVacio.getIdMuni(), 1);
+	public void testGetSetNomMunicipio() {
+		emVacio.setNomMunicipio("Basauri");;
+		assertEquals(emVacio.getNomMunicipio(), "Basauri");
 	}
 	
 	@Test

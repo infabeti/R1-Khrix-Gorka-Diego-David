@@ -9,23 +9,23 @@ import org.junit.Test;
 public class InfoMeteorologicaTest {
 
 	private InfoMeteorologica infMetVacio = new InfoMeteorologica();
-	private InfoMeteorologica infMetParam = new InfoMeteorologica(1, 1, new Date(2020-03-12), 
-			2.4, 7.2, 4);
+	private InfoMeteorologica infMetParam = new InfoMeteorologica(1, new Date(2020-03-12), 
+			2.4, 7.2, 4, "Abadino");
 	
 	@Test
 	public void testConstructor() {
-		assertEquals(infMetParam.getIdEstacionMeteo(), 1);
 		assertEquals(infMetParam.getIdInfo(), 1);
 		assertEquals(infMetParam.getFecha(), new Date(2020-03-12));
 		assertEquals(infMetParam.getPresionAtmos(), 2.4, 1);
 		assertEquals(infMetParam.getTemperaturaC(), 7.2, 1);
 		assertEquals(infMetParam.getSaturacionO2(), 4);
+		assertEquals(infMetParam.getNomEstMet(), "Abadino");
 	}
 	
 	@Test
-	public void testGetSetIdEstacionMeteo() {
-		infMetVacio.setIdEstacionMeteo(1);
-		assertEquals(infMetVacio.getIdEstacionMeteo(), 1);
+	public void testGetSetNomEstMet() {
+		infMetVacio.setNomEstMet("Prueba");
+		assertEquals(infMetVacio.getNomEstMet(), "Prueba");
 	}
 	
 	@Test
