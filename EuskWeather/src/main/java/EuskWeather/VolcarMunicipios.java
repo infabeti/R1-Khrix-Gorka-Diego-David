@@ -17,7 +17,7 @@ public class VolcarMunicipios {
 			
 			String xml = convertirJSONXML.leerArchivo("./ficherosXML//municipios.xml"); 
 			
-			ArrayList<Municipio> municipios = lecturaDatos(xml);
+			ArrayList<Municipios> municipios = lecturaDatos(xml);
 //			for(Municipio m: municipios) {
 //				System.out.println(m.getNombreMuni());
 //			}
@@ -25,9 +25,9 @@ public class VolcarMunicipios {
 			
 		}
 
-		public static ArrayList<Municipio> lecturaDatos(String archivo) {
-			Municipio[] munisObj;
-			ArrayList<Municipio> listaMunicipios = new ArrayList<Municipio>();
+		public static ArrayList<Municipios> lecturaDatos(String archivo) {
+			Municipios[] munisObj;
+			ArrayList<Municipios> listaMunicipios = new ArrayList<Municipios>();
 			String municipio = "", alcalde = "", web = "";
 			String[] municipios, nodos, nombreMuni = null, alcaldeMuni = null, webMuni = null;
 			int[] idProv = null;
@@ -38,7 +38,7 @@ public class VolcarMunicipios {
 			alcaldeMuni = new String[municipios.length -1];
 			webMuni = new String[municipios.length -1];
 			idProv = new int[municipios.length - 1]; 
-			munisObj = new Municipio[municipios.length - 1];
+			munisObj = new Municipios[municipios.length - 1];
 			for (int i = 0; i < municipios.length; i++) {
 				nodos = municipios[i].split("/");
 				for (int j = 0; j < nodos.length; j++) {
@@ -76,14 +76,14 @@ public class VolcarMunicipios {
 			}
 
 			for (int i = 0; i < nombreMuni.length; i++) {
-				munisObj[i] = new Municipio(idProv[i], (i+1), nombreMuni[i], alcaldeMuni[i], webMuni[i]);
+				munisObj[i] = new Municipios(idProv[i], (i+1), nombreMuni[i], alcaldeMuni[i], webMuni[i]);
 				listaMunicipios.add(munisObj[i]);
 			}
 			
 			return listaMunicipios;
 		}
 
-		public static void volcarInformacion(ArrayList<Municipio> objetos) {
+		public static void volcarInformacion(ArrayList<Municipios> objetos) {
 			
 			for (int i = 0; i < objetos.size(); i++) {
 				Session session = HibernateUtil.getSessionFactory().openSession();

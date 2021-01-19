@@ -6,8 +6,8 @@ import org.junit.Test;
 
 public class MunicipioTest {
 
-	private Municipio mVacio = new Municipio();
-	private Municipio mParam = new Municipio(1, 2, "Bilbao", "Aburto", "www.bilbao.eus");
+	private Municipios mVacio = new Municipios();
+	private Municipios mParam = new Municipios(1, 2, "Bilbao", "Aburto", "www.bilbao.eus");
 
 	@Test
 	public void testConstructor() {

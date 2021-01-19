@@ -11,10 +11,12 @@ import javax.swing.JTextArea;
 
 public class consultarDato {
 	
-	static ArrayList<Usuarios> users = new ArrayList();
+	
+	
 
 	public static ArrayList<Usuarios> consultarUsuarios(String sql) {
 		int x = 0;
+		ArrayList<Usuarios> users = new ArrayList();
 		
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		session.beginTransaction();
@@ -26,6 +28,24 @@ public class consultarDato {
 		}
 	
 		return users;
+		
+	
+	}
+	
+	public static ArrayList<Municipios> consultarMunicipios(String sql) {
+		int x = 0;
+		ArrayList<Municipios> munic = new ArrayList();
+		
+		Session session = HibernateUtil.getSessionFactory().openSession();
+		session.beginTransaction();
+		
+		Iterator obj = session.createQuery(sql).iterate();
+		while(obj.hasNext()) {
+			Municipios usuarios = (Municipios) obj.next();
+			munic.add(usuarios);
+		}
+	
+		return munic;
 		
 	
 	}

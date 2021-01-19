@@ -12,7 +12,7 @@ import javax.persistence.UniqueConstraint;
 @Table(name = "municipios", uniqueConstraints = {@UniqueConstraint(columnNames = "idMuni"),@UniqueConstraint(columnNames = "nombreMuni"),
 		@UniqueConstraint(columnNames = "alcalde"),@UniqueConstraint(columnNames = "webMunicipio"),@UniqueConstraint(columnNames = "idProvincia")})
 
-public class Municipio implements Serializable{
+public class Municipios implements Serializable{
 	
 	@Id
 	@Column(name = "idProvincia", unique = true, nullable = false)
@@ -34,11 +34,11 @@ public class Municipio implements Serializable{
 	@Column(name = "webMunicipio", unique = true, nullable = false)
 	private String webMuni;
 	
-	public Municipio() {
+	public Municipios() {
 		
 	}
 	
-	public Municipio(int idProv, int idMunicipio, String nombreMuni, String alcaldeMuni,
+	public Municipios(int idProv, int idMunicipio, String nombreMuni, String alcaldeMuni,
 			String webMuni) {
 		this.idProv = idProv;
 		this.idMunicipio = idMunicipio;

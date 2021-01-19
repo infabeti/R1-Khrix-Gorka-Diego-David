@@ -24,12 +24,6 @@ import javax.swing.JPanel;
 public class VentanaCliente extends JFrame{
 	
 	private JPanel contentPane;
-	private JTextField txtId;
-	private JTextField txtNombre;
-	private JTextField txtDireccion;
-	private JTextField txtCorreo;
-	private JTextField txtNickname;
-	private JTextField txtPassword;
 	private String sql;
 	private final int PUERTO = 5000;
 	private final String IP = "localhost";
@@ -46,80 +40,27 @@ public class VentanaCliente extends JFrame{
 
 			
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 527, 300);
+		setBounds(100, 100, 639, 580);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JButton btnBuscar = new JButton("VER USUARIOS");
-		btnBuscar.setBounds(10, 11, 127, 23);
-		contentPane.add(btnBuscar);
+		JButton btnVerUsuarios = new JButton("VER TODOS USUARIOS");
+		btnVerUsuarios.setBounds(10, 439, 185, 23);
+		contentPane.add(btnVerUsuarios);
 		
 		JButton btnModificar = new JButton("MODIFICAR DIRECCION");
-		btnModificar.setBounds(319, 11, 162, 23);
+		btnModificar.setBounds(10, 507, 185, 23);
 		contentPane.add(btnModificar);
 		
-		JButton btnInsertar = new JButton("INSERTAR USUARIO");
-		btnInsertar.setBounds(147, 11, 162, 23);
-		contentPane.add(btnInsertar);
+		JButton btnMunicipiosConEstaciones = new JButton("MUNICIPIOS CON ESTACIONES");
 		
-		JLabel lblNewLabel = new JLabel("ID:");
-		lblNewLabel.setBounds(298, 45, 23, 14);
-		contentPane.add(lblNewLabel);
-		
-		JLabel lblNewLabel_1 = new JLabel("Nombre:");
-		lblNewLabel_1.setBounds(298, 70, 46, 14);
-		contentPane.add(lblNewLabel_1);
-		
-		JLabel lblNewLabel_2 = new JLabel("Direccion:");
-		lblNewLabel_2.setBounds(298, 95, 58, 14);
-		contentPane.add(lblNewLabel_2);
-		
-		JLabel lblNewLabel_3 = new JLabel("Correo:");
-		lblNewLabel_3.setBounds(298, 120, 46, 14);
-		contentPane.add(lblNewLabel_3);
-		
-		JLabel lblNewLabel_4 = new JLabel("Nickname:");
-		lblNewLabel_4.setBounds(298, 145, 58, 14);
-		contentPane.add(lblNewLabel_4);
-		
-		JLabel lblNewLabel_5 = new JLabel("Password:");
-		lblNewLabel_5.setBounds(298, 170, 58, 14);
-		contentPane.add(lblNewLabel_5);
-		
-		txtId = new JTextField();
-		txtId.setBounds(319, 42, 86, 20);
-		contentPane.add(txtId);
-		txtId.setColumns(10);
-		
-		txtNombre = new JTextField();
-		txtNombre.setBounds(354, 67, 86, 20);
-		contentPane.add(txtNombre);
-		txtNombre.setColumns(10);
-		
-		txtDireccion = new JTextField();
-		txtDireccion.setBounds(354, 92, 86, 20);
-		contentPane.add(txtDireccion);
-		txtDireccion.setColumns(10);
-		
-		txtCorreo = new JTextField();
-		txtCorreo.setBounds(354, 117, 86, 20);
-		contentPane.add(txtCorreo);
-		txtCorreo.setColumns(10);
-		
-		txtNickname = new JTextField();
-		txtNickname.setBounds(354, 142, 86, 20);
-		contentPane.add(txtNickname);
-		txtNickname.setColumns(10);
-		
-		txtPassword = new JTextField();
-		txtPassword.setBounds(354, 167, 86, 20);
-		contentPane.add(txtPassword);
-		txtPassword.setColumns(10);
+		btnMunicipiosConEstaciones.setBounds(10, 473, 185, 23);
+		contentPane.add(btnMunicipiosConEstaciones);
 		
 		JTextArea textArea = new JTextArea();
-		textArea.setBounds(10, 45, 278, 185);
+		textArea.setBounds(10, 11, 603, 417);
 		contentPane.add(textArea);
 		
 		try {
@@ -127,7 +68,7 @@ public class VentanaCliente extends JFrame{
 			cliente = new Socket(IP, PUERTO);	
 			System.out.println("Conexion realizada con el servidor.");
 			
-			btnBuscar.addActionListener(new ActionListener() {
+			btnVerUsuarios.addActionListener(new ActionListener() {
 				@Override
 				public void actionPerformed(ActionEvent arg0) {
 					// TODO Auto-generated method stub		
@@ -144,7 +85,7 @@ public class VentanaCliente extends JFrame{
 					Iterator<Usuarios> it = resultado.iterator();
 					while(it.hasNext()) {
 					users = it.next();
-					textArea.setText(textArea.getText()+"ID: "+users.getidUser()+"Nombre y Apellidos: "+users.getnombreApellido()+"Direccion: "+users.getDireccion()+"Mail: "+users.getMail()+"Nick: "+users.getNickUsuario()+"Contraseña: "+users.getContrasenia()+ "\n");
+					textArea.setText(textArea.getText()+"ID: "+users.getidUser()+" Nombre y Apellidos: "+users.getnombreApellido()+" Direccion: "+users.getDireccion()+" Mail: "+users.getMail()+" Nick: "+users.getNickUsuario()+" Contraseña: "+users.getContrasenia()+ "\n");
 						
 					}
 											
@@ -156,32 +97,34 @@ public class VentanaCliente extends JFrame{
 			}
 			
 		});
-		
-			btnInsertar.addActionListener(new ActionListener() {
-
-				@Override
-				public void actionPerformed(ActionEvent arg0) {
-					// TODO Auto-generated method stub
-					sql = "INSERT INTO usuarios "
-							+ "VALUES(" + txtId.getText() + ", '" + txtNombre.getText() + "', '" 
-							+ txtDireccion.getText() + "', '" + txtCorreo.getText() + "', '"
-							+ txtNickname.getText() + "', '" + txtPassword.getText() + "')";
+			btnMunicipiosConEstaciones.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					sql = "select m from Municipios m join m.idMuni as municipio left join provincia p where m.idMuni = p.IDENT";
+					Municipios munic = new Municipios();
+					ArrayList<Municipios> resultCons;
+					try {
+						entrada = new ObjectInputStream(cliente.getInputStream());
+						salida = new ObjectOutputStream(cliente.getOutputStream());
+						salida.writeObject(sql);
 						
+						ArrayList resultado = (ArrayList) entrada.readObject();
+						
+						Iterator<Municipios> it = resultado.iterator();
+						while(it.hasNext()) {
+						munic = it.next();
+						textArea.setText(textArea.getText()+"ID: "+munic.getIdMunicipio()+" Nombre del municipio: "+munic.getNombreMuni()+" Alcalde: "+munic.getAlcaldeMuni()+" Web: "+munic.getWebMuni()+" Nick: "+munic.getIdProv()+ "\n");
+							
+						}
+						
+					}catch (IOException | ClassNotFoundException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+					
 				}
-			
 			});
 		
-			btnModificar.addActionListener(new ActionListener() {
-
-				@Override
-				public void actionPerformed(ActionEvent arg0) {
-					// TODO Auto-generated method stub
-					sql = "UPDATE usuarios SET direccion='" + txtDireccion.getText() + "' "
-							+ "WHERE idUsuario=" + txtDireccion.getText();
-				
-				}
 			
-			});
 		
 		} catch (UnknownHostException e) {
 			// TODO Auto-generated catch block

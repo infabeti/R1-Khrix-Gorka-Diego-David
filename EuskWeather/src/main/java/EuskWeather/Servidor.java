@@ -24,7 +24,7 @@ private int PUERTO = 5000;
 		ServerSocket servidor = null;
 		Socket cliente = null;
 		String sql = "";
-		ArrayList<Usuarios> resultadoConsulta;
+		ArrayList resultadoConsulta = null;
 		try {
 			servidor = new ServerSocket(PUERTO);
 
@@ -38,8 +38,14 @@ private int PUERTO = 5000;
 				System.out.println("CLIENTE CONECTADO");
 				
 				sql = (String) entrada.readObject();
-
-				resultadoConsulta = consultarDato.consultarUsuarios(sql);
+				
+				if(sql.contains("Usuarios")) {
+					resultadoConsulta = consultarDato.consultarUsuarios(sql);
+				}
+				if(sql.contains("Municipios")) {
+					resultadoConsulta = consultarDato.consultarMunicipios(sql);
+				}
+				
 				
 				salida.writeObject(resultadoConsulta);
 			}

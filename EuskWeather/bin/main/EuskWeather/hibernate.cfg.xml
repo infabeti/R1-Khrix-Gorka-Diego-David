@@ -11,7 +11,7 @@
 		<property name="connection.username">root</property>
 		<property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
 		<mapping class="EuskWeather.Usuarios"></mapping>
-		<mapping class="EuskWeather.Municipio"></mapping>
+		<mapping class="EuskWeather.Municipios"></mapping>
 
 	</session-factory>
 
