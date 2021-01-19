@@ -13,6 +13,8 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
 import java.net.UnknownHostException;
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import javax.swing.JButton;
@@ -131,15 +133,22 @@ public class VentanaCliente extends JFrame{
 					// TODO Auto-generated method stub		
 					sql = "select u from Usuarios u";
 					Usuarios users = new Usuarios();
+					ArrayList<Usuarios> resultCons;
 					try {
 						entrada = new ObjectInputStream(cliente.getInputStream());
 						salida = new ObjectOutputStream(cliente.getOutputStream());
 						salida.writeObject(sql);
 						
-						users = (Usuarios) entrada.readObject();
+						ArrayList resultado = (ArrayList) entrada.readObject();
+						
+						Iterator<Usuarios> it = resultado.iterator();
+						while(it.hasNext()) {
+							users = it.next();
+							textArea.setText(textArea.getText()+"ID: "+users.getidUser()+"Nombre y Apellidos: "+users.getnombreApellido()+"Direccion: "+users.getDireccion()+"Mail: "+users.getMail()+"Nick: "+users.getNickUsuario()+"Contraseña: "+users.getContrasenia()+ "\n");
+							
+						}
 						
 						
-						textArea.setText("ID:"+users.getIdUsuario() + " Nick: " + users.getNickUsuario());
 						
 					} catch (IOException | ClassNotFoundException e) {
 						// TODO Auto-generated catch block

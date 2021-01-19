@@ -5,6 +5,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Servidor extends Thread{
@@ -23,7 +24,7 @@ private int PUERTO = 5000;
 		ServerSocket servidor = null;
 		Socket cliente = null;
 		String sql = "";
-		Usuarios resultadoConsulta;
+		ArrayList<Usuarios> resultadoConsulta;
 		try {
 			servidor = new ServerSocket(PUERTO);
 

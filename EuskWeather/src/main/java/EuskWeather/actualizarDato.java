@@ -10,8 +10,8 @@ public class actualizarDato {
 		session.beginTransaction();
 		
 		Usuarios table = new Usuarios();
-		table.setIdUsuario(51);
-		table.setNomApellido("prueba");
+		table.setidUser(51);
+		table.setnombreApellido("prueba");
 		table.setDireccion("calle de prueba");
 		table.setMail("mailActualizado");
 		table.setNickUsuario("nick");

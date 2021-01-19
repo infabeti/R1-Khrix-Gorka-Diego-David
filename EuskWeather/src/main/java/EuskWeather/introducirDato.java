@@ -8,11 +8,11 @@ public class introducirDato {
 		session.beginTransaction();
 		
 		Usuarios table = new Usuarios();
-		table.setIdUsuario(52);
-		table.setNomApellido("prueba2");
-		table.setDireccion("calle de prueba2");
-		table.setMail("mail2");
-		table.setNickUsuario("nick2");
+		table.setidUser(54);
+		table.setnombreApellido("prueba3");
+		table.setDireccion("calle de prueba3");
+		table.setMail("mail3");
+		table.setNickUsuario("nick3");
 		table.setContrasenia("123");
 		
 		session.save(table);

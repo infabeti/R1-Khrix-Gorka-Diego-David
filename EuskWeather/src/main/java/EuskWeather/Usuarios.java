@@ -6,17 +6,17 @@ import javax.persistence.*;
 import org.hibernate.annotations.OptimisticLockType;
 
 @Entity
-@Table(name = "usuarios", uniqueConstraints = {@UniqueConstraint(columnNames = "idUsuario"),@UniqueConstraint(columnNames = "nomApellidos"),
+@Table(name = "usuarios", uniqueConstraints = {@UniqueConstraint(columnNames = "idUser"),@UniqueConstraint(columnNames = "nombreApellido"),
 		@UniqueConstraint(columnNames = "direccion"),@UniqueConstraint(columnNames = "mail"),@UniqueConstraint(columnNames = "nickUsuario"),
 		@UniqueConstraint(columnNames = "contrasenia")})
 
 public class Usuarios implements Serializable{
 	@Id
-	@Column(name = "idUsuario", unique = true, nullable = false)
-	private int idUsuario;
+	@Column(name = "idUser", unique = true, nullable = false)
+	private int idUser;
 	
-	@Column(name = "nomApellidos", unique = false, nullable = false, length = 40)
-	private String nomApellido;
+	@Column(name = "nombreApellido", unique = false, nullable = false, length = 40)
+	private String nombreApellido;
 	
 	@Column(name = "direccion", unique = false, nullable = false, length = 100)
 	private String direccion;
@@ -34,30 +34,30 @@ public class Usuarios implements Serializable{
 		
 	}
 	
-	public Usuarios(int idUsuario, String nomApellido, String direccion, String mail, 
+	public Usuarios(int idUser, String nombreApellido, String direccion, String mail, 
 			String nickUsuario, String contrasenia) {
-		this.idUsuario = idUsuario;
-		this.nomApellido = nomApellido;
+		this.idUser = idUser;
+		this.nombreApellido = nombreApellido;
 		this.direccion = direccion;
 		this.mail = mail;
 		this.nickUsuario = nickUsuario;
 		this.contrasenia = contrasenia;
 	}
 
-	public int getIdUsuario() {
-		return idUsuario;
+	public int getidUser() {
+		return idUser;
 	}
 
-	public void setIdUsuario(int idUsuario) {
-		this.idUsuario = idUsuario;
+	public void setidUser(int idUser) {
+		this.idUser = idUser;
 	}
 
-	public String getNomApellido() {
-		return nomApellido;
+	public String getnombreApellido() {
+		return nombreApellido;
 	}
 
-	public void setNomApellido(String nomApellido) {
-		this.nomApellido = nomApellido;
+	public void setnombreApellido(String nomApellido) {
+		this.nombreApellido = nomApellido;
 	}
 
 	public String getDireccion() {

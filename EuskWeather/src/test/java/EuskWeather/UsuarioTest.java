@@ -12,8 +12,8 @@ public class UsuarioTest {
 	
 	@Test
 	public void testConstructor() {
-		assertEquals(usuParam.getIdUsuario(), 1);
-		assertEquals(usuParam.getNomApellido(), "Diego Villalon");
+		assertEquals(usuParam.getidUser(), 1);
+		assertEquals(usuParam.getnombreApellido(), "Diego Villalon");
 		assertEquals(usuParam.getDireccion(), "Zabalbide Kalea");
 		assertEquals(usuParam.getMail(), "diego@elorrieta.com");
 		assertEquals(usuParam.getNickUsuario(), "diegovjelorrieta");
@@ -22,14 +22,14 @@ public class UsuarioTest {
 	
 	@Test
 	public void testGetSetIdUsuario() {
-		usuVacio.setIdUsuario(1);
-		assertEquals(usuVacio.getIdUsuario(), 1);
+		usuVacio.setidUser(1);
+		assertEquals(usuVacio.getidUser(), 1);
 	}
 	
 	@Test
 	public void testGetSetNomApellido() {
-		usuVacio.setNomApellido("Gorka Carnero");
-		assertEquals(usuVacio.getNomApellido(), "Gorka Carnero");
+		usuVacio.setnombreApellido("Gorka Carnero");
+		assertEquals(usuVacio.getnombreApellido(), "Gorka Carnero");
 	}
 	
 	@Test
