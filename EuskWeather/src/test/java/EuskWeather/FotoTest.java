@@ -7,12 +7,12 @@ import org.junit.Test;
 public class FotoTest {
 
 	private Foto fVacia = new Foto();
-	private Foto fParam = new Foto(1, 2, 3);
+	private Foto fParam = new Foto(1, "Bilbao", 3);
 	
 	@Test
 	public void testConstructor() {
 		assertEquals(fParam.getIdFoto(), 1);
-		assertEquals(fParam.getIdMunicipio(), 2);
+		assertEquals(fParam.getNombreMunicipio(), "Bilbao");
 		assertEquals(fParam.getIdUsuario(), 3);
 	}
 	
@@ -23,9 +23,9 @@ public class FotoTest {
 	}
 	
 	@Test
-	public void testGetSetIdMunicipio() {
-		fVacia.setIdMunicipio(4);
-		assertEquals(fVacia.getIdMunicipio(), 4);
+	public void testGetSetNombreMunicipio() {
+		fVacia.setNombreMunicipio("Barakaldo");
+		assertEquals(fVacia.getNombreMunicipio(), "Barakaldo");
 	}
 	
 	@Test

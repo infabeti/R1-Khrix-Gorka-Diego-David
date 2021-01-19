@@ -15,12 +15,10 @@ public class VolcarMunicipios {
 
 		public static void main(String[] args) {
 			
-			String xml = convertirJSONXML.leerArchivo("./ficherosXML//municipios.xml"); 
+			String xml = convertirJSONXML.leerArchivo("./ficherosXML//municipios.xml", "utf-8"); 
 			
 			ArrayList<Municipio> municipios = lecturaDatos(xml);
-//			for(Municipio m: municipios) {
-//				System.out.println(m.getNombreMuni());
-//			}
+
 			volcarInformacion(municipios);
 			
 		}
@@ -72,6 +70,17 @@ public class VolcarMunicipios {
 					} else if (nodos[j].contains("<territorycode>")) {
 						idProv[i] = Integer.parseInt(nodos[j].substring(23, nodos[j].length() - 1));
 					} 
+				}
+			}
+			
+			for(int i = 0; i < nombreMuni.length; i++) {
+				for(int j = i+1; j < nombreMuni.length; j++) {
+					if(nombreMuni[i].contentEquals(nombreMuni[j])){
+						nombreMuni[j] = nombreMuni[j] + "-DUP";
+					}
+					if(nombreMuni[i].contentEquals("San Sebastián")){
+						nombreMuni[i] = nombreMuni[i] + "-DUP";
+					}	
 				}
 			}
 

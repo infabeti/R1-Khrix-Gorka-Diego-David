@@ -12,6 +12,11 @@
 		<property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
 		<mapping class="EuskWeather.Usuarios"></mapping>
 		<mapping class="EuskWeather.Municipio"></mapping>
+		<mapping class="EuskWeather.Provincia"></mapping>
+		<mapping class="EuskWeather.EspacioNatural"></mapping>
+		<mapping class="EuskWeather.EstacionMeteorologica"></mapping>
+		<mapping class="EuskWeather.Foto"></mapping>
+		<mapping class="EuskWeather.InfoMeteorologica"></mapping>
 
 	</session-factory>
 

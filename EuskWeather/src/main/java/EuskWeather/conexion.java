@@ -19,26 +19,6 @@ public class conexion {
 			conexion = (Connection) DriverManager.getConnection(URL, user, passw);
 			System.out.println("Conectado");
 
-//			 prueba conexion
-//			ArrayList<String> nLineas = new ArrayList<String>();
-//			String sql = "select Url from datosmetereologicos2.indexxml where Id = 1";
-//
-//			try {
-//				java.sql.PreparedStatement ps = conexion.prepareStatement(sql);
-//				// Statement ps=connection.conectarmySQL().createStatement();
-//
-//				ResultSet rs = ps.executeQuery("select Url from datosmetereologicos2.indexxml");
-//
-//				while (rs.next()) {
-//					System.out.println(rs.getString(1));
-//					nLineas.add(rs.getString(1));
-//
-//				}
-//
-//			} catch (Exception e) {
-//				System.err.println("Consulta no valida");
-//			}
-
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

@@ -2,27 +2,56 @@ package EuskWeather;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
+
+
+@Entity
+@Table(name = "estacionmeteorologica", uniqueConstraints = {@UniqueConstraint(columnNames = "idEstacion"),@UniqueConstraint(columnNames = "nombreEstacion"),
+		@UniqueConstraint(columnNames = "latitud"),@UniqueConstraint(columnNames = "longitud"),@UniqueConstraint(columnNames = "direccion"),
+		@UniqueConstraint(columnNames = "nomMunicipio")})
+
 public class EstacionMeteorologica implements Serializable{
 
+	@Id
+	@Column(name = "idEstacion", unique = true, nullable = false)
 	private int idEstacion;
-	private int idMuni;
+	
+	@Id
+	@Column(name = "nombreEstacion", unique = true, nullable = false)
 	private String nombreEstacion;
+	
+	@Id
+	@Column(name = "latitud", unique = true, nullable = false)
 	private double latidud;
+	
+	@Id
+	@Column(name = "longitud", unique = true, nullable = false)
 	private double longitud;
+	
+	@Id
+	@Column(name = "direccion", unique = true, nullable = false)
 	private String direccion;
+	
+	@Id
+	@Column(name = "nomMunicipio", unique = true, nullable = false)
+	private String nomMunicipio;
 	
 	public EstacionMeteorologica() {
 		
 	}
 	
-	public EstacionMeteorologica(int idEstacion, int idMuni, String nombreEstacion, 
-					double latitud, double longitud, String direccion) {
+	public EstacionMeteorologica(int idEstacion, String nombreEstacion, 
+					double latitud, double longitud, String direccion, String nomMunicipio) {
 		this.idEstacion = idEstacion;
-		this.idMuni = idMuni;
 		this.nombreEstacion = nombreEstacion;
 		this.latidud = latitud;
 		this.longitud = longitud;
 		this.direccion = direccion;
+		this.nomMunicipio = nomMunicipio;
 	}
 
 	public int getIdEstacion() {
@@ -33,12 +62,12 @@ public class EstacionMeteorologica implements Serializable{
 		this.idEstacion = idEstacion;
 	}
 
-	public int getIdMuni() {
-		return idMuni;
+	public String getNomMunicipio() {
+		return nomMunicipio;
 	}
 
-	public void setIdMuni(int idMuni) {
-		this.idMuni = idMuni;
+	public void setNomMunicipio(String nomMunicipio) {
+		this.nomMunicipio = nomMunicipio;
 	}
 
 	public String getNombreEstacion() {
