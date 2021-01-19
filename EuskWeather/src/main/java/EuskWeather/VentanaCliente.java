@@ -131,33 +131,31 @@ public class VentanaCliente extends JFrame{
 				@Override
 				public void actionPerformed(ActionEvent arg0) {
 					// TODO Auto-generated method stub		
-					sql = "select u from Usuarios u";
-					Usuarios users = new Usuarios();
-					ArrayList<Usuarios> resultCons;
-					try {
-						entrada = new ObjectInputStream(cliente.getInputStream());
-						salida = new ObjectOutputStream(cliente.getOutputStream());
-						salida.writeObject(sql);
+				sql = "select u from Usuarios u";
+				Usuarios users = new Usuarios();
+				ArrayList<Usuarios> resultCons;
+				try {
+					entrada = new ObjectInputStream(cliente.getInputStream());
+					salida = new ObjectOutputStream(cliente.getOutputStream());
+					salida.writeObject(sql);
 						
-						ArrayList resultado = (ArrayList) entrada.readObject();
+					ArrayList resultado = (ArrayList) entrada.readObject();
 						
-						Iterator<Usuarios> it = resultado.iterator();
-						while(it.hasNext()) {
-							users = it.next();
-							textArea.setText(textArea.getText()+"ID: "+users.getidUser()+"Nombre y Apellidos: "+users.getnombreApellido()+"Direccion: "+users.getDireccion()+"Mail: "+users.getMail()+"Nick: "+users.getNickUsuario()+"Contraseña: "+users.getContrasenia()+ "\n");
-							
-						}
+					Iterator<Usuarios> it = resultado.iterator();
+					while(it.hasNext()) {
+					users = it.next();
+					textArea.setText(textArea.getText()+"ID: "+users.getidUser()+"Nombre y Apellidos: "+users.getnombreApellido()+"Direccion: "+users.getDireccion()+"Mail: "+users.getMail()+"Nick: "+users.getNickUsuario()+"Contraseña: "+users.getContrasenia()+ "\n");
 						
-						
-						
-					} catch (IOException | ClassNotFoundException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
 					}
-				
+											
+				} catch (IOException | ClassNotFoundException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
 				}
+				
+			}
 			
-			});
+		});
 		
 			btnInsertar.addActionListener(new ActionListener() {
 
