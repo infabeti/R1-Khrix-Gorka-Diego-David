@@ -2,12 +2,36 @@ package EuskWeather;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
+
+@Entity
+@Table(name = "municipios", uniqueConstraints = {@UniqueConstraint(columnNames = "idMuni"),@UniqueConstraint(columnNames = "nombreMuni"),
+		@UniqueConstraint(columnNames = "alcalde"),@UniqueConstraint(columnNames = "webMunicipio"),@UniqueConstraint(columnNames = "idProvincia")})
+
 public class Municipio implements Serializable{
 	
+	@Id
+	@Column(name = "idProvincia", unique = true, nullable = false)
 	private int idProv;
+	
+	@Id
+	@Column(name = "idMuni", unique = true, nullable = false)
 	private int idMunicipio;
+	
+	@Id
+	@Column(name = "nombreMuni", unique = true, nullable = false)
 	private String nombreMuni;
+	
+	@Id
+	@Column(name = "alcalde", unique = true, nullable = false)
 	private String alcaldeMuni;
+	
+	@Id
+	@Column(name = "webMunicipio", unique = true, nullable = false)
 	private String webMuni;
 	
 	public Municipio() {

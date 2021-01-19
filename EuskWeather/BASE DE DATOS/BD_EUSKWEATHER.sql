@@ -7,7 +7,7 @@ create table Provincias
     
 create table Municipios
 	(idMuni int primary key auto_increment, nombreMuni varchar(40) not null,
-    alcalde varchar(40) not null, webMunicipio varchar(40) not null,
+    alcalde varchar(40) not null, webMunicipio varchar(40),
     idProvincia int not null,
     constraint fk_idProvincia foreign key(idProvincia) references Provincias(idProv) on update cascade on delete cascade);
     
