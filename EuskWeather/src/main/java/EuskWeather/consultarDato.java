@@ -19,20 +19,12 @@ public class consultarDato {
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		session.beginTransaction();
 		
-		Iterator obj = session.createQuery("Select u from Usuarios u").iterate();
+		Iterator obj = session.createQuery(sql).iterate();
 		while(obj.hasNext()) {
 			Usuarios usuarios = (Usuarios) obj.next();
 			users.add(usuarios);
 		}
-		
-//		String hql = "Select u from Usuarios u";
-//		Query query = session.createQuery(hql);
-//		
-//		List<Usuarios> results = query.list();
-//		for(int x= 0;x < results.size(); x++) {
-//			usuario = results.get(x);
-//			users.add(usuario);
-//		}
+	
 		return users;
 		
 	
