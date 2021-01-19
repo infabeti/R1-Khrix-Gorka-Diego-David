@@ -6,8 +6,8 @@ import org.junit.Test;
 
 public class UsuarioTest {
 
-	private Usuario usuVacio = new Usuario();
-	private Usuario usuParam = new Usuario(1, "Diego Villalon", "Zabalbide Kalea", "diego@elorrieta.com", 
+	private Usuarios usuVacio = new Usuarios();
+	private Usuarios usuParam = new Usuarios(1, "Diego Villalon", "Zabalbide Kalea", "diego@elorrieta.com", 
 								"diegovjelorrieta", "1234qwerty");
 	
 	@Test

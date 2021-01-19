@@ -7,7 +7,7 @@ public class introducirDato {
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		session.beginTransaction();
 		
-		Usuario table = new Usuario();
+		Usuarios table = new Usuarios();
 		table.setIdUsuario(52);
 		table.setNomApellido("prueba2");
 		table.setDireccion("calle de prueba2");

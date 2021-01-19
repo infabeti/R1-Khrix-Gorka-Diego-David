@@ -9,30 +9,25 @@ import javax.persistence.Entity;
 import javax.swing.JTextArea;
 
 public class consultarDato {
+	
+	
 
-	public static String consultarUsuarios(String sql) {
-		List<Usuario[]> result = null;
-		String resultado = null;
+	public static Usuarios consultarUsuarios(String sql) {
+		Usuarios users = new Usuarios();
+		
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		session.beginTransaction();
 		
-		result = session.createSQLQuery(sql).list();
-
-		try {
-		for (Object[] row : result) {
-			resultado +=  "\n";
-			for (Object col : row) {
-				resultado += col + " ";
-			}
+		String hql = "Select u from Usuarios u";
+		Query query = session.createQuery(hql);
+		
+		List<Usuarios> results = query.list();
+		for(int x= 0;x < results.size(); x++) {
+			users = results.get(x);
 		}
-		resultado +=  "\n";
-		} catch (ClassCastException e) {
-			e.printStackTrace();
-		}
-		session.getTransaction().commit();
-		session.close();
-
-		return resultado;
+		return users;
+		
+	
 	}
 
 }

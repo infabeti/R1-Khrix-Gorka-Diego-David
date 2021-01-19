@@ -13,6 +13,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
 import java.net.UnknownHostException;
+import java.util.List;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -40,7 +41,7 @@ public class VentanaCliente extends JFrame{
 	}
 	
 	public VentanaCliente() {
-		
+
 			
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 527, 300);
@@ -128,16 +129,17 @@ public class VentanaCliente extends JFrame{
 				@Override
 				public void actionPerformed(ActionEvent arg0) {
 					// TODO Auto-generated method stub		
-					sql = "SELECT * FROM usuarios";
-					String resultadocons = "";
+					sql = "select u from Usuarios u";
+					Usuarios users = new Usuarios();
 					try {
 						entrada = new ObjectInputStream(cliente.getInputStream());
 						salida = new ObjectOutputStream(cliente.getOutputStream());
 						salida.writeObject(sql);
 						
-						resultadocons = (String) entrada.readObject();
+						users = (Usuarios) entrada.readObject();
 						
-						textArea.setText(resultadocons);
+						
+						textArea.setText("ID:"+users.getIdUsuario() + " Nick: " + users.getNickUsuario());
 						
 					} catch (IOException | ClassNotFoundException e) {
 						// TODO Auto-generated catch block

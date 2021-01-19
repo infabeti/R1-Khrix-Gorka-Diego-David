@@ -10,7 +10,7 @@ import org.hibernate.annotations.OptimisticLockType;
 		@UniqueConstraint(columnNames = "direccion"),@UniqueConstraint(columnNames = "mail"),@UniqueConstraint(columnNames = "nickUsuario"),
 		@UniqueConstraint(columnNames = "contrasenia")})
 
-public class Usuario implements Serializable{
+public class Usuarios implements Serializable{
 	@Id
 	@Column(name = "idUsuario", unique = true, nullable = false)
 	private int idUsuario;
@@ -30,11 +30,11 @@ public class Usuario implements Serializable{
 	@Column(name = "contrasenia", unique = false, nullable = false, length = 20)
 	private String contrasenia;
 	
-	public Usuario() {
+	public Usuarios() {
 		
 	}
 	
-	public Usuario(int idUsuario, String nomApellido, String direccion, String mail, 
+	public Usuarios(int idUsuario, String nomApellido, String direccion, String mail, 
 			String nickUsuario, String contrasenia) {
 		this.idUsuario = idUsuario;
 		this.nomApellido = nomApellido;

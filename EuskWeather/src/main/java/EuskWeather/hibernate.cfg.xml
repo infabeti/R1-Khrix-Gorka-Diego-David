@@ -10,7 +10,7 @@
 		<property name="connection.url">jdbc:mysql://localhost:3306/euskweather</property>
 		<property name="connection.username">root</property>
 		<property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
-		<mapping class="EuskWeather.Usuario"></mapping>
+		<mapping class="EuskWeather.Usuarios"></mapping>
 
 	</session-factory>
 

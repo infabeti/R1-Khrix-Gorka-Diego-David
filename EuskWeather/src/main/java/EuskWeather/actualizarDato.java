@@ -9,7 +9,7 @@ public class actualizarDato {
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		session.beginTransaction();
 		
-		Usuario table = new Usuario();
+		Usuarios table = new Usuarios();
 		table.setIdUsuario(51);
 		table.setNomApellido("prueba");
 		table.setDireccion("calle de prueba");
