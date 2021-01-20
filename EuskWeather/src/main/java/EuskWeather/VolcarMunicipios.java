@@ -21,7 +21,7 @@ public class VolcarMunicipios {
 			ArrayList<Municipios> municipios = lecturaDatos(xml);
 //			for(Municipio m: municipios) {
 //				System.out.println(m.getNombreMuni());
-
+//			}
 
 			volcarInformacion(municipios);
 			
