@@ -17,7 +17,7 @@ public class VolcarEstaciones {
 //			System.out.println(e.getNomMunicipio());
 //		}
 
-		volcarInformacion(estaciones);
+		//volcarInformacion(estaciones);
 	}
 	
 	public static ArrayList<EstacionMeteorologica> lecturaDatos(String archivo) {
@@ -71,16 +71,6 @@ public class VolcarEstaciones {
 					}
 					//System.out.println(Double.parseDouble(nodos[j].substring(20, nodos[j].length()-1)));
 				
-				} else if(nodos[j].contains("<Address>")){
-					for(int k = 0; k < nodos[j].length(); k++) {
-						if(nodos[j].charAt(k) == 's') {
-							direccion = nodos[j].substring(26, nodos[j].length()-1);
-							if (direccion.contains(">")) {
-								direccEst[i] = direccion.substring(2);
-								//System.out.println(direccEst[i]);
-							}
-						}
-					}
 				} else if (nodos[j].contains("<Town>")) {
 					for(int k = 0; k < nodos[j].length(); k++) {
 						if(nodos[j].charAt(k) == 'n') {
@@ -93,6 +83,33 @@ public class VolcarEstaciones {
 					}
 				} 
 			}
+		}
+		
+		for(int i = 0; i < estaciones.length; i++) {
+			nodos = estaciones[i].split("<Address>");
+			for(int j = 0; j < nodos.length; j++) {
+				for(int k = 0; k < nodos[j].length(); k++) {
+					if(nodos[j].charAt(k) == 's') {
+						direccion = nodos[j].substring(26, nodos[j].length()-1);
+						if(direccion.contains("<")) {
+							direccEst[i] = direccion.substring(2);
+							System.out.println(nodos[j]);
+						}
+					}
+				}
+				//System.out.println(nodos[j]);
+			}
+//			if(nodos[j].contains("<Address>")){
+//				for(int k = 0; k < nodos[j].length(); k++) {
+//					if(nodos[j].charAt(k) == 's') {
+//						direccion = nodos[j].substring(26, nodos[j].length()-1);
+//						if (direccion.contains(">")) {
+//							direccEst[i] = direccion.substring(2);
+//							//System.out.println(direccEst[i]);
+//						}
+//					}
+//				}
+//			}
 		}
 		
 		for(int i = 0; i < nombreMuni.length; i++) {
