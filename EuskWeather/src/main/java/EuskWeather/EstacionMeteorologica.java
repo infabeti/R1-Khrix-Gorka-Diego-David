@@ -5,6 +5,7 @@ import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
@@ -16,7 +17,6 @@ import javax.persistence.UniqueConstraint;
 
 public class EstacionMeteorologica implements Serializable{
 
-	@Id
 	@Column(name = "idEstacion", unique = true, nullable = false)
 	private int idEstacion;
 	
@@ -24,19 +24,15 @@ public class EstacionMeteorologica implements Serializable{
 	@Column(name = "nombreEstacion", unique = true, nullable = false)
 	private String nombreEstacion;
 	
-	@Id
 	@Column(name = "latitud", unique = true, nullable = false)
 	private double latidud;
 	
-	@Id
 	@Column(name = "longitud", unique = true, nullable = false)
 	private double longitud;
 	
-	@Id
 	@Column(name = "direccion", unique = true, nullable = false)
 	private String direccion;
 	
-	@Id
 	@Column(name = "nomMunicipio", unique = true, nullable = false)
 	private String nomMunicipio;
 	
