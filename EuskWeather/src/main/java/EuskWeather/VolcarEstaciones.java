@@ -13,7 +13,9 @@ public class VolcarEstaciones {
 	
 	public static ArrayList<EstacionMeteorologica> lecturaDatos(String archivo) {
 		Municipios[] munisObj;
+		EstacionMeteorologica[] estacionesObj;
 		ArrayList<EstacionMeteorologica> listaMunicipios = new ArrayList<EstacionMeteorologica>();
+		String nomEst = "", direccion = "", nomMuni="";
 		String municipio = "", alcalde = "", web = "";
 		String[] municipios, nodos, nombreMuni = null, alcaldeMuni = null, webMuni = null;
 		int[] idProv = null;
@@ -55,7 +57,16 @@ public class VolcarEstaciones {
 							}
 						}
 					}
-				} else if (nodos[j].contains("<territorycode>")) {
+				} else if(nodos[j].contains("<Address>")){
+					for(int k = 0; k < nodos[j].length(); k++) {
+						if(nodos[j].charAt(k) == 'e') {
+							web = nodos[j].substring(k, nodos[j].length() -1);
+							if (web.contains(">")) {
+								webMuni[i] = web.substring(2);
+							}
+						}
+					}
+				} else if (nodos[j].contains("<Province>")) {
 					idProv[i] = Integer.parseInt(nodos[j].substring(23, nodos[j].length() - 1));
 				} 
 			}
