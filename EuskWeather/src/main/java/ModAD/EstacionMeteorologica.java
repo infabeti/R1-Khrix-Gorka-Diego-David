@@ -8,6 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
@@ -19,7 +20,6 @@ import javax.persistence.UniqueConstraint;
 
 public class EstacionMeteorologica implements Serializable{
 
-	@Id
 	@Column(name = "idEstacion", unique = true, nullable = false)
 	private int idEstacion;
 	
@@ -27,15 +27,13 @@ public class EstacionMeteorologica implements Serializable{
 	@Column(name = "nombreEstacion", unique = true, nullable = false)
 	private String nombreEstacion;
 	
-	
 	@Column(name = "latitud", unique = true, nullable = false)
 	private double latidud;
 	
 	
 	@Column(name = "longitud", unique = true, nullable = false)
 	private double longitud;
-	
-	
+
 	@Column(name = "direccion", unique = true, nullable = false)
 	private String direccion;
 	

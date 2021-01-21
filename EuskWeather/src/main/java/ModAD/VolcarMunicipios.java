@@ -19,7 +19,7 @@ public class VolcarMunicipios {
 			
 
 			ArrayList<Municipios> municipios = lecturaDatos(xml);
-//			for(Municipio m: municipios) {
+//			for(Municipios m: municipios) {
 //				System.out.println(m.getNombreMuni());
 //			}
 

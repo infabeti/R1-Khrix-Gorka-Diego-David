@@ -1,5 +1,7 @@
 package ModAD;
 
+import java.text.DecimalFormat;
+import java.text.ParseException;
 import java.util.ArrayList;
 
 import org.hibernate.Session;
@@ -8,90 +10,115 @@ public class VolcarEstaciones {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		String xml = convertirJSONXML.leerArchivo("./ficherosXML//estaciones.xml", "utf-8"); 
+	
+		ArrayList<EstacionMeteorologica> estaciones = lecturaDatos(xml);
+//		for(EstacionMeteorologica e: estaciones) {
+//			System.out.println(e.getDireccion());
+//		}
 
+		volcarInformacion(estaciones);
 	}
 	
 	public static ArrayList<EstacionMeteorologica> lecturaDatos(String archivo) {
-		Municipios[] munisObj;
 		EstacionMeteorologica[] estacionesObj;
-		ArrayList<EstacionMeteorologica> listaMunicipios = new ArrayList<EstacionMeteorologica>();
+		ArrayList<EstacionMeteorologica> listaEstaciones = new ArrayList<EstacionMeteorologica>();
 		String nomEst = "", direccion = "", nomMuni="";
-		String municipio = "", alcalde = "", web = "";
-		String[] municipios, nodos, nombreMuni = null, alcaldeMuni = null, webMuni = null;
-		int[] idProv = null;
+		String[] estaciones, nodos = null, nombreEst = null, direccEst = null, nombreMuni = null;
+		double[] lati = null, longi = null;
 
-		municipios = archivo.split("</estacion>");
+		estaciones = archivo.split("</estacion>");
 
-		nombreMuni = new String[municipios.length - 1];
-		alcaldeMuni = new String[municipios.length -1];
-		webMuni = new String[municipios.length -1];
-		idProv = new int[municipios.length - 1]; 
-		munisObj = new Municipios[municipios.length - 1];
-		for (int i = 0; i < municipios.length; i++) {
-			nodos = municipios[i].split("/");
+		nombreEst = new String[estaciones.length - 1];
+		direccEst = new String[estaciones.length -1];
+		nombreMuni = new String[estaciones.length -1];
+		lati = new double[estaciones.length -1];
+		longi = new double[estaciones.length -1];
+		estacionesObj = new EstacionMeteorologica[estaciones.length - 1];
+		
+		for (int i = 0; i < estaciones.length; i++) {
+			nodos = estaciones[i].split("/");
 			for (int j = 0; j < nodos.length; j++) {
-				if (nodos[j].contains("<Town>")) {
+				if (nodos[j].contains("<Name>")) {
 					for (int k = 0; k < nodos[j].length(); k++) {		
-						if (nodos[j].charAt(k) == 'n') {
-							municipio = nodos[j].substring(k, nodos[j].length() - 1);
-							if (municipio.contains(">")) {
-								nombreMuni[i] = municipio.substring(2);
+						if (nodos[j].charAt(k) == 'e') {
+							nomEst = nodos[j].substring(k, nodos[j].length() - 1);
+							if (nomEst.contains(">")) {
+								nombreEst[i] = nomEst.substring(2);
 							}
 						}
 					}
 				} else if (nodos[j].contains("<Latitude>")) {
-					for(int k = 0; k < nodos[j].length(); k++) {
-						if(nodos[j].charAt(k) == 'e') {
-							alcalde = nodos[j].substring(k, nodos[j].length() -1);
-							if (alcalde.contains(">")) {
-								alcaldeMuni[i] = alcalde.substring(2);
-							}
-						}
+					
+					String numLati = nodos[j].substring(29, nodos[j].length()-1);
+					DecimalFormat formatter = new DecimalFormat("#.#");
+					try {
+						lati[i] = (double) formatter.parse(numLati);
+						//System.out.println(lati[j]);
+					} catch(ParseException e) {
+						System.out.println(e.getMessage());
 					}
+					
 				} else if (nodos[j].contains("<Longitude>")) {
+					
+					String numLongi = nodos[j].substring(20, nodos[j].length()-1);
+					DecimalFormat formatter = new DecimalFormat("#.#");
+					try {
+						longi[i] = (double) formatter.parse(numLongi);
+					} catch(ParseException e) {
+						System.out.println(e.getMessage());
+					}
+					//System.out.println(Double.parseDouble(nodos[j].substring(20, nodos[j].length()-1)));
+				
+				} else if (nodos[j].contains("<Town>")) {
 					for(int k = 0; k < nodos[j].length(); k++) {
-						if(nodos[j].charAt(k) == 'e') {
-							web = nodos[j].substring(k, nodos[j].length() -1);
-							if (web.contains(">")) {
-								webMuni[i] = web.substring(2);
+						if(nodos[j].charAt(k) == 'n') {
+							nomMuni = nodos[j].substring(k, nodos[j].length()-1);
+							if (nomMuni.contains(">")) {
+								nombreMuni[i] = nomMuni.substring(2);
+								//System.out.println(nombreMuni[i]);
 							}
 						}
 					}
-				} else if(nodos[j].contains("<Address>")){
-					for(int k = 0; k < nodos[j].length(); k++) {
-						if(nodos[j].charAt(k) == 'e') {
-							web = nodos[j].substring(k, nodos[j].length() -1);
-							if (web.contains(">")) {
-								webMuni[i] = web.substring(2);
-							}
-						}
-					}
-				} else if (nodos[j].contains("<Province>")) {
-					idProv[i] = Integer.parseInt(nodos[j].substring(23, nodos[j].length() - 1));
 				} 
 			}
 		}
 		
-		for(int i = 0; i < nombreMuni.length; i++) {
-			for(int j = i+1; j < nombreMuni.length; j++) {
-				if(nombreMuni[i].contentEquals(nombreMuni[j])){
-					nombreMuni[j] = nombreMuni[j] + "-DUP";
+		String[] aux;
+		for(int i = 0; i < estaciones.length-1; i++) {
+			nodos = estaciones[i].split("<Address>");		
+			for(int j = 0; j < nodos.length; j++) {
+				aux = nodos[j].split("</Address>");
+				if(nodos[j].contains("</Address>")){
+					direccEst[i] = aux[0];
 				}
-				if(nombreMuni[i].contentEquals("San Sebastián")){
-					nombreMuni[i] = nombreMuni[i] + "-DUP";
-				}	
+			}
+		}
+		
+		for(int i = 0; i < nombreMuni.length; i++) {
+			if(nombreMuni[i].contentEquals("Agurai")){
+				nombreMuni[i] = "Salvatierra";
+			}	
+			if(nombreMuni[i].contentEquals("Laudi")) {
+				nombreMuni[i] = "Laudio";
+			}
+			if(nombreMuni[i].contentEquals("Arrasat")) {
+				nombreMuni[i] = "Arrasate";
+			}
+			if(nombreMuni[i].contentEquals("Valdegoví")) {
+				nombreMuni[i] = "Villanueva de Valdegovía";
 			}
 		}
 
 		for (int i = 0; i < nombreMuni.length; i++) {
-			munisObj[i] = new Municipios(idProv[i], (i+1), nombreMuni[i], alcaldeMuni[i], webMuni[i]);
-			//listaMunicipios.add(munisObj[i]);
+			estacionesObj[i] = new EstacionMeteorologica((i+1), nombreEst[i], lati[i], longi[i], direccEst[i], nombreMuni[i]);
+			listaEstaciones.add(estacionesObj[i]);
 		}
 		
-		return listaMunicipios;
+		return listaEstaciones;
 	}
 
-	public static void volcarInformacion(ArrayList<Municipios> objetos) {
+	public static void volcarInformacion(ArrayList<EstacionMeteorologica> objetos) {
 		
 		for (int i = 0; i < objetos.size(); i++) {
 			Session session = HibernateUtil.getSessionFactory().openSession();
