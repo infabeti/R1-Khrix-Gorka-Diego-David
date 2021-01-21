@@ -4,6 +4,8 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import ModAD.convertirJSONXML;
+
 public class convertirJSONXMLTest {
 
 	convertirJSONXML conversor = new convertirJSONXML();

@@ -4,6 +4,8 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import ModAD.Municipios;
+
 public class MunicipioTest {
 
 	private Municipios mVacio = new Municipios();

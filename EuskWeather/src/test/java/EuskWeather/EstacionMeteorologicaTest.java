@@ -4,6 +4,8 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import ModAD.EstacionMeteorologica;
+
 public class EstacionMeteorologicaTest {
 
 	private EstacionMeteorologica emVacio = new EstacionMeteorologica();

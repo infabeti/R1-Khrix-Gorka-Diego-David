@@ -6,6 +6,8 @@ import java.sql.Date;
 
 import org.junit.Test;
 
+import ModAD.InfoMeteorologica;
+
 public class InfoMeteorologicaTest {
 
 	private InfoMeteorologica infMetVacio = new InfoMeteorologica();

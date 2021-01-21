@@ -4,6 +4,8 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import ModAD.Provincia;
+
 public class ProvinciaTest {
 
 	private Provincia pVacio = new Provincia();
