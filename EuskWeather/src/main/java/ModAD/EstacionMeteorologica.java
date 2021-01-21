@@ -20,6 +20,7 @@ import javax.persistence.UniqueConstraint;
 
 public class EstacionMeteorologica implements Serializable{
 
+	@Id
 	@Column(name = "idEstacion", unique = true, nullable = false)
 	private int idEstacion;
 	

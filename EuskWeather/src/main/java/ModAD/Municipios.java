@@ -27,11 +27,11 @@ public class Municipios implements Serializable{
 	private String nombreMuni;
 	
 	
-	@Column(name = "alcalde", unique = true, nullable = false)
+	@Column(name = "alcalde", unique = true, nullable = true)
 	private String alcaldeMuni;
 	
 	
-	@Column(name = "webMunicipio", unique = true, nullable = false)
+	@Column(name = "webMunicipio", unique = true, nullable = true)
 	private String webMuni;
 	
 	public Municipios() {
