@@ -14,10 +14,10 @@ public class VolcarEstaciones {
 	
 		ArrayList<EstacionMeteorologica> estaciones = lecturaDatos(xml);
 //		for(EstacionMeteorologica e: estaciones) {
-//			System.out.println(e.getNomMunicipio());
+//			System.out.println(e.getDireccion());
 //		}
 
-		//volcarInformacion(estaciones);
+		volcarInformacion(estaciones);
 	}
 	
 	public static ArrayList<EstacionMeteorologica> lecturaDatos(String archivo) {
@@ -25,7 +25,7 @@ public class VolcarEstaciones {
 		EstacionMeteorologica[] estacionesObj;
 		ArrayList<EstacionMeteorologica> listaEstaciones = new ArrayList<EstacionMeteorologica>();
 		String nomEst = "", direccion = "", nomMuni="";
-		String[] estaciones, nodos, nombreEst = null, direccEst = null, nombreMuni = null;
+		String[] estaciones, nodos = null, nombreEst = null, direccEst = null, nombreMuni = null;
 		double[] lati = null, longi = null;
 
 		estaciones = archivo.split("</estacion>");
@@ -95,21 +95,13 @@ public class VolcarEstaciones {
 //			}
 //		}
 //	}
-		for(int i = 0; i < estaciones.length; i++) {
-			nodos = estaciones[i].split("<Address>");
+		String[] aux;
+		for(int i = 0; i < estaciones.length-1; i++) {
+			nodos = estaciones[i].split("<Address>");		
 			for(int j = 0; j < nodos.length; j++) {
+				aux = nodos[j].split("</Address>");
 				if(nodos[j].contains("</Address>")){
-				for(int k = 0; k < nodos[j].length(); k++) {
-					if(nodos[j].charAt(k) == 's') {
-						direccion = nodos[j].substring(0, nodos[j].length()-1);
-						System.out.println();
-				//System.out.println(nodos[j].substring(0, nodos[j].length()-1));
-						if (direccion.contains("<")) {
-							direccEst[i] = direccion.substring(0, nodos[j].length()-1);
-							System.out.println(direccEst[i]);
-						}
-					}
-				}
+					direccEst[i] = aux[0];
 				}
 			}
 		}
