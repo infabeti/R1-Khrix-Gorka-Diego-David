@@ -13,113 +13,70 @@ public class VolcarEspaciosNaturales {
 		String xml = convertirJSONXML.leerArchivo("./ficherosXML//espacios-naturales.xml", "utf-8"); 
 		
 
-//		ArrayList<Municipios> municipios = lecturaDatos(xml);
-////		for(Municipios m: municipios) {
-////			System.out.println(m.getNombreMuni());
-////		}
-//
-//		volcarInformacion(municipios);
+		ArrayList<EspacioNatural> espaciosNaturales = lecturaDatos(xml);
+//		for(EspacioNatural en: espaciosNaturales) {
+//			System.out.println(en.getTipo());
+//		}
+
+		volcarInformacion(espaciosNaturales);
 	}
 	
-	public static ArrayList<EstacionMeteorologica> lecturaDatos(String archivo) {
-		Municipios[] munisObj;
-		EstacionMeteorologica[] estacionesObj;
-		ArrayList<EstacionMeteorologica> listaEstaciones = new ArrayList<EstacionMeteorologica>();
-		String nomEst = "", direccion = "", nomMuni="";
-		String[] estaciones, nodos, nombreEst = null, direccEst = null, nombreMuni = null;
-		double[] lati = null, longi = null;
+	public static ArrayList<EspacioNatural> lecturaDatos(String archivo) {
+		EspacioNatural[] espaciosNaturalesObj;
+		ArrayList<EspacioNatural> listaEspaciosNaturales = new ArrayList<EspacioNatural>();
+		String nomEspNat = "", descri = "", tipoEspNat="";
+		String[] espaciosNats, nodos, nombreEspNat = null, descriEspNat = null, tipo = null;
 
-		estaciones = archivo.split("</estacion>");
+		espaciosNats = archivo.split("</espacioNatural>");
 
-		nombreEst = new String[estaciones.length - 1];
-		direccEst = new String[estaciones.length -1];
-		nombreMuni = new String[estaciones.length -1];
-		lati = new double[estaciones.length -1];
-		longi = new double[estaciones.length -1];
-		estacionesObj = new EstacionMeteorologica[estaciones.length - 1];
+		nombreEspNat = new String[espaciosNats.length - 1];
+		descriEspNat = new String[espaciosNats.length -1];
+		tipo = new String[espaciosNats.length -1];
+		espaciosNaturalesObj = new EspacioNatural[espaciosNats.length-1];
 		
-		for (int i = 0; i < estaciones.length; i++) {
-			nodos = estaciones[i].split("/");
+		for (int i = 0; i < espaciosNats.length; i++) {
+			nodos = espaciosNats[i].split("/");
 			for (int j = 0; j < nodos.length; j++) {
-				if (nodos[j].contains("<Name>")) {
+				if (nodos[j].contains("<documentName>")) {
 					for (int k = 0; k < nodos[j].length(); k++) {		
 						if (nodos[j].charAt(k) == 'e') {
-							nomEst = nodos[j].substring(k, nodos[j].length() - 1);
-							if (nomEst.contains(">")) {
-								nombreEst[i] = nomEst.substring(2);
+							nomEspNat = nodos[j].substring(k, nodos[j].length() - 1);
+							if (nomEspNat.contains(">")) {
+								nombreEspNat[i] = nomEspNat.substring(2);
 							}
 						}
 					}
-				} else if (nodos[j].contains("<Latitude>")) {
-					
-					String numLati = nodos[j].substring(29, nodos[j].length()-1);
-					DecimalFormat formatter = new DecimalFormat("#.#");
-					try {
-						lati[i] = (double) formatter.parse(numLati);
-						//System.out.println(lati[j]);
-					} catch(ParseException e) {
-						System.out.println(e.getMessage());
-					}
-					
-				} else if (nodos[j].contains("<Longitude>")) {
-					
-					String numLongi = nodos[j].substring(20, nodos[j].length()-1);
-					DecimalFormat formatter = new DecimalFormat("#.#");
-					try {
-						longi[i] = (double) formatter.parse(numLongi);
-					} catch(ParseException e) {
-						System.out.println(e.getMessage());
-					}
-					//System.out.println(Double.parseDouble(nodos[j].substring(20, nodos[j].length()-1)));
-				
-				} else if(nodos[j].contains("<Address>")){
-					for(int k = 0; k < nodos[j].length(); k++) {
-						if(nodos[j].charAt(k) == 's') {
-							direccion = nodos[j].substring(26, nodos[j].length()-1);
-							if (direccion.contains(">")) {
-								direccEst[i] = direccion.substring(2);
-								//System.out.println(direccEst[i]);
-							}
-						}
-					}
-				} else if (nodos[j].contains("<Town>")) {
+				}else if(nodos[j].contains("<turismDescription>")){
 					for(int k = 0; k < nodos[j].length(); k++) {
 						if(nodos[j].charAt(k) == 'n') {
-							nomMuni = nodos[j].substring(k, nodos[j].length()-1);
-							if (nomMuni.contains(">")) {
-								nombreMuni[i] = nomMuni.substring(2);
-								//System.out.println(nombreMuni[i]);
+							descri = nodos[j].substring(k, nodos[j].length()-1);
+							if (descri.contains(">")) {
+								descriEspNat[i] = descri.substring(2);
+							}
+						}
+					}
+				} else if (nodos[j].contains("<natureType>")) {
+					for(int k = 0; k < nodos[j].length(); k++) {
+						if(nodos[j].charAt(k) == 'e') {
+							tipoEspNat = nodos[j].substring(k, nodos[j].length()-1);
+							if (tipoEspNat.contains(">")) {
+								tipo[i] = tipoEspNat.substring(2);
 							}
 						}
 					}
 				} 
 			}
 		}
-		
-		for(int i = 0; i < nombreMuni.length; i++) {
-			if(nombreMuni[i].contentEquals("Agurai")){
-				nombreMuni[i] = "Salvatierra";
-			}	
-			if(nombreMuni[i].contentEquals("Laudi")) {
-				nombreMuni[i] = "Laudio";
-			}
-			if(nombreMuni[i].contentEquals("Arrasat")) {
-				nombreMuni[i] = "Arrasate";
-			}
-			if(nombreMuni[i].contentEquals("Valdegoví")) {
-				nombreMuni[i] = "Villanueva de Valdegovía";
-			}
-		}
 
-		for (int i = 0; i < nombreMuni.length; i++) {
-			estacionesObj[i] = new EstacionMeteorologica((i+1), nombreEst[i], lati[i], longi[i], direccEst[i], nombreMuni[i]);
-			listaEstaciones.add(estacionesObj[i]);
+		for (int i = 0; i < tipo.length; i++) {
+			espaciosNaturalesObj[i] = new EspacioNatural((i+1), nombreEspNat[i], descriEspNat[i], tipo[i]);
+			listaEspaciosNaturales.add(espaciosNaturalesObj[i]);
 		}
 		
-		return listaEstaciones;
+		return listaEspaciosNaturales;
 	}
 
-	public static void volcarInformacion(ArrayList<EstacionMeteorologica> objetos) {
+	public static void volcarInformacion(ArrayList<EspacioNatural> objetos) {
 		
 		for (int i = 0; i < objetos.size(); i++) {
 			Session session = HibernateUtil.getSessionFactory().openSession();

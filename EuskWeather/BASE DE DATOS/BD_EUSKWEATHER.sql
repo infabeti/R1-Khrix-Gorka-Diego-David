@@ -36,7 +36,7 @@ create table ContieneEspNat
 	constraint pk_idMunicipio_idEspacioNatural primary key(nombreMunicipio, nomEspNat));
     
 create table Usuarios
-	(idUser int primary key, nombreApellido varchar(50) not null, direccion varchar(100) not null,
+	(idUser int primary key auto_increment, nombreApellido varchar(50) not null, direccion varchar(100) not null,
     mail varchar(50) not null, nickUsuario varchar(40) not null, contrasenia varchar(40) not null);
     
 create table Fotos

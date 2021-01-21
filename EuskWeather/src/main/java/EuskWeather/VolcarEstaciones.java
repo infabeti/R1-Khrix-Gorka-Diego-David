@@ -21,7 +21,6 @@ public class VolcarEstaciones {
 	}
 	
 	public static ArrayList<EstacionMeteorologica> lecturaDatos(String archivo) {
-		Municipios[] munisObj;
 		EstacionMeteorologica[] estacionesObj;
 		ArrayList<EstacionMeteorologica> listaEstaciones = new ArrayList<EstacionMeteorologica>();
 		String nomEst = "", direccion = "", nomMuni="";
@@ -84,17 +83,7 @@ public class VolcarEstaciones {
 				} 
 			}
 		}
-//		if(nodos[j].contains("<Address>")){
-//		for(int k = 0; k < nodos[j].length(); k++) {
-//			if(nodos[j].charAt(k) == 's') {
-//				direccion = nodos[j].substring(26, nodos[j].length()-1);
-//				if (direccion.contains(">")) {
-//					direccEst[i] = direccion.substring(2);
-//					//System.out.println(direccEst[i]);
-//				}
-//			}
-//		}
-//	}
+		
 		String[] aux;
 		for(int i = 0; i < estaciones.length-1; i++) {
 			nodos = estaciones[i].split("<Address>");		
