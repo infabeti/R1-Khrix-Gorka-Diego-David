@@ -40,7 +40,7 @@ create table Usuarios
     mail varchar(50) not null, nickUsuario varchar(40) not null, contrasenia varchar(40) not null);
     
 create table Fotos
-	(idFoto int primary key, nombreMunicipio varchar(40) not null, idUsuario int not null,
+	(idFoto int primary key auto_increment, fotoString varchar(500) not null, nombreMunicipio varchar(40) not null, idUsuario int not null,
     constraint fk_nombreMunicipio_2 foreign key(nombreMunicipio) references Municipios(nombreMuni) on update cascade on delete cascade,
     constraint fk_idUsuario foreign key(idUsuario) references Usuarios(idUser) on update cascade on delete cascade);
     
