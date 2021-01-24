@@ -13,8 +13,9 @@ public class convertirInfoMunicipiosXML {
 	    String archivoJSON = "", archivoXML = "", archJson = "", archJsonSinCabecera = "", archJsonDefinitivo = "";
 	    String contXML = "";
 	    FileWriter ficheroXML = null;
-    		archivoJSON = "./ficheros//1.json";
-    		archivoXML = "./ficherosXML//0.xml";
+	    int i = 1;
+    		archivoJSON = "./ficheros//" + Integer.toString(i) + ".json";
+    		archivoXML = "./ficherosXML//" + Integer.toString(i) + ".xml";
     		
     		//INICIO DE LA PREPARACION DE NUESTRO JSON
     		archJson = convertirJSONXML.leerArchivo(archivoJSON, "Windows-1252"); // Lee el archivo

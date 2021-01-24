@@ -3,10 +3,17 @@ package EuskWeatherApp;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 
 import org.json.JSONObject;
 
 import ModAD.DescargarPrincipales;
+import ModAD.EspacioNatural;
+import ModAD.EstacionMeteorologica;
+import ModAD.Municipios;
+import ModAD.VolcarEspaciosNaturales;
+import ModAD.VolcarEstaciones;
+import ModAD.VolcarMunicipios;
 import ModAD.convertirJSONXML;
 
 public class Ejecutable {
@@ -52,6 +59,20 @@ public class Ejecutable {
     	
     	//VOLCAR INFORMACION A LA BD CON HIBERNATE
     	
+    	//MUNICIPIOS
+    	String xmlMunicipios = convertirJSONXML.leerArchivo("./ficherosXML//municipios.xml", "utf-8");
+    	ArrayList<Municipios> municipios = VolcarMunicipios.lecturaDatos(xmlMunicipios);
+    	VolcarMunicipios.volcarInformacion(municipios);
+    	
+    	//ESTACIONES METEOROLOGICAS
+    	String xmlEstaciones = convertirJSONXML.leerArchivo("./ficherosXML//estaciones.xml", "utf-8");
+    	ArrayList<EstacionMeteorologica> estaciones = VolcarEstaciones.lecturaDatos(xmlEstaciones);
+    	VolcarEstaciones.volcarInformacion(estaciones);
+    	
+    	//ESPACIOS NATURALES
+    	String xmlEspaciosNaturales = convertirJSONXML.leerArchivo("./ficherosXML//espacios-naturales.xml", "utf-8");
+    	ArrayList<EspacioNatural> espaciosNaturales = VolcarEspaciosNaturales.lecturaDatos(xmlEspaciosNaturales);
+    	VolcarEspaciosNaturales.volcarInformacion(espaciosNaturales);
 	}
 
 }
