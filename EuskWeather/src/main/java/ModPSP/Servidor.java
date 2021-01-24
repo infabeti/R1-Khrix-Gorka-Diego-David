@@ -39,14 +39,15 @@ private int PUERTO = 5000;
 				
 				sql = (String) entrada.readObject();
 				
-				if(sql.contains("Usuarios")) {
+				if(sql.contains("from Usuarios")) {
 					resultadoConsulta = consultarDato.consultarUsuarios(sql);
 				}
-				if(sql.contains("Municipios")) {
-					resultadoConsulta = consultarDato.consultarMunicipios();
+				if(sql.contains("from Municipios")) {
+					resultadoConsulta = consultarDato.consultarMunicipios(sql);
 				}
-				
-				
+				if(sql.contains("from Provincias")) {
+					resultadoConsulta = consultarDato.consultarProvincias(sql);
+				}
 				salida.writeObject(resultadoConsulta);
 			}
 

@@ -4,12 +4,12 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import ModAD.Provincia;
+import ModAD.Provincias;
 
 public class ProvinciaTest {
 
-	private Provincia pVacio = new Provincia();
-	private Provincia pParam = new Provincia(1, "Bizkaia");
+	private Provincias pVacio = new Provincias();
+	private Provincias pParam = new Provincias(1, "Bizkaia");
 	
 	@Test
 	public void testConstructor() {

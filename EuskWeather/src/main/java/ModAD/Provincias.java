@@ -11,7 +11,7 @@ import javax.persistence.UniqueConstraint;
 @Entity
 @Table(name = "provincias", uniqueConstraints = {@UniqueConstraint(columnNames = "idProv"),@UniqueConstraint(columnNames = "nombreProv")})
 
-public class Provincia implements Serializable{
+public class Provincias implements Serializable{
 
 	@Id
 	@Column(name = "idProv", unique = true, nullable = false)
@@ -21,11 +21,11 @@ public class Provincia implements Serializable{
 	@Column(name = "nombreProv", unique = true, nullable = false)
 	private String nombreProv;
 	
-	public Provincia() {
+	public Provincias() {
 		
 	}
 	
-	public Provincia(int idProv, String nombreProv) {
+	public Provincias(int idProv, String nombreProv) {
 		this.idProv = idProv;
 		this.nombreProv = nombreProv;
 	}
