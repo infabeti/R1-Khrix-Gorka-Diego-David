@@ -7,6 +7,7 @@ import java.util.List;
 import org.hibernate.Query;
 import org.hibernate.Session;
 
+import ModAD.EstacionMeteorologica;
 import ModAD.HibernateUtil;
 import ModAD.Municipios;
 import ModAD.Usuarios;
@@ -68,6 +69,22 @@ public class consultarDato {
 		}
 	
 		return prov;
+	}
+	
+	public static ArrayList<EstacionMeteorologica> consultarEstaciones(String hql){
+		int x = 0;
+		ArrayList<EstacionMeteorologica> estacion = new ArrayList();
+		
+		Session session = HibernateUtil.getSessionFactory().openSession();
+		session.beginTransaction();
+		
+		Iterator obj = session.createQuery(hql).iterate();
+		while(obj.hasNext()) {
+			EstacionMeteorologica estaciones = (EstacionMeteorologica) obj.next();
+			estacion.add(estaciones);
+		}
+		
+		return estacion;
 	}
 
 }

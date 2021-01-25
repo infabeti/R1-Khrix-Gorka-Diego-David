@@ -51,6 +51,9 @@ private int PUERTO = 5000;
 					if(sql.contains("from Provincias")) {
 						resultadoConsulta = consultarDato.consultarProvincias(sql);
 					}
+					if(sql.contains("from EstacionMeteorologica")) {
+						resultadoConsulta = consultarDato.consultarEstaciones(sql);
+					}
 					salida.writeObject(resultadoConsulta);
 				}
 			}

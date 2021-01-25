@@ -5,6 +5,7 @@ import javax.swing.JTextField;
 import javax.swing.ScrollPaneConstants;
 import javax.swing.border.EmptyBorder;
 
+import ModAD.EstacionMeteorologica;
 import ModAD.Municipios;
 import ModAD.Provincias;
 import ModAD.Usuarios;
@@ -38,7 +39,7 @@ public class VentanaCliente extends JFrame{
 	private static Socket cliente = null;
 	private static ObjectInputStream entrada = null;
 	private static ObjectOutputStream salida = null;
-	public static JComboBox comboBox;
+	public JComboBox comboBox;
 	public static boolean SALIR = false;
 	
 	public static void main(String[] args) {
@@ -48,7 +49,7 @@ public class VentanaCliente extends JFrame{
 		
 	}
 	
-	public static void cargarComboBox(ObjectInputStream entrada, ObjectOutputStream salida) {
+	public static void cargarComboBox(JComboBox comboBox, ObjectInputStream entrada, ObjectOutputStream salida) {
 		
 		sql = "select p from Provincias p";
 		Provincias prov = new Provincias();
@@ -81,6 +82,38 @@ public class VentanaCliente extends JFrame{
 		
 	}
 	
+	public static void cargarComboBoxMunicipios(JComboBox comboBox, String codProv, ObjectInputStream entrada, ObjectOutputStream salida) {
+		
+		sql = "select m from Municipios m where m.idProv = " + codProv;
+		Municipios muni = new Municipios();
+		try {
+			salida.writeObject(sql);
+				
+			try {
+				ArrayList resultado = (ArrayList) entrada.readObject();
+			
+				Iterator<Municipios> it = resultado.iterator();
+				while(it.hasNext()) {
+					muni = it.next();
+					comboBox.addItem(muni.getNombreMuni());
+					
+				}
+			} catch (ClassNotFoundException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+				
+			
+		}catch (UnknownHostException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	
 	public VentanaCliente() {
 
 			
@@ -95,9 +128,9 @@ public class VentanaCliente extends JFrame{
 		btnVerUsuarios.setBounds(10, 439, 185, 23);
 		contentPane.add(btnVerUsuarios);
 		
-		JButton btnModificar = new JButton("MODIFICAR DIRECCION");
-		btnModificar.setBounds(10, 507, 185, 23);
-		contentPane.add(btnModificar);
+		JButton btnEstaciones = new JButton("ESTACIONES  METEOROLOGICAS DE");
+		btnEstaciones.setBounds(10, 507, 226, 23);
+		contentPane.add(btnEstaciones);
 		
 		JButton btnMunicipiosConEstaciones = new JButton("MUNICIPIOS DE");
 		
@@ -114,6 +147,10 @@ public class VentanaCliente extends JFrame{
 		comboBox.setBounds(205, 473, 129, 22);
 		contentPane.add(comboBox);
 		
+		JComboBox comboBoxMunis = new JComboBox();
+		comboBoxMunis.setBounds(246, 507, 147, 22);
+		contentPane.add(comboBoxMunis);
+		
 		try {
 			cliente = new Socket(IP, PUERTO);
 			entrada = new ObjectInputStream(cliente.getInputStream());
@@ -123,7 +160,28 @@ public class VentanaCliente extends JFrame{
 			e2.printStackTrace();
 		}
 		System.out.println("Conexion realizada con el servidor.");
-		cargarComboBox(entrada, salida);
+		cargarComboBox(comboBox, entrada, salida);
+		
+		comboBox.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				// TODO Auto-generated method stub
+				comboBoxMunis.removeAllItems();
+				String codProv = null;
+				if(comboBox.getSelectedItem().equals("Araba/Álava")) {
+					codProv = "1";
+				}
+				if(comboBox.getSelectedItem().equals("Gipuzkoa")) {
+					codProv = "20";
+				}
+				if(comboBox.getSelectedItem().equals("Bizkaia")) {
+					codProv = "48";
+				}
+				cargarComboBoxMunicipios(comboBoxMunis, codProv, entrada, salida);
+			}
+			
+		});
 		
 		btnVerUsuarios.addActionListener(new ActionListener() {
 			@Override
@@ -135,8 +193,6 @@ public class VentanaCliente extends JFrame{
 			Usuarios users = new Usuarios();
 			ArrayList<Usuarios> resultCons;
 			try {
-//				entrada = new ObjectInputStream(cliente.getInputStream());
-//				salida = new ObjectOutputStream(cliente.getOutputStream());
 				salida.writeObject(sql);
 					
 				ArrayList resultado = (ArrayList) entrada.readObject();
@@ -161,13 +217,13 @@ public class VentanaCliente extends JFrame{
 			}
 			
 		}
+		});
 		
-});
 		btnMunicipiosConEstaciones.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				textArea.setText("");
 				String codProv = null;
-				if(comboBox.getSelectedItem().equals("Araba/Àlava")) {
+				if(comboBox.getSelectedItem().equals("Araba/Álava")) {
 					codProv = "1";
 				}
 				if(comboBox.getSelectedItem().equals("Gipuzkoa")) {
@@ -176,14 +232,12 @@ public class VentanaCliente extends JFrame{
 				if(comboBox.getSelectedItem().equals("Bizkaia")) {
 					codProv = "48";
 				}
-				
+				//cargarComboBoxMunicipios(comboBoxMunis, codProv, entrada, salida);
 				
 				sql = "select m from Municipios m where m.idProv = " + codProv;
 				Municipios munic = new Municipios();
 				ArrayList<Municipios> resultCons;
 				try {
-//					entrada = new ObjectInputStream(cliente.getInputStream());
-//					salida = new ObjectOutputStream(cliente.getOutputStream());
 					salida.writeObject(sql);
 					
 					ArrayList resultado = (ArrayList) entrada.readObject();
@@ -207,6 +261,42 @@ public class VentanaCliente extends JFrame{
 				}
 				
 			}
+		});
+		
+		btnEstaciones.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				// TODO Auto-generated method stub
+				textArea.setText("");
+				sql = "select e from EstacionMeteorologica e where e.nomMunicipio = '" + comboBoxMunis.getSelectedItem() + "'";
+				EstacionMeteorologica estacion = new EstacionMeteorologica();
+				ArrayList<EstacionMeteorologica> resultCons;
+				try {
+					salida.writeObject(sql);
+					
+					ArrayList resultado = (ArrayList) entrada.readObject();
+					
+					Iterator<EstacionMeteorologica> it = resultado.iterator();
+					while(it.hasNext()) {
+					estacion = it.next();
+					textArea.setText(textArea.getText()+
+							"ID: "+estacion.getIdEstacion()+
+							"\nNombre de la estacion: "+estacion.getNombreEstacion()+
+							"\nLatitud: "+estacion.getLatidud()+
+							"\nLongitud: "+estacion.getLongitud()+
+							"\nDireccion: "+estacion.getDireccion()+ 
+							"\nMunicipio perteneciente: "+estacion.getNomMunicipio() +
+							"\n----------------------------------------------------------------\n");
+						
+					}
+					
+				}catch (IOException | ClassNotFoundException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+			}
+			
 		});
 	}
 }
