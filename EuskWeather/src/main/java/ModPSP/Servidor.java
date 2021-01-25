@@ -8,6 +8,8 @@ import java.net.Socket;
 import java.util.ArrayList;
 import java.util.List;
 
+import VistaPSP.VentanaCliente;
+
 public class Servidor extends Thread{
 private int PUERTO = 5000;
 	
@@ -37,18 +39,20 @@ private int PUERTO = 5000;
 				entrada = new ObjectInputStream(socket.getInputStream());
 				System.out.println("CLIENTE CONECTADO");
 				
-				sql = (String) entrada.readObject();
+				while(VentanaCliente.SALIR == false) {
+					sql = (String) entrada.readObject();
 				
-				if(sql.contains("from Usuarios")) {
-					resultadoConsulta = consultarDato.consultarUsuarios(sql);
+					if(sql.contains("from Usuarios")) {
+						resultadoConsulta = consultarDato.consultarUsuarios(sql);
+					}
+					if(sql.contains("from Municipios")) {
+						resultadoConsulta = consultarDato.consultarMunicipios(sql);
+					}
+					if(sql.contains("from Provincias")) {
+						resultadoConsulta = consultarDato.consultarProvincias(sql);
+					}
+					salida.writeObject(resultadoConsulta);
 				}
-				if(sql.contains("from Municipios")) {
-					resultadoConsulta = consultarDato.consultarMunicipios(sql);
-				}
-				if(sql.contains("from Provincias")) {
-					resultadoConsulta = consultarDato.consultarProvincias(sql);
-				}
-				salida.writeObject(resultadoConsulta);
 			}
 
 		} catch (IOException | ClassNotFoundException e) {

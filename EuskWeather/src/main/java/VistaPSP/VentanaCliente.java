@@ -37,6 +37,7 @@ public class VentanaCliente extends JFrame{
 	private static ObjectInputStream entrada = null;
 	private static ObjectOutputStream salida = null;
 	public static JComboBox comboBox;
+	public static boolean SALIR = false;
 	
 	public static void main(String[] args) {
 			
@@ -45,17 +46,14 @@ public class VentanaCliente extends JFrame{
 		
 	}
 	
-	public static void cargarComboBox() {
+	public static void cargarComboBox(ObjectInputStream entrada, ObjectOutputStream salida) {
 		
 		sql = "select p from Provincias p";
 		Provincias prov = new Provincias();
 		ArrayList<Provincias> resultCons;
 		try {
-			entrada = new ObjectInputStream(cliente.getInputStream());
-			salida = new ObjectOutputStream(cliente.getOutputStream());
 			salida.writeObject(sql);
 				
-			
 			try {
 				ArrayList resultado = (ArrayList) entrada.readObject();
 			
@@ -114,24 +112,27 @@ public class VentanaCliente extends JFrame{
 		
 		try {
 			cliente = new Socket(IP, PUERTO);
+			entrada = new ObjectInputStream(cliente.getInputStream());
+			salida = new ObjectOutputStream(cliente.getOutputStream());
 		} catch (IOException e2) {
 			// TODO Auto-generated catch block
 			e2.printStackTrace();
 		}
 		System.out.println("Conexion realizada con el servidor.");
-		cargarComboBox();
+		cargarComboBox(entrada, salida);
 		
 		btnVerUsuarios.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				// TODO Auto-generated method stub		
 				
+			textArea.setText("");
 			sql = "select u from Usuarios u";
 			Usuarios users = new Usuarios();
 			ArrayList<Usuarios> resultCons;
 			try {
-				entrada = new ObjectInputStream(cliente.getInputStream());
-				salida = new ObjectOutputStream(cliente.getOutputStream());
+//				entrada = new ObjectInputStream(cliente.getInputStream());
+//				salida = new ObjectOutputStream(cliente.getOutputStream());
 				salida.writeObject(sql);
 					
 				ArrayList resultado = (ArrayList) entrada.readObject();
@@ -160,27 +161,28 @@ public class VentanaCliente extends JFrame{
 });
 		btnMunicipiosConEstaciones.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String provincia = null;
+				textArea.setText("");
+				String codProv = null;
 				if(comboBox.getSelectedItem().equals("Araba/Álava")) {
-					provincia = "1";
+					codProv = "1";
 				}
 				if(comboBox.getSelectedItem().equals("Gipuzkoa")) {
-					provincia = "20";
+					codProv = "20";
 				}
 				if(comboBox.getSelectedItem().equals("Bizkaia")) {
-					provincia = "48";
+					codProv = "48";
 				}
 				if(comboBox.getSelectedItem().equals("ProvPrueba")) {
-					provincia = "2";
+					codProv = "2";
 				}
 				
 				
-				sql = "select m from Municipio m where m.idProv = " + provincia;
+				sql = "select m from Municipios m where m.idProv = " + codProv;
 				Municipios munic = new Municipios();
 				ArrayList<Municipios> resultCons;
 				try {
-					entrada = new ObjectInputStream(cliente.getInputStream());
-					salida = new ObjectOutputStream(cliente.getOutputStream());
+//					entrada = new ObjectInputStream(cliente.getInputStream());
+//					salida = new ObjectOutputStream(cliente.getOutputStream());
 					salida.writeObject(sql);
 					
 					ArrayList resultado = (ArrayList) entrada.readObject();
@@ -194,7 +196,7 @@ public class VentanaCliente extends JFrame{
 							"\nAlcalde: "+munic.getAlcaldeMuni()+
 							"\nWeb: "+munic.getWebMuni()+
 							"\nNick: "+munic.getIdProv()+ 
-							"\n----------------------------------------------------------------");
+							"\n----------------------------------------------------------------\n");
 						
 					}
 					
