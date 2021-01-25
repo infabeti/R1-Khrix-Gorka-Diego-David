@@ -2,6 +2,7 @@ package VistaPSP;
 
 import javax.swing.JFrame;
 import javax.swing.JTextField;
+import javax.swing.ScrollPaneConstants;
 import javax.swing.border.EmptyBorder;
 
 import ModAD.Municipios;
@@ -10,6 +11,7 @@ import ModAD.Usuarios;
 
 import javax.swing.JTextArea;
 import javax.swing.JRadioButton;
+import javax.swing.JScrollPane;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -97,14 +99,16 @@ public class VentanaCliente extends JFrame{
 		btnModificar.setBounds(10, 507, 185, 23);
 		contentPane.add(btnModificar);
 		
-		JButton btnMunicipiosConEstaciones = new JButton("MUNICIPIOS CON ESTACIONES");
+		JButton btnMunicipiosConEstaciones = new JButton("MUNICIPIOS DE");
 		
 		btnMunicipiosConEstaciones.setBounds(10, 473, 185, 23);
 		contentPane.add(btnMunicipiosConEstaciones);
 		
 		JTextArea textArea = new JTextArea();
-		textArea.setBounds(10, 11, 603, 417);
-		contentPane.add(textArea);
+		JScrollPane sp = new JScrollPane(textArea);
+		sp.setBounds(10,11,603,417);
+		sp.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+		contentPane.add(sp);
 		
 		comboBox = new JComboBox();
 		comboBox.setBounds(205, 473, 129, 22);
@@ -147,7 +151,7 @@ public class VentanaCliente extends JFrame{
 						"\nMail: "+users.getMail()+
 						"\nNick: "+users.getNickUsuario()+
 						"\nContraseña: "+users.getContrasenia()+
-						"\n----------------------------------------------------------------");
+						"\n----------------------------------------------------------------\n");
 					
 				}
 										
@@ -163,7 +167,7 @@ public class VentanaCliente extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 				textArea.setText("");
 				String codProv = null;
-				if(comboBox.getSelectedItem().equals("Araba/Álava")) {
+				if(comboBox.getSelectedItem().equals("Araba/Àlava")) {
 					codProv = "1";
 				}
 				if(comboBox.getSelectedItem().equals("Gipuzkoa")) {
@@ -171,9 +175,6 @@ public class VentanaCliente extends JFrame{
 				}
 				if(comboBox.getSelectedItem().equals("Bizkaia")) {
 					codProv = "48";
-				}
-				if(comboBox.getSelectedItem().equals("ProvPrueba")) {
-					codProv = "2";
 				}
 				
 				
@@ -195,7 +196,7 @@ public class VentanaCliente extends JFrame{
 							"\nNombre del municipio: "+munic.getNombreMuni()+
 							"\nAlcalde: "+munic.getAlcaldeMuni()+
 							"\nWeb: "+munic.getWebMuni()+
-							"\nNick: "+munic.getIdProv()+ 
+							"\nCodProv: "+munic.getIdProv()+ 
 							"\n----------------------------------------------------------------\n");
 						
 					}
