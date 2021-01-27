@@ -106,6 +106,5 @@ public class VolcarMunicipios {
 				session.close();
 				
 			}
-			HibernateUtil.shutdown();
 		}
 }

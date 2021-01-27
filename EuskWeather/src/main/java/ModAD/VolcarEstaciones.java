@@ -128,7 +128,6 @@ public class VolcarEstaciones {
 			session.close();
 			
 		}
-		HibernateUtil.shutdown();
 	}
 
 }
