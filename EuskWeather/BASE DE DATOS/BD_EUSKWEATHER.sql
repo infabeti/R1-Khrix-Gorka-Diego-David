@@ -4,6 +4,12 @@ use EuskWeather;
 
 create table Provincias
 	(idProv int primary key auto_increment, nombreProv varchar(40) not null);
+insert into Provincias
+values(1, "Araba/Álava");
+insert into Provincias
+values(20, "Gipuzkoa");
+insert into Provincias
+values(48, "Bizkaia");
     
 create table Municipios
 	(idMuni int, nombreMuni varchar(40) primary key,
@@ -40,11 +46,9 @@ create table Usuarios
     mail varchar(50) not null, nickUsuario varchar(40) not null, contrasenia varchar(40) not null);
     
 create table Fotos
-	(idFoto int primary key auto_increment, fotoString varchar(500) not null, nombreMunicipio varchar(40) not null, nombreUsuario varchar(40) not null,
-    constraint fk_nombreMunicipio_2 foreign key(nombreMunicipio) references Municipios(nombreMuni) on update cascade on delete cascade,
-    constraint fk_idUsuario foreign key(nombreUsuario) references Usuarios(nickUsuario) on update cascade on delete cascade);
+	(idFoto int primary key auto_increment, fotoString text not null, nombreMunicipio varchar(40) not null, nombreUsuario varchar(40) not null,
+    constraint fk_nombreMunicipio_2 foreign key(nombreMunicipio) references Municipios(nombreMuni) on update cascade on delete cascade);
 
 create table favoritos
 	(idFav int primary key auto_increment, nomMuni varchar(40),
-    constraint fk_nomMuni_ foreign key(nomMuni) references municipios(nombreMuni) on update cascade on delete cascade);
-    
+    constraint fk_nomMuni_ foreign key(nomMuni) references municipios(nombreMuni) on update cascade on delete cascade);    
