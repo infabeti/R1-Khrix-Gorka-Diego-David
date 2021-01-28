@@ -11,32 +11,33 @@ import javax.persistence.UniqueConstraint;
 
 @Entity
 @Table(name = "informacionmeteorologica", uniqueConstraints = {@UniqueConstraint(columnNames = "idInfo"),@UniqueConstraint(columnNames = "fechaInfo"),
-		@UniqueConstraint(columnNames = "presionAtm"),@UniqueConstraint(columnNames = "temperatura"),@UniqueConstraint(columnNames = "saturacionO2"),
-		@UniqueConstraint(columnNames = "nomEstMet")})
+		@UniqueConstraint(columnNames = "hora"), @UniqueConstraint(columnNames = "presionAtm"),@UniqueConstraint(columnNames = "temperatura"),
+		@UniqueConstraint(columnNames = "saturacionO2"), @UniqueConstraint(columnNames = "calidadAire"), @UniqueConstraint(columnNames = "nomEstMet")})
 
 public class InfoMeteorologica implements Serializable{
-	
+
 	@Id
 	@Column(name = "idInfo", unique = true, nullable = false)
 	private int idInfo;
 	
-	@Id
-	@Column(name = "fechaInfo", unique = true, nullable = false)
-	private Date fecha;
+	@Column(name = "fechaInfo", unique = true, nullable = true)
+	private String fecha;
 	
-	@Id
-	@Column(name = "presionAtm", unique = true, nullable = false)
-	private double presionAtmos;
+	@Column(name = "hora", unique = true, nullable = true)
+	private String hora;
 	
-	@Id
-	@Column(name = "temperatura", unique = true, nullable = false)
-	private double temperaturaC;
+	@Column(name = "presionAtm", unique = true, nullable = true)
+	private String presionAtm;
 	
-	@Id
-	@Column(name = "saturacionO2", unique = true, nullable = false)
+	@Column(name = "temperatura", unique = true, nullable = true)
+	private String temperatura;
+	
+	@Column(name = "saturacionO2", unique = true, nullable = true)
 	private int saturacionO2;
 	
-	@Id
+	@Column(name = "calidadAire", unique = true, nullable = true)
+	private String calidadAire;
+	
 	@Column(name = "nomEstMet", unique = true, nullable = false)
 	private String nomEstMet;
 	
@@ -44,22 +45,23 @@ public class InfoMeteorologica implements Serializable{
 		
 	}
 	
-	public InfoMeteorologica(int idInfo, Date fecha, double presionAtmos, 
-			double temperaturaC, int saturacionO2, String nomEstMet) {
+	public InfoMeteorologica(int idInfo, String fecha, String hora, String presionAtm, String temperatura,
+			int saturacionO2, String calidadAire, String nomEstMet) {
 		this.idInfo = idInfo;
 		this.fecha = fecha;
-		this.presionAtmos = presionAtmos;
-		this.temperaturaC = temperaturaC;
+		this.hora = hora;
+		this.presionAtm = presionAtm;
+		this.temperatura = temperatura;
 		this.saturacionO2 = saturacionO2;
+		this.calidadAire = calidadAire;
 		this.nomEstMet = nomEstMet;
 	}
-
-	public String getNomEstMet() {
-		return nomEstMet;
-	}
-
-	public void setNomEstMet(String nomEstMet) {
-		this.nomEstMet = nomEstMet;
+	
+	@Override
+	public String toString() {
+		return "InfoMeteorologica [idInfo=" + idInfo + ", fecha=" + fecha + ", hora=" + hora + ", presionAtm="
+				+ presionAtm + ", temperatura=" + temperatura + ", saturacionO2=" + saturacionO2 + ", calidadAire="
+				+ calidadAire + ", nomEstMet=" + nomEstMet + "]";
 	}
 
 	public int getIdInfo() {
@@ -70,28 +72,36 @@ public class InfoMeteorologica implements Serializable{
 		this.idInfo = idInfo;
 	}
 
-	public Date getFecha() {
+	public String getFecha() {
 		return fecha;
 	}
 
-	public void setFecha(Date fecha) {
+	public void setFecha(String fecha) {
 		this.fecha = fecha;
 	}
 
-	public double getPresionAtmos() {
-		return presionAtmos;
+	public String getHora() {
+		return hora;
 	}
 
-	public void setPresionAtmos(double presionAtmos) {
-		this.presionAtmos = presionAtmos;
+	public void setHora(String hora) {
+		this.hora = hora;
 	}
 
-	public double getTemperaturaC() {
-		return temperaturaC;
+	public String getPresionAtm() {
+		return presionAtm;
 	}
 
-	public void setTemperaturaC(double temperaturaC) {
-		this.temperaturaC = temperaturaC;
+	public void setPresionAtm(String presionAtm) {
+		this.presionAtm = presionAtm;
+	}
+
+	public String getTemperatura() {
+		return temperatura;
+	}
+
+	public void setTemperatura(String temperatura) {
+		this.temperatura = temperatura;
 	}
 
 	public int getSaturacionO2() {
@@ -100,6 +110,22 @@ public class InfoMeteorologica implements Serializable{
 
 	public void setSaturacionO2(int saturacionO2) {
 		this.saturacionO2 = saturacionO2;
+	}
+
+	public String getCalidadAire() {
+		return calidadAire;
+	}
+
+	public void setCalidadAire(String calidadAire) {
+		this.calidadAire = calidadAire;
+	}
+
+	public String getNomEstMet() {
+		return nomEstMet;
+	}
+
+	public void setNomEstMet(String nomEstMet) {
+		this.nomEstMet = nomEstMet;
 	}
 	
 }

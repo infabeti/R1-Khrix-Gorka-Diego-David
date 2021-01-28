@@ -16,6 +16,10 @@ create table Municipios
     alcalde varchar(120), webMunicipio varchar(40),
     idProvincia int not null,
     constraint fk_idProvincia foreign key(idProvincia) references Provincias(idProv) on update cascade on delete cascade);
+
+create table indexLinks
+	(idIndex int primary key auto_increment, nombreMuni varchar(40) not null, enlace varchar(100) not null,
+    constraint fk_nombreMuni_2_ foreign key(nombreMuni) references municipios(nombreMuni) on update cascade on delete cascade);
     
 create table EstacionMeteorologica
 	(idEstacion int, nombreEstacion varchar(40) primary key,
@@ -25,9 +29,8 @@ create table EstacionMeteorologica
     constraint fk_nomMunicipio foreign key(nomMunicipio) references Municipios(nombreMuni) on update cascade on delete cascade);
 
 create table InformacionMeteorologica
-	(idInfo int, fechaInfo Date primary key,
-    presionAtm double not null, temperatura double not null,
-    saturacionO2 int not null, nomEstMet varchar(40) not null,
+	(idInfo int primary key, fechaInfo varchar(40), hora varchar(40), presionAtm varchar(40), temperatura varchar(40),
+    saturacionO2 int, calidadAire varchar(50), nomEstMet varchar(40) not null,
     constraint fk_nomEstMet foreign key(nomEstMet) references EstacionMeteorologica(nombreEstacion) on update cascade on delete cascade);
 
 create table EspaciosNaturales
@@ -51,4 +54,5 @@ create table Fotos
 
 create table favoritos
 	(idFav int primary key auto_increment, nomMuni varchar(40),
-    constraint fk_nomMuni_ foreign key(nomMuni) references municipios(nombreMuni) on update cascade on delete cascade);    
+    constraint fk_nomMuni_ foreign key(nomMuni) references municipios(nombreMuni) on update cascade on delete cascade);
+    

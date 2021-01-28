@@ -86,7 +86,6 @@ public class VolcarEspaciosNaturales {
 			session.close();
 			
 		}
-		HibernateUtil.shutdown();
 	}
 
 }

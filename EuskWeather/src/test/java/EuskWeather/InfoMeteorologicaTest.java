@@ -11,17 +11,17 @@ import ModAD.InfoMeteorologica;
 public class InfoMeteorologicaTest {
 
 	private InfoMeteorologica infMetVacio = new InfoMeteorologica();
-	private InfoMeteorologica infMetParam = new InfoMeteorologica(1, new Date(2020-03-12), 
-			2.4, 7.2, 4, "Abadino");
+	private InfoMeteorologica infMetParam = new InfoMeteorologica(1, "1-1-2020", "24:00", "2.4", "5", 2, "Buena", "ZUMARRAGA");
 	
 	@Test
 	public void testConstructor() {
 		assertEquals(infMetParam.getIdInfo(), 1);
-		assertEquals(infMetParam.getFecha(), new Date(2020-03-12));
-		assertEquals(infMetParam.getPresionAtmos(), 2.4, 1);
-		assertEquals(infMetParam.getTemperaturaC(), 7.2, 1);
-		assertEquals(infMetParam.getSaturacionO2(), 4);
-		assertEquals(infMetParam.getNomEstMet(), "Abadino");
+		assertEquals(infMetParam.getFecha(), "1-1-2020");
+		assertEquals(infMetParam.getHora(), "24:00");
+		assertEquals(infMetParam.getPresionAtm(), "2.4");
+		assertEquals(infMetParam.getTemperatura(), "5");
+		assertEquals(infMetParam.getSaturacionO2(), 2);
+		assertEquals(infMetParam.getNomEstMet(), "ZUMARRAGA");
 	}
 	
 	@Test
@@ -38,26 +38,34 @@ public class InfoMeteorologicaTest {
 	
 	@Test
 	public void testGetSetFecha() {
-		infMetVacio.setFecha(new Date(2020-11-23));
-		assertEquals(infMetVacio.getFecha(), new Date(2020-11-23));
+		infMetVacio.setFecha("2020-11-23");
+		assertEquals(infMetVacio.getFecha(), "2020-11-23");
 	}
 	
 	@Test
-	public void testGetSetPresionAtmos() {
-		infMetVacio.setPresionAtmos(5.2);
-		assertEquals(infMetVacio.getPresionAtmos(), 5.2, 1);
+	public void testGetSetPresionAtm() {
+		infMetVacio.setPresionAtm("5.2");
+		assertEquals(infMetVacio.getPresionAtm(), "5.2");
 	}
 	
 	@Test
-	public void testGetSetTemperaturaC() {
-		infMetVacio.setTemperaturaC(4.3);
-		assertEquals(infMetVacio.getTemperaturaC(), 4.3, 1);
+	public void testGetSetTemperatura() {
+		infMetVacio.setTemperatura("23");;
+		assertEquals(infMetVacio.getTemperatura(), "23");
 	}
 	
 	@Test
 	public void testGetSetSaturacionO2() {
 		infMetVacio.setSaturacionO2(2);
 		assertEquals(infMetVacio.getSaturacionO2(), 2);
+	}
+	
+	@Test
+	public void testToString() {
+		String resultadoEsperado = "InfoMeteorologica [idInfo=" + infMetParam.getIdInfo() + ", fecha=" + infMetParam.getFecha() + ", hora=" + infMetParam.getHora() + ", presionAtm="
+				+ infMetParam.getPresionAtm() + ", temperatura=" + infMetParam.getTemperatura() + ", saturacionO2=" + infMetParam.getSaturacionO2() + ", calidadAire="
+				+ infMetParam.getCalidadAire() + ", nomEstMet=" + infMetParam.getNomEstMet() + "]";
+		assertEquals(infMetParam.toString(), resultadoEsperado);
 	}
 
 }

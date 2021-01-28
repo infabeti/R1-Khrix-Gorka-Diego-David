@@ -3,11 +3,13 @@ package ModAD;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 
+import org.hibernate.Session;
 import org.json.JSONObject;
 
 public class DescargarIndex {
-
+	
 	public static void main(String[] args) throws IOException {
 		String xml = convertirJSONXML.leerArchivo("./ficherosXML//index.xml", "utf-8"); 
 		procesarDatosAtmosfericos(xml);
@@ -75,5 +77,5 @@ public class DescargarIndex {
     		
     	}
 	}
-	
+
 }
