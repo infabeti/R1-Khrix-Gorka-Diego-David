@@ -16,9 +16,12 @@ public class VolcarInfoMeteorologica {
 			
 		listadoInfoMeteorologica = lecturaDatos();
 		cambiarNombreEstacion(listadoInfoMeteorologica);
-//		for(InfoMeteorologica i: listadoInfoMeteorologica) {
-//			System.out.println(i.toString());
-//		}
+		for(InfoMeteorologica i: listadoInfoMeteorologica) {
+			if(i.getTemperatura().contains(",")) {
+				i.setTemperatura(i.getTemperatura().replace(',', '.'));
+			}
+			//System.out.println(i.toString());
+		}
 		
 		volcarInformacion(listadoInfoMeteorologica);
 		
