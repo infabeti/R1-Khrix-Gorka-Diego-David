@@ -6,12 +6,12 @@ import java.sql.Date;
 
 import org.junit.Test;
 
-import ModAD.InfoMeteorologica;
+import ModAD.InformacionMeteorologica;
 
 public class InfoMeteorologicaTest {
 
-	private InfoMeteorologica infMetVacio = new InfoMeteorologica();
-	private InfoMeteorologica infMetParam = new InfoMeteorologica(1, "1-1-2020", "24:00", "2.4", "5", 2, "Buena", "ZUMARRAGA");
+	private InformacionMeteorologica infMetVacio = new InformacionMeteorologica();
+	private InformacionMeteorologica infMetParam = new InformacionMeteorologica(1, "1-1-2020", "24:00", "2.4", "5", 2, "Buena", "ZUMARRAGA");
 	
 	@Test
 	public void testConstructor() {

@@ -6,6 +6,7 @@ import javax.swing.ScrollPaneConstants;
 import javax.swing.border.EmptyBorder;
 
 import ModAD.EstacionMeteorologica;
+import ModAD.InformacionMeteorologica;
 import ModAD.Municipios;
 import ModAD.Provincias;
 import ModAD.Usuarios;
@@ -114,11 +115,46 @@ public class VentanaCliente extends JFrame{
 		
 	}
 	
+	public static void cargarComboBoxEstaciones(JComboBox comboBoxMuni, JComboBox comboBoxEst) {
+		sql = "select e from EstacionMeteorologica e where e.nomMunicipio='" + comboBoxMuni.getSelectedItem() + "'";
+		EstacionMeteorologica est = new EstacionMeteorologica();
+		try {
+			salida.writeObject(sql);
+				
+			try {
+				ArrayList resultado = (ArrayList) entrada.readObject();
+				String noDisponible = "No hay estaciones";
+				Iterator<EstacionMeteorologica> it = resultado.iterator();
+				while(it.hasNext()) {
+					est = it.next();
+					if(est.getNombreEstacion().isEmpty()) {
+						comboBoxEst.addItem(noDisponible);
+					} else {
+						comboBoxEst.addItem(est.getNombreEstacion());
+					}
+					
+					
+				}
+			} catch (ClassNotFoundException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+				
+			
+		}catch (UnknownHostException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
 	public VentanaCliente() {
 
 			
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 639, 580);
+		setBounds(100, 100, 639, 614);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -162,6 +198,14 @@ public class VentanaCliente extends JFrame{
 		System.out.println("Conexion realizada con el servidor.");
 		cargarComboBox(comboBox, entrada, salida);
 		
+		JButton btnCargarInfoMeteo = new JButton("CARGAR DATOS ESTACION");
+		btnCargarInfoMeteo.setBounds(10, 539, 185, 23);
+		contentPane.add(btnCargarInfoMeteo);
+		
+		JComboBox comboBoxEstaciones = new JComboBox();
+		comboBoxEstaciones.setBounds(205, 539, 147, 22);
+		contentPane.add(comboBoxEstaciones);
+		
 		comboBox.addActionListener(new ActionListener() {
 
 			@Override
@@ -179,6 +223,17 @@ public class VentanaCliente extends JFrame{
 					codProv = "48";
 				}
 				cargarComboBoxMunicipios(comboBoxMunis, codProv, entrada, salida);
+			}
+			
+		});
+		
+		comboBoxMunis.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				// TODO Auto-generated method stub
+				comboBoxEstaciones.removeAllItems();
+				cargarComboBoxEstaciones(comboBoxMunis, comboBoxEstaciones);
 			}
 			
 		});
@@ -294,6 +349,41 @@ public class VentanaCliente extends JFrame{
 				}catch (IOException | ClassNotFoundException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
+				}
+			}
+			
+		});
+		
+		btnCargarInfoMeteo.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				// TODO Auto-generated method stub
+				textArea.setText("");
+				sql = "select i from InformacionMeteorologica i where i.nomEstMet = '" + comboBoxEstaciones.getSelectedItem() + "'";
+				InformacionMeteorologica inf = new InformacionMeteorologica();
+				ArrayList<InformacionMeteorologica> resultCons;
+				try {
+					salida.writeObject(sql);
+					ArrayList resultado = (ArrayList) entrada.readObject();
+					
+					Iterator<InformacionMeteorologica> it = resultado.iterator();
+					while(it.hasNext()) {
+					inf = it.next();
+					textArea.setText(textArea.getText()+
+							"ID: "+inf.getIdInfo()+
+							"\nNombre de la estacion: "+inf.getNomEstMet()+
+							"\nFecha: "+inf.getFecha()+
+							"\nHora: "+inf.getHora()+
+							"\nPresion atm: "+inf.getPresionAtm()+ " atm" + 
+							"\nTemperatura: "+inf.getTemperatura() + "ºC" +
+							"\nSaturacion de O2: "+ inf.getSaturacionO2() + "ºC" +
+							"\nCalidad de aire: "+inf.getCalidadAire() +
+							"\n----------------------------------------------------------------\n");
+						
+					}
+				} catch(IOException | ClassNotFoundException e) {
+					
 				}
 			}
 			

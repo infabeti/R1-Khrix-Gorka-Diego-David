@@ -18,7 +18,7 @@
 		<mapping class="ModAD.EspacioNatural"></mapping>
 		<mapping class="ModAD.EstacionMeteorologica"></mapping>
 		<mapping class="ModAD.Foto"></mapping>
-		<mapping class="ModAD.InfoMeteorologica"></mapping>
+		<mapping class="ModAD.InformacionMeteorologica"></mapping>
 
 
 	</session-factory>

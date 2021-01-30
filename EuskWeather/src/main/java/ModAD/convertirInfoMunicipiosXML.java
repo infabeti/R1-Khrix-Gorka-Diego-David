@@ -20,11 +20,10 @@ public class convertirInfoMunicipiosXML {
     		//INICIO DE LA PREPARACION DE NUESTRO JSON
     		archJson = convertirJSONXML.leerArchivo(archivoJSON, "Windows-1252"); // Lee el archivo
     		archJsonSinCabecera = convertirJSONXML.repararJSONSinCabecera(archJson, "datosMunicipio");
-    		archJsonDefinitivo = convertirJSONXML.distinguirEtiquetasRepes(archJsonSinCabecera);
     		//AQUI YA TENDREMOS NUESTRO JSON PERTINENTE PREPARADO
     		
     		//INICIO DE LA CONVERSION JSON-->XML
-    		JSONObject objetoJson = new JSONObject(archJsonDefinitivo);
+    		JSONObject objetoJson = new JSONObject(archJsonSinCabecera);
     		contXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><nodoRaiz>" + org.json.XML.toString(objetoJson) + "</nodoRaiz>";
 
     		ficheroXML = new FileWriter(archivoXML);

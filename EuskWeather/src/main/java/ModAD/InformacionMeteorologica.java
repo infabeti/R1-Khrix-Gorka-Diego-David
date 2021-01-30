@@ -14,7 +14,7 @@ import javax.persistence.UniqueConstraint;
 		@UniqueConstraint(columnNames = "hora"), @UniqueConstraint(columnNames = "presionAtm"),@UniqueConstraint(columnNames = "temperatura"),
 		@UniqueConstraint(columnNames = "saturacionO2"), @UniqueConstraint(columnNames = "calidadAire"), @UniqueConstraint(columnNames = "nomEstMet")})
 
-public class InfoMeteorologica implements Serializable{
+public class InformacionMeteorologica implements Serializable{
 
 	@Id
 	@Column(name = "idInfo", unique = true, nullable = false)
@@ -41,11 +41,11 @@ public class InfoMeteorologica implements Serializable{
 	@Column(name = "nomEstMet", unique = true, nullable = false)
 	private String nomEstMet;
 	
-	public InfoMeteorologica() {
+	public InformacionMeteorologica() {
 		
 	}
 	
-	public InfoMeteorologica(int idInfo, String fecha, String hora, String presionAtm, String temperatura,
+	public InformacionMeteorologica(int idInfo, String fecha, String hora, String presionAtm, String temperatura,
 			int saturacionO2, String calidadAire, String nomEstMet) {
 		this.idInfo = idInfo;
 		this.fecha = fecha;

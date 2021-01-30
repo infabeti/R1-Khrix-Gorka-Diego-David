@@ -42,7 +42,7 @@ public class DescargarIndex {
 		}		
 		
 		for(int i = 0; i < nombreMuni.length; i+=3) {
-			DescargarPrincipales.descargarFicheros("https://opendata.euskadi.eus/contenidos/ds_informes_estudios/calidad_aire_2020/es_def/adjuntos/datos_indice/" + nombreMuni[i] + ".json", "./pruebaFich/" + nombreMuni[i] + ".json");
+			DescargarPrincipales.descargarFicheros("https://opendata.euskadi.eus/contenidos/ds_informes_estudios/calidad_aire_2020/es_def/adjuntos/datos_indice/" + nombreMuni[i] + ".json", "./ficheros/" + nombreMuni[i] + ".json");
 		}
 		
 		System.out.println("\nINICIADA CONVERSION A XML:\n");
@@ -50,7 +50,7 @@ public class DescargarIndex {
 	    String contXML = "";
 	    FileWriter ficheroXML = null;
     	for (int i = 0; i < nombreMuni.length; i+=3) {
-    		archivoJSON = "./pruebaFich//" + nombreMuni[i] + ".json";
+    		archivoJSON = "./ficheros//" + nombreMuni[i] + ".json";
     		archivoXML = "./ficherosXML//" + nombreMuni[i] + ".xml";
     		
     		//INICIO DE LA PREPARACION DE NUESTRO JSON

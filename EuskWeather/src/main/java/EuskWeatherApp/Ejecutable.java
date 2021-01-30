@@ -7,10 +7,11 @@ import java.util.ArrayList;
 
 import org.json.JSONObject;
 
+import ModAD.DescargarIndex;
 import ModAD.DescargarPrincipales;
 import ModAD.EspacioNatural;
 import ModAD.EstacionMeteorologica;
-import ModAD.InfoMeteorologica;
+import ModAD.InformacionMeteorologica;
 import ModAD.Municipios;
 import ModAD.VolcarEspaciosNaturales;
 import ModAD.VolcarEstaciones;
@@ -59,6 +60,10 @@ public class Ejecutable {
     		System.out.println("Archivo " + nombreArchivos[i] + ".json convertido a " + nombreArchivos[i] + ".xml correctamente");
     	}
     	
+    	//INFORMACION METEOROLOGICA
+    	String infoMeteo = convertirJSONXML.leerArchivo("./ficherosXML//index.xml", "utf-8");
+    	DescargarIndex.procesarDatosAtmosfericos(infoMeteo);
+    	
     	//VOLCAR INFORMACION A LA BD CON HIBERNATE
     	
     	//MUNICIPIOS
@@ -77,7 +82,7 @@ public class Ejecutable {
     	VolcarEspaciosNaturales.volcarInformacion(espaciosNaturales);
     	
     	//INFORMACION METEOROLOGICA
-    	ArrayList<InfoMeteorologica> listadoInfoMeteorologica = new ArrayList<InfoMeteorologica>();
+    	ArrayList<InformacionMeteorologica> listadoInfoMeteorologica = new ArrayList<InformacionMeteorologica>();
     	listadoInfoMeteorologica = VolcarInfoMeteorologica.lecturaDatos();
     	VolcarInfoMeteorologica.volcarInformacion(listadoInfoMeteorologica);
 	}

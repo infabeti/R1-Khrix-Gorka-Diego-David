@@ -12,11 +12,11 @@ public class VolcarInfoMeteorologica {
 		// TODO Auto-generated method stub
 		String xml = convertirJSONXML.leerArchivo("./ficherosXML//index.xml", "utf-8");
 		String[] nombresMunicipios = obtenerNombreMunicipios(xml);
-		ArrayList<InfoMeteorologica> listadoInfoMeteorologica = new ArrayList<InfoMeteorologica>();
+		ArrayList<InformacionMeteorologica> listadoInfoMeteorologica = new ArrayList<InformacionMeteorologica>();
 			
 		listadoInfoMeteorologica = lecturaDatos();
 		cambiarNombreEstacion(listadoInfoMeteorologica);
-		for(InfoMeteorologica i: listadoInfoMeteorologica) {
+		for(InformacionMeteorologica i: listadoInfoMeteorologica) {
 			if(i.getTemperatura().contains(",")) {
 				i.setTemperatura(i.getTemperatura().replace(',', '.'));
 			}
@@ -27,8 +27,8 @@ public class VolcarInfoMeteorologica {
 		
 	}
 	
-	public static void cambiarNombreEstacion(ArrayList<InfoMeteorologica> lista) {
-		for(InfoMeteorologica im: lista) {
+	public static void cambiarNombreEstacion(ArrayList<InformacionMeteorologica> lista) {
+		for(InformacionMeteorologica im: lista) {
 			if(im.getNomEstMet().equals("3_DE_MARZO")) {
 				im.setNomEstMet("3 DE MARZO");
 			} else if(im.getNomEstMet().equals("ALGORTA_BBIZI2")) {
@@ -92,23 +92,23 @@ public class VolcarInfoMeteorologica {
 		return nombreMuni;
 	}
 	
-	public static ArrayList<InfoMeteorologica> lecturaDatos() {
-		InfoMeteorologica[] infoMeteoObj;
-		ArrayList<InfoMeteorologica> listaInfo = new ArrayList<InfoMeteorologica>();
+	public static ArrayList<InformacionMeteorologica> lecturaDatos() {
+		InformacionMeteorologica[] infoMeteoObj;
+		ArrayList<InformacionMeteorologica> listaInfo = new ArrayList<InformacionMeteorologica>();
 		String estaciones = "";
 		String[] estacion, nodos, fechasTotales = null, fechasBD = null;
 		String[] calidadAire = null, calidadBD = null, nombreMuni = null, horaTotales = null, horasBD = null;
 		String[] tempC = null, tempBD = null;
 		int[] satO2 = null, satBD = null;
 		String[] presionAtm = null, presionBD = null;
-		ArrayList<InfoMeteorologica> listado = new ArrayList<InfoMeteorologica>();
+		ArrayList<InformacionMeteorologica> listado = new ArrayList<InformacionMeteorologica>();
 		
 		String archivoIndex = convertirJSONXML.leerArchivo("./ficherosXML//index.xml", "utf-8");
 		nombreMuni = obtenerNombreMunicipios(archivoIndex);
 //		for(int i = 0; i < nombreMuni.length; i+=3) {
 //			System.out.println(nombreMuni[i]);
 //		}
-		infoMeteoObj = new InfoMeteorologica[nombreMuni.length];
+		infoMeteoObj = new InformacionMeteorologica[nombreMuni.length];
 		satO2 = new int[nombreMuni.length]; 
 		fechasTotales = new String[nombreMuni.length];
 		horaTotales = new String[nombreMuni.length];
@@ -221,7 +221,7 @@ public class VolcarInfoMeteorologica {
 				//System.out.println(fechasBD[0]);
 			}
 			
-			infoMeteoObj[l] = new InfoMeteorologica((l+1), fechasBD[0], horasBD[0], presionBD[0], tempBD[0], satBD[0], calidadBD[0], nombreMuni[l]);
+			infoMeteoObj[l] = new InformacionMeteorologica((l+1), fechasBD[0], horasBD[0], presionBD[0], tempBD[0], satBD[0], calidadBD[0], nombreMuni[l]);
 			
 			listado.add(infoMeteoObj[l]);
 		}
@@ -230,9 +230,15 @@ public class VolcarInfoMeteorologica {
 		return listado;
 	}
 	
-	public static void volcarInformacion(ArrayList<InfoMeteorologica> objetos) {
+	public static void volcarInformacion(ArrayList<InformacionMeteorologica> objetos) {
 		
 		cambiarNombreEstacion(objetos);
+		for(InformacionMeteorologica i: objetos) {
+			if(i.getTemperatura().contains(",")) {
+				i.setTemperatura(i.getTemperatura().replace(',', '.'));
+			}
+			//System.out.println(i.toString());
+		}
 		
 		for (int i = 0; i < objetos.size(); i++) {
 			Session session = HibernateUtil.getSessionFactory().openSession();
