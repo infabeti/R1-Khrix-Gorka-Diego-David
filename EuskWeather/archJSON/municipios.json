@@ -7731,7 +7731,7 @@ jsonCallback([ {
   "entCensus" : "495",
   "entCensusYear" : "2.020",
   "entMajorName" : "OIER OYARBIDE MURUA  (Origen de los Datos: M.FTFP)",
-  "entLegislature" : "2019 - 2023",
+  "entLegislature" : "2019-2023",
   "entPoliticalParty" : "GHA",
   "latitudelongitude" : "0.0,0.0",
   "latwgs84" : "",

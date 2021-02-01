@@ -17,10 +17,10 @@ create table Municipios
     idProvincia int not null,
     constraint fk_idProvincia foreign key(idProvincia) references Provincias(idProv) on update cascade on delete cascade);
 
-create table indexLinks
-	(idIndex int primary key auto_increment, nombreMuni varchar(40) not null, enlace varchar(100) not null,
-    constraint fk_nombreMuni_2_ foreign key(nombreMuni) references municipios(nombreMuni) on update cascade on delete cascade);
-    
+create table hashes
+	(nomEstacion varchar(40) primary key, hash text not null,
+ 	constraint fk_nomEstacion foreign key(nomEstacion) references estacionmeteorologica(nombreEstacion));
+
 create table EstacionMeteorologica
 	(idEstacion int, nombreEstacion varchar(40) primary key,
     latitud double not null, longitud double not null,
