@@ -9,7 +9,7 @@ import ModAD.EspacioNatural;
 public class EspacioNaturalTest {
 
 	private EspacioNatural epVacio = new EspacioNatural();
-	private EspacioNatural epParam = new EspacioNatural(1, "La Arboleda", "Convertido en espacio de ocio", "Pantanos");
+	private EspacioNatural epParam = new EspacioNatural(1, "La Arboleda", "Convertido en espacio de ocio", "Pantanos", "Orio");
 	
 	@Test
 	public void test() {

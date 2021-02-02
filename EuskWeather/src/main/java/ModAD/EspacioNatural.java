@@ -18,28 +18,29 @@ public class EspacioNatural implements Serializable{
 	@Column(name = "idEspNat", unique = true, nullable = false)
 	private int idEspacioNat;
 	
-	@Id
 	@Column(name = "nombreEspNat", unique = true, nullable = false)
 	private String nombreEspacioNat;
 	
-	@Id
 	@Column(name = "descripcion", unique = true, nullable = false)
 	private String descripcion;
 	
-	@Id
 	@Column(name = "tipoEspNat", unique = true, nullable = false)
 	private String tipo;
+	
+	@Column(name = "nomMunicipio", unique = true, nullable = false)
+	private String nomMunicipio;
 	
 	public EspacioNatural() {
 		
 	}
 	
 	public EspacioNatural(int idEspacioNat, String nombreEspacioNat, String descripcion, 
-			String tipo) {
+			String tipo, String nomMunicipio) {
 		this.idEspacioNat = idEspacioNat;
 		this.nombreEspacioNat = nombreEspacioNat;
 		this.descripcion = descripcion;
 		this.tipo = tipo;
+		this.nomMunicipio = nomMunicipio;
 	}
 
 	public int getIdEspacioNat() {

@@ -24,14 +24,15 @@ public class VolcarEspaciosNaturales {
 	public static ArrayList<EspacioNatural> lecturaDatos(String archivo) {
 		EspacioNatural[] espaciosNaturalesObj;
 		ArrayList<EspacioNatural> listaEspaciosNaturales = new ArrayList<EspacioNatural>();
-		String nomEspNat = "", descri = "", tipoEspNat="";
-		String[] espaciosNats, nodos, nombreEspNat = null, descriEspNat = null, tipo = null;
+		String nomEspNat = "", descri = "", tipoEspNat="", nomMuni = "";
+		String[] espaciosNats, nodos, nombreEspNat = null, descriEspNat = null, tipo = null, nomMunicipio = null;
 
 		espaciosNats = archivo.split("</espacioNatural>");
 
 		nombreEspNat = new String[espaciosNats.length - 1];
 		descriEspNat = new String[espaciosNats.length -1];
 		tipo = new String[espaciosNats.length -1];
+		nomMunicipio = new String[espaciosNats.length -1];
 		espaciosNaturalesObj = new EspacioNatural[espaciosNats.length-1];
 		
 		for (int i = 0; i < espaciosNats.length; i++) {
@@ -64,12 +65,57 @@ public class VolcarEspaciosNaturales {
 							}
 						}
 					}
-				} 
+				}
+			}
+		}
+		
+		String[] aux;
+		for(int i = 0; i < espaciosNats.length-1; i++) {
+			nodos = espaciosNats[i].split("<municipality>");		
+			for(int j = 0; j < nodos.length; j++) {
+				aux = nodos[j].split("</municipality>");
+				if(nodos[j].contains("</municipality>")){
+					nomMunicipio[i] = aux[0];
+					System.out.println(nomMunicipio[i]);
+				}
+			}
+		}
+		
+		for(int i= 0; i < nomMunicipio.length; i++) {
+			if(nomMunicipio[i].contentEquals("Ayala/Aiara")) {
+				nomMunicipio[i] = "Aia";
+			}
+			if(nomMunicipio[i].contentEquals("Arratzua-Ubarrundia")) {
+				nomMunicipio[i] = "Arratzu";
+			}
+			if(nomMunicipio[i].contentEquals("Otxandio Legutio Legutio Legutio")) {
+				nomMunicipio[i] = "Legutio";
+			}
+			if(nomMunicipio[i].contentEquals("Valdegovía/Gaubea")) {
+				nomMunicipio[i] = "Villanueva de Valdegovía";
+			}
+			if(nomMunicipio[i].contentEquals("Campezo/Kanpezu")) {
+				nomMunicipio[i] = "Karkamu";
+			}
+			if(nomMunicipio[i].contentEquals("Getxo Sopela")) {
+				nomMunicipio[i] = "Sopela";
+			}
+			if(nomMunicipio[i].contentEquals("Zierbena Muskiz")) {
+				nomMunicipio[i] = "Zierbena";
+			}
+			if(nomMunicipio[i].contentEquals("Donostia / San Sebastián")) {
+				nomMunicipio[i] = "Donostia";
+			}
+			if(nomMunicipio[i].contentEquals("Sukarrieta Busturia")) {
+				nomMunicipio[i] = "Sukarrieta";
+			}
+			if(nomMunicipio[i].contentEquals("Barrundia Elburgo/Burgelu")) {
+				nomMunicipio[i] = "Elburgo";
 			}
 		}
 
 		for (int i = 0; i < tipo.length; i++) {
-			espaciosNaturalesObj[i] = new EspacioNatural((i+1), nombreEspNat[i], descriEspNat[i], tipo[i]);
+			espaciosNaturalesObj[i] = new EspacioNatural((i+1), nombreEspNat[i], descriEspNat[i], tipo[i], nomMunicipio[i]);
 			listaEspaciosNaturales.add(espaciosNaturalesObj[i]);
 		}
 		

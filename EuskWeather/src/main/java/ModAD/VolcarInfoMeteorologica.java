@@ -15,15 +15,15 @@ public class VolcarInfoMeteorologica {
 		ArrayList<InformacionMeteorologica> listadoInfoMeteorologica = new ArrayList<InformacionMeteorologica>();
 			
 		listadoInfoMeteorologica = lecturaDatos();
-		cambiarNombreEstacion(listadoInfoMeteorologica);
-		for(InformacionMeteorologica i: listadoInfoMeteorologica) {
-			if(i.getTemperatura().contains(",")) {
-				i.setTemperatura(i.getTemperatura().replace(',', '.'));
-			}
-			//System.out.println(i.toString());
-		}
+		//cambiarNombreEstacion(listadoInfoMeteorologica);
+//		for(InformacionMeteorologica i: listadoInfoMeteorologica) {
+//			if(i.getTemperatura().contains(",")) {
+//				i.setTemperatura(i.getTemperatura().replace(',', '.'));
+//			}
+//			//System.out.println(i.toString());
+//		}
 		
-		volcarInformacion(listadoInfoMeteorologica);
+		//volcarInformacion(listadoInfoMeteorologica);
 		
 	}
 	
@@ -128,7 +128,7 @@ public class VolcarInfoMeteorologica {
 								estaciones = nodos[j].substring(k, nodos[j].length() - 1);
 								if (estaciones.contains(">")) {
 									horaTotales[l] = estaciones.substring(2);
-									
+									System.out.println(horaTotales[l]);
 								}
 							}
 						}

@@ -36,7 +36,8 @@ create table InformacionMeteorologica
 create table EspaciosNaturales
 	(idEspNat int, nombreEspNat varchar(50) primary key,
     descripcion varchar(150) not null, 
-    tipoEspNat enum('Playas', 'Pantanos', 'Rios') not null);
+    tipoEspNat enum('Playas', 'Pantanos', 'Rios') not null, nomMunicipio varchar(40) not null,
+	constraint fk_nombreMunicipio_espnat foreign key(nomMunicipio) references Municipios(nombreMuni));
     
 create table ContieneEspNat
 	(nombreMunicipio varchar(40), nomEspNat varchar(50),
