@@ -17,10 +17,6 @@ create table Municipios
     idProvincia int not null,
     constraint fk_idProvincia foreign key(idProvincia) references Provincias(idProv) on update cascade on delete cascade);
 
-create table hashes
-	(nomEstacion varchar(40) primary key, hash text not null,
- 	constraint fk_nomEstacion foreign key(nomEstacion) references estacionmeteorologica(nombreEstacion));
-
 create table EstacionMeteorologica
 	(idEstacion int, nombreEstacion varchar(40) primary key,
     latitud double not null, longitud double not null,
