@@ -10,7 +10,7 @@ import org.json.JSONObject;
 import ContAD.ControladorPrincipal;
 import ModAD.DescargarIndex;
 import ModAD.DescargarPrincipales;
-import ModAD.EspacioNatural;
+import ModAD.EspaciosNaturales;
 import ModAD.EstacionMeteorologica;
 import ModAD.ModeloPrincipal;
 import ModAD.Municipios;

@@ -4,12 +4,12 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import ModAD.EspacioNatural;
+import ModAD.EspaciosNaturales;
 
 public class EspacioNaturalTest {
 
-	private EspacioNatural epVacio = new EspacioNatural();
-	private EspacioNatural epParam = new EspacioNatural(1, "La Arboleda", "Convertido en espacio de ocio", "Pantanos", "Getxo");
+	private EspaciosNaturales epVacio = new EspaciosNaturales();
+	private EspaciosNaturales epParam = new EspaciosNaturales(1, "La Arboleda", "Convertido en espacio de ocio", "Pantanos", "Getxo");
 	
 	@Test
 	public void test() {

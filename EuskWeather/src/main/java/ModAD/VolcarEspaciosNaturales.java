@@ -6,9 +6,9 @@ import org.hibernate.Session;
 
 public class VolcarEspaciosNaturales {
 	
-	public static ArrayList<EspacioNatural> lecturaDatos(String archivo) {
-		EspacioNatural[] espaciosNaturalesObj;
-		ArrayList<EspacioNatural> listaEspaciosNaturales = new ArrayList<EspacioNatural>();
+	public static ArrayList<EspaciosNaturales> lecturaDatos(String archivo) {
+		EspaciosNaturales[] espaciosNaturalesObj;
+		ArrayList<EspaciosNaturales> listaEspaciosNaturales = new ArrayList<EspaciosNaturales>();
 		String nomEspNat = "", descri = "", tipoEspNat="", nomMuni = "";
 		String[] espaciosNats, nodos, nombreEspNat = null, descriEspNat = null, tipo = null, nomMunicipio = null;
 
@@ -18,7 +18,7 @@ public class VolcarEspaciosNaturales {
 		descriEspNat = new String[espaciosNats.length -1];
 		tipo = new String[espaciosNats.length -1];
 		nomMunicipio = new String[espaciosNats.length -1];
-		espaciosNaturalesObj = new EspacioNatural[espaciosNats.length-1];
+		espaciosNaturalesObj = new EspaciosNaturales[espaciosNats.length-1];
 		
 		for (int i = 0; i < espaciosNats.length; i++) {
 			nodos = espaciosNats[i].split("/");
@@ -100,14 +100,14 @@ public class VolcarEspaciosNaturales {
 		}
 
 		for (int i = 0; i < tipo.length; i++) {
-			espaciosNaturalesObj[i] = new EspacioNatural((i+1), nombreEspNat[i], descriEspNat[i], tipo[i], nomMunicipio[i]);
+			espaciosNaturalesObj[i] = new EspaciosNaturales((i+1), nombreEspNat[i], descriEspNat[i], tipo[i], nomMunicipio[i]);
 			listaEspaciosNaturales.add(espaciosNaturalesObj[i]);
 		}
 		
 		return listaEspaciosNaturales;
 	}
 
-	public static void volcarInformacion(ArrayList<EspacioNatural> objetos) {
+	public static void volcarInformacion(ArrayList<EspaciosNaturales> objetos) {
 		
 		for (int i = 0; i < objetos.size(); i++) {
 			Session session = HibernateUtil.getSessionFactory().openSession();

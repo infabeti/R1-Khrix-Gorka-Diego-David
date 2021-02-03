@@ -7,6 +7,7 @@ import java.util.List;
 import org.hibernate.Query;
 import org.hibernate.Session;
 
+import ModAD.EspaciosNaturales;
 import ModAD.EstacionMeteorologica;
 import ModAD.HibernateUtil;
 import ModAD.InformacionMeteorologica;
@@ -102,6 +103,21 @@ public class consultarDato {
 		}
 		
 		return infoMeteo;
+	}
+	public static ArrayList<EspaciosNaturales> consultarEspacio(String hql){
+		int x = 0;
+		ArrayList<EspaciosNaturales> espacio = new ArrayList();
+		
+		Session session = HibernateUtil.getSessionFactory().openSession();
+		session.beginTransaction();
+		
+		Iterator obj = session.createQuery(hql).iterate();
+		while(obj.hasNext()) {
+			EspaciosNaturales esp = (EspaciosNaturales) obj.next();
+			espacio.add(esp);
+		}
+		
+		return espacio;
 	}
 
 }

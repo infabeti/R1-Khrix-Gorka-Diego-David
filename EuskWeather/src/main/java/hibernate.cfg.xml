@@ -15,7 +15,7 @@
 		<mapping class="ModAD.Municipios"></mapping>
 
 		<mapping class="ModAD.Provincias"></mapping>
-		<mapping class="ModAD.EspacioNatural"></mapping>
+		<mapping class="ModAD.EspaciosNaturales"></mapping>
 		<mapping class="ModAD.EstacionMeteorologica"></mapping>
 		<mapping class="ModAD.Foto"></mapping>
 		<mapping class="ModAD.InformacionMeteorologica"></mapping>

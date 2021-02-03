@@ -5,6 +5,7 @@ import javax.swing.JTextField;
 import javax.swing.ScrollPaneConstants;
 import javax.swing.border.EmptyBorder;
 
+import ModAD.EspaciosNaturales;
 import ModAD.EstacionMeteorologica;
 import ModAD.InformacionMeteorologica;
 import ModAD.Municipios;
@@ -150,18 +151,53 @@ public class VentanaCliente extends JFrame{
 		}
 	}
 	
+	public static void cargarComboBoxEspacios(JComboBox comboBoxMuni, JComboBox comboBoxEst) {
+		sql = "select esp from EspaciosNaturales esp where esp.nomMunicipio='" + comboBoxMuni.getSelectedItem() + "'";
+		EspaciosNaturales esp = new EspaciosNaturales();
+		try {
+			salida.writeObject(sql);
+				
+			try {
+				ArrayList resultado = (ArrayList) entrada.readObject();
+				String noDisponible = "No hay estaciones";
+				Iterator<EspaciosNaturales> it = resultado.iterator();
+				while(it.hasNext()) {
+					esp = it.next();
+					if(esp.getNombreEspacioNat().isEmpty()) {
+						comboBoxEst.addItem(noDisponible);
+					} else {
+						comboBoxEst.addItem(esp.getNombreEspacioNat());
+					}
+					
+					
+				}
+			} catch (ClassNotFoundException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+				
+			
+		}catch (UnknownHostException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
 	public VentanaCliente() {
 
 			
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 639, 614);
+		setBounds(100, 100, 639, 650);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
 		JButton btnVerUsuarios = new JButton("VER TODOS USUARIOS");
-		btnVerUsuarios.setBounds(10, 439, 185, 23);
+		btnVerUsuarios.setBounds(10, 439, 226, 23);
 		contentPane.add(btnVerUsuarios);
 		
 		JButton btnEstaciones = new JButton("ESTACIONES  METEOROLOGICAS DE");
@@ -170,7 +206,7 @@ public class VentanaCliente extends JFrame{
 		
 		JButton btnMunicipiosConEstaciones = new JButton("MUNICIPIOS DE");
 		
-		btnMunicipiosConEstaciones.setBounds(10, 473, 185, 23);
+		btnMunicipiosConEstaciones.setBounds(10, 473, 226, 23);
 		contentPane.add(btnMunicipiosConEstaciones);
 		
 		JTextArea textArea = new JTextArea();
@@ -180,7 +216,7 @@ public class VentanaCliente extends JFrame{
 		contentPane.add(sp);
 		
 		comboBox = new JComboBox();
-		comboBox.setBounds(205, 473, 129, 22);
+		comboBox.setBounds(246, 473, 147, 22);
 		contentPane.add(comboBox);
 		
 		JComboBox comboBoxMunis = new JComboBox();
@@ -199,12 +235,50 @@ public class VentanaCliente extends JFrame{
 		cargarComboBox(comboBox, entrada, salida);
 		
 		JButton btnCargarInfoMeteo = new JButton("CARGAR DATOS ESTACION");
-		btnCargarInfoMeteo.setBounds(10, 539, 185, 23);
+		btnCargarInfoMeteo.setBounds(10, 539, 226, 23);
 		contentPane.add(btnCargarInfoMeteo);
 		
 		JComboBox comboBoxEstaciones = new JComboBox();
-		comboBoxEstaciones.setBounds(205, 539, 147, 22);
+		comboBoxEstaciones.setBounds(246, 539, 147, 22);
 		contentPane.add(comboBoxEstaciones);
+		
+		JButton btnNewButton = new JButton("CARGAR ESPACIO NATURAL");
+		btnNewButton.setBounds(10, 573, 226, 23);
+		contentPane.add(btnNewButton);
+		
+		JComboBox comboBoxEspacios = new JComboBox();
+		comboBoxEspacios.setBounds(246, 573, 147, 22);
+		contentPane.add(comboBoxEspacios);
+		
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				textArea.setText("");
+				sql = "select esp from EspaciosNaturales esp where esp.nombreEspacioNat = '" + comboBoxEspacios.getSelectedItem() + "'";
+				EspaciosNaturales espacio = new EspaciosNaturales();
+				ArrayList<EspaciosNaturales> resultCons;
+				try {
+					salida.writeObject(sql);
+					
+					ArrayList resultado = (ArrayList) entrada.readObject();
+					
+					Iterator<EspaciosNaturales> it = resultado.iterator();
+					while(it.hasNext()) {
+						espacio = it.next();
+					textArea.setText(textArea.getText()+
+							"ID: "+espacio.getIdEspacioNat()+
+							"\nNombre de la estacion: "+espacio.getNombreEspacioNat()+
+							"\nDescripcion: "+espacio.getDescripcion()+
+							"\nTipo: "+espacio.getTipo()+
+							"\n----------------------------------------------------------------\n");
+						
+					}
+					
+				}catch (IOException | ClassNotFoundException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+			}
+		});
 		
 		comboBox.addActionListener(new ActionListener() {
 
@@ -234,6 +308,8 @@ public class VentanaCliente extends JFrame{
 				// TODO Auto-generated method stub
 				comboBoxEstaciones.removeAllItems();
 				cargarComboBoxEstaciones(comboBoxMunis, comboBoxEstaciones);
+				comboBoxEspacios.removeAllItems();
+				cargarComboBoxEspacios(comboBoxMunis, comboBoxEspacios);
 			}
 			
 		});

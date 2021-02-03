@@ -12,7 +12,7 @@ import javax.persistence.UniqueConstraint;
 @Table(name = "espaciosnaturales", uniqueConstraints = {@UniqueConstraint(columnNames = "idEspNat"),@UniqueConstraint(columnNames = "nombreEspNat"),
 		@UniqueConstraint(columnNames = "descripcion"),@UniqueConstraint(columnNames = "tipoEspNat")})
 
-public class EspacioNatural implements Serializable{
+public class EspaciosNaturales implements Serializable{
 
 	@Id
 	@Column(name = "idEspNat", unique = true, nullable = false)
@@ -33,11 +33,11 @@ public class EspacioNatural implements Serializable{
 	@Column(name = "nomMunicipio", unique = true, nullable = false)
 	private String nomMunicipio;
 	
-	public EspacioNatural() {
+	public EspaciosNaturales() {
 		
 	}
 	
-	public EspacioNatural(int idEspacioNat, String nombreEspacioNat, String descripcion, 
+	public EspaciosNaturales(int idEspacioNat, String nombreEspacioNat, String descripcion, 
 			String tipo, String nomMunicipio) {
 		this.idEspacioNat = idEspacioNat;
 		this.nombreEspacioNat = nombreEspacioNat;

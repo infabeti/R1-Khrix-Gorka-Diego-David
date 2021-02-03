@@ -65,6 +65,9 @@ private int PUERTO = 5000;
 					if(sql.contains("from InformacionMeteorologica")) {
 						resultadoConsulta = consultarDato.consultarInfoMeteo(sql);
 					}
+					if(sql.contains("from EspaciosNaturales")) {
+						resultadoConsulta = consultarDato.consultarEspacio(sql);
+					}
 					salida.writeObject(resultadoConsulta);
 				}
 			}
