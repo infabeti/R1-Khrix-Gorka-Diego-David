@@ -1,25 +1,10 @@
 package ModAD;
 
-import java.text.DecimalFormat;
-import java.text.ParseException;
 import java.util.ArrayList;
 
 import org.hibernate.Session;
 
 public class VolcarEspaciosNaturales {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		String xml = convertirJSONXML.leerArchivo("./ficherosXML//espacios-naturales.xml", "utf-8"); 
-		
-
-		ArrayList<EspacioNatural> espaciosNaturales = lecturaDatos(xml);
-//		for(EspacioNatural en: espaciosNaturales) {
-//			System.out.println(en.getTipo());
-//		}
-
-		volcarInformacion(espaciosNaturales);
-	}
 	
 	public static ArrayList<EspacioNatural> lecturaDatos(String archivo) {
 		EspacioNatural[] espaciosNaturalesObj;
@@ -65,7 +50,7 @@ public class VolcarEspaciosNaturales {
 							}
 						}
 					}
-				}
+				} 
 			}
 		}
 		
@@ -76,7 +61,7 @@ public class VolcarEspaciosNaturales {
 				aux = nodos[j].split("</municipality>");
 				if(nodos[j].contains("</municipality>")){
 					nomMunicipio[i] = aux[0];
-					System.out.println(nomMunicipio[i]);
+					//System.out.println(nomMunicipio[i]);
 				}
 			}
 		}
@@ -127,11 +112,13 @@ public class VolcarEspaciosNaturales {
 		for (int i = 0; i < objetos.size(); i++) {
 			Session session = HibernateUtil.getSessionFactory().openSession();
 			session.beginTransaction();
-			session.save(objetos.get(i));
+			//session.save(objetos.get(i));
+			session.saveOrUpdate(objetos.get(i));
 			session.getTransaction().commit();
 			session.close();
 			
 		}
+		//HibernateUtil.shutdown();
 	}
 
 }

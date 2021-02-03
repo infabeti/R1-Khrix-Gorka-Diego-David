@@ -7,18 +7,12 @@ import java.util.ArrayList;
 import org.hibernate.Session;
 
 public class VolcarEstaciones {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		String xml = convertirJSONXML.leerArchivo("./ficherosXML//estaciones.xml", "utf-8"); 
 	
-		ArrayList<EstacionMeteorologica> estaciones = lecturaDatos(xml);
-//		for(EstacionMeteorologica e: estaciones) {
-//			System.out.println(e.getDireccion());
-//		}
-
-		volcarInformacion(estaciones);
-	}
+//	public static void main(String[] args) {
+//		String xml = convertirJSONXML.leerArchivo("./ficherosXML//estaciones.xml", "utf-8");
+//		lecturaDatos(xml);
+//	}
+	
 	
 	public static ArrayList<EstacionMeteorologica> lecturaDatos(String archivo) {
 		EstacionMeteorologica[] estacionesObj;
@@ -28,7 +22,6 @@ public class VolcarEstaciones {
 		double[] lati = null, longi = null;
 
 		estaciones = archivo.split("</estacion>");
-
 		nombreEst = new String[estaciones.length - 1];
 		direccEst = new String[estaciones.length -1];
 		nombreMuni = new String[estaciones.length -1];
@@ -123,7 +116,8 @@ public class VolcarEstaciones {
 		for (int i = 0; i < objetos.size(); i++) {
 			Session session = HibernateUtil.getSessionFactory().openSession();
 			session.beginTransaction();
-			session.save(objetos.get(i));
+			//session.save(objetos.get(i));
+			session.saveOrUpdate(objetos.get(i));
 			session.getTransaction().commit();
 			session.close();
 			

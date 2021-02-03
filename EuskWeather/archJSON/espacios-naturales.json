@@ -43,11 +43,11 @@ jsonCallback([ {
   "phone" : "",
   "email" : "",
   "webpage" : "",
-  "friendlyUrl" : "https://opendata.euskadi.eus/datos/-/es/playas-embalses-rios/embalse-de-marono/",
-  "physicalUrl" : "https://opendata.euskadi.eus/datos/contenidos/g_naturaleza/0000008882_g1_rec_turismo/es_8882/8882-ficha2.html",
-  "dataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000008882_g1_rec_turismo/es_8882/data/8882_openData.xml",
-  "metadataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000008882_g1_rec_turismo/r01Index/0000008882_g1_rec_turismo-idxContent.xml",
-  "zipFile" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000008882_g1_rec_turismo/opendata/0000008882_g1_rec_turismo.zip"
+  "friendlyUrl" : "https://turismoa.euskadi.eus/es/playas-embalses-rios/embalse-de-marono/aa30-12375/es/",
+  "physicalUrl" : "https://turismoa.euskadi.eus/aa30-12375/es/contenidos/g_naturaleza/0000008882_g1_rec_turismo/es_8882/8882-ficha2.html",
+  "dataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000008882_g1_rec_turismo/es_8882/data/8882_openData.xml",
+  "metadataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000008882_g1_rec_turismo/r01Index/0000008882_g1_rec_turismo-idxContent.xml",
+  "zipFile" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000008882_g1_rec_turismo/opendata/0000008882_g1_rec_turismo.zip"
 }, {
   "documentName" : "Embalse de Ullíbarri-Gamboa",
   "turismDescription" : "Emplazado en el municipio alavés de Arrazua-Ubarrundia, el embalse de Ull&iacute...",
@@ -93,11 +93,11 @@ jsonCallback([ {
   "phone" : "",
   "email" : "",
   "webpage" : "",
-  "friendlyUrl" : "https://opendata.euskadi.eus/datos/-/es/playas-embalses-rios/embalse-de-ullibarri-gamboa/",
-  "physicalUrl" : "https://opendata.euskadi.eus/datos/contenidos/g_naturaleza/0000008805_g1_rec_turismo/es_8805/8805-ficha2.html",
-  "dataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000008805_g1_rec_turismo/es_8805/data/8805_openData.xml",
-  "metadataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000008805_g1_rec_turismo/r01Index/0000008805_g1_rec_turismo-idxContent.xml",
-  "zipFile" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000008805_g1_rec_turismo/opendata/0000008805_g1_rec_turismo.zip"
+  "friendlyUrl" : "https://turismoa.euskadi.eus/es/playas-embalses-rios/embalse-de-ullibarri-gamboa/aa30-12375/es/",
+  "physicalUrl" : "https://turismoa.euskadi.eus/aa30-12375/es/contenidos/g_naturaleza/0000008805_g1_rec_turismo/es_8805/8805-ficha2.html",
+  "dataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000008805_g1_rec_turismo/es_8805/data/8805_openData.xml",
+  "metadataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000008805_g1_rec_turismo/r01Index/0000008805_g1_rec_turismo-idxContent.xml",
+  "zipFile" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000008805_g1_rec_turismo/opendata/0000008805_g1_rec_turismo.zip"
 }, {
   "documentName" : "Embalse de Urkulu",
   "turismDescription" : "El embalse de Urkulu se halla en el interior del territorio histórico de Gipuzkoa, a pocos...",
@@ -143,11 +143,11 @@ jsonCallback([ {
   "phone" : "",
   "email" : "",
   "webpage" : "",
-  "friendlyUrl" : "https://opendata.euskadi.eus/datos/-/es/playas-embalses-rios/embalse-de-urkulu/",
-  "physicalUrl" : "https://opendata.euskadi.eus/datos/contenidos/g_naturaleza/0000005342_g1_rec_turismo/es_5342/5342-ficha2.html",
-  "dataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000005342_g1_rec_turismo/es_5342/data/5342_openData.xml",
-  "metadataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000005342_g1_rec_turismo/r01Index/0000005342_g1_rec_turismo-idxContent.xml",
-  "zipFile" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000005342_g1_rec_turismo/opendata/0000005342_g1_rec_turismo.zip"
+  "friendlyUrl" : "https://turismoa.euskadi.eus/es/playas-embalses-rios/embalse-de-urkulu/aa30-12375/es/",
+  "physicalUrl" : "https://turismoa.euskadi.eus/aa30-12375/es/contenidos/g_naturaleza/0000005342_g1_rec_turismo/es_5342/5342-ficha2.html",
+  "dataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000005342_g1_rec_turismo/es_5342/data/5342_openData.xml",
+  "metadataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000005342_g1_rec_turismo/r01Index/0000005342_g1_rec_turismo-idxContent.xml",
+  "zipFile" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000005342_g1_rec_turismo/opendata/0000005342_g1_rec_turismo.zip"
 }, {
   "documentName" : "Embalse de Urrúnaga",
   "turismDescription" : "El embalse de Urrúnaga está ubicado a caballo entre Álava y Bizkaia, rodeado...",
@@ -193,11 +193,11 @@ jsonCallback([ {
   "phone" : "",
   "email" : "",
   "webpage" : "",
-  "friendlyUrl" : "https://opendata.euskadi.eus/datos/-/es/playas-embalses-rios/embalse-de-urrunaga/",
-  "physicalUrl" : "https://opendata.euskadi.eus/datos/contenidos/g_naturaleza/0000008842_g1_rec_turismo/es_8842/8842-ficha2.html",
-  "dataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000008842_g1_rec_turismo/es_8842/data/8842_openData.xml",
-  "metadataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000008842_g1_rec_turismo/r01Index/0000008842_g1_rec_turismo-idxContent.xml",
-  "zipFile" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000008842_g1_rec_turismo/opendata/0000008842_g1_rec_turismo.zip"
+  "friendlyUrl" : "https://turismoa.euskadi.eus/es/playas-embalses-rios/embalse-de-urrunaga/aa30-12375/es/",
+  "physicalUrl" : "https://turismoa.euskadi.eus/aa30-12375/es/contenidos/g_naturaleza/0000008842_g1_rec_turismo/es_8842/8842-ficha2.html",
+  "dataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000008842_g1_rec_turismo/es_8842/data/8842_openData.xml",
+  "metadataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000008842_g1_rec_turismo/r01Index/0000008842_g1_rec_turismo-idxContent.xml",
+  "zipFile" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000008842_g1_rec_turismo/opendata/0000008842_g1_rec_turismo.zip"
 }, {
   "documentName" : "La Arboleda",
   "turismDescription" : "Convertido hoy en día en espacio de ocio y esparcimiento, La Arboleda fue un pueblo minero...",
@@ -243,11 +243,11 @@ jsonCallback([ {
   "phone" : "",
   "email" : "",
   "webpage" : "",
-  "friendlyUrl" : "https://opendata.euskadi.eus/datos/-/es/playas-embalses-rios/la-arboleda/",
-  "physicalUrl" : "https://opendata.euskadi.eus/datos/contenidos/g_naturaleza/0000009596_g1_rec_turismo/es_9596/9596-ficha2.html",
-  "dataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000009596_g1_rec_turismo/es_9596/data/9596_openData.xml",
-  "metadataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000009596_g1_rec_turismo/r01Index/0000009596_g1_rec_turismo-idxContent.xml",
-  "zipFile" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000009596_g1_rec_turismo/opendata/0000009596_g1_rec_turismo.zip"
+  "friendlyUrl" : "https://turismoa.euskadi.eus/es/playas-embalses-rios/la-arboleda/aa30-12375/es/",
+  "physicalUrl" : "https://turismoa.euskadi.eus/aa30-12375/es/contenidos/g_naturaleza/0000009596_g1_rec_turismo/es_9596/9596-ficha2.html",
+  "dataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000009596_g1_rec_turismo/es_9596/data/9596_openData.xml",
+  "metadataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000009596_g1_rec_turismo/r01Index/0000009596_g1_rec_turismo-idxContent.xml",
+  "zipFile" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000009596_g1_rec_turismo/opendata/0000009596_g1_rec_turismo.zip"
 }, {
   "documentName" : "Piscinas fluviales de Espejo",
   "turismDescription" : "Las piscinas fluviales de Espejo se hallan en el territorio histórico de Álava, en ...",
@@ -293,11 +293,11 @@ jsonCallback([ {
   "phone" : "",
   "email" : "",
   "webpage" : "",
-  "friendlyUrl" : "https://opendata.euskadi.eus/datos/-/es/playas-embalses-rios/piscinas-fluviales-de-espejo/",
-  "physicalUrl" : "https://opendata.euskadi.eus/datos/contenidos/g_naturaleza/0000008904_g1_rec_turismo/es_8904/8904-ficha2.html",
-  "dataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000008904_g1_rec_turismo/es_8904/data/8904_openData.xml",
-  "metadataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000008904_g1_rec_turismo/r01Index/0000008904_g1_rec_turismo-idxContent.xml",
-  "zipFile" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000008904_g1_rec_turismo/opendata/0000008904_g1_rec_turismo.zip"
+  "friendlyUrl" : "https://turismoa.euskadi.eus/es/playas-embalses-rios/piscinas-fluviales-de-espejo/aa30-12375/es/",
+  "physicalUrl" : "https://turismoa.euskadi.eus/aa30-12375/es/contenidos/g_naturaleza/0000008904_g1_rec_turismo/es_8904/8904-ficha2.html",
+  "dataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000008904_g1_rec_turismo/es_8904/data/8904_openData.xml",
+  "metadataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000008904_g1_rec_turismo/r01Index/0000008904_g1_rec_turismo-idxContent.xml",
+  "zipFile" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000008904_g1_rec_turismo/opendata/0000008904_g1_rec_turismo.zip"
 }, {
   "documentName" : "Piscinas fluviales de Fresnedo",
   "turismDescription" : "Las piscinas fluviales de Fresnedo se sitúan en la entrada de la localidad alavesa de Sant...",
@@ -343,11 +343,11 @@ jsonCallback([ {
   "phone" : "",
   "email" : "",
   "webpage" : "",
-  "friendlyUrl" : "https://opendata.euskadi.eus/datos/-/es/playas-embalses-rios/piscinas-fluviales-de-fresnedo/",
-  "physicalUrl" : "https://opendata.euskadi.eus/datos/contenidos/g_naturaleza/0000008911_g1_rec_turismo/es_8911/8911-ficha2.html",
-  "dataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000008911_g1_rec_turismo/es_8911/data/8911_openData.xml",
-  "metadataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000008911_g1_rec_turismo/r01Index/0000008911_g1_rec_turismo-idxContent.xml",
-  "zipFile" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000008911_g1_rec_turismo/opendata/0000008911_g1_rec_turismo.zip"
+  "friendlyUrl" : "https://turismoa.euskadi.eus/es/playas-embalses-rios/piscinas-fluviales-de-fresnedo/aa30-12375/es/",
+  "physicalUrl" : "https://turismoa.euskadi.eus/aa30-12375/es/contenidos/g_naturaleza/0000008911_g1_rec_turismo/es_8911/8911-ficha2.html",
+  "dataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000008911_g1_rec_turismo/es_8911/data/8911_openData.xml",
+  "metadataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000008911_g1_rec_turismo/r01Index/0000008911_g1_rec_turismo-idxContent.xml",
+  "zipFile" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000008911_g1_rec_turismo/opendata/0000008911_g1_rec_turismo.zip"
 }, {
   "documentName" : "Playa Santiago de Deba",
   "turismDescription" : "La playa de Santiago de Deba se halla al oeste del litoral guipuzcoano, junto a la desembocadura ...",
@@ -393,11 +393,11 @@ jsonCallback([ {
   "phone" : "",
   "email" : "",
   "webpage" : "",
-  "friendlyUrl" : "https://opendata.euskadi.eus/datos/-/es/playas-embalses-rios/playa-santiago-de-deba/",
-  "physicalUrl" : "https://opendata.euskadi.eus/datos/contenidos/g_naturaleza/0000003020_g1_rec_turismo/es_3020/3020-ficha2.html",
-  "dataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003020_g1_rec_turismo/es_3020/data/3020_openData.xml",
-  "metadataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003020_g1_rec_turismo/r01Index/0000003020_g1_rec_turismo-idxContent.xml",
-  "zipFile" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003020_g1_rec_turismo/opendata/0000003020_g1_rec_turismo.zip"
+  "friendlyUrl" : "https://turismoa.euskadi.eus/es/playas-embalses-rios/playa-santiago-de-deba/aa30-12375/es/",
+  "physicalUrl" : "https://turismoa.euskadi.eus/aa30-12375/es/contenidos/g_naturaleza/0000003020_g1_rec_turismo/es_3020/3020-ficha2.html",
+  "dataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003020_g1_rec_turismo/es_3020/data/3020_openData.xml",
+  "metadataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003020_g1_rec_turismo/r01Index/0000003020_g1_rec_turismo-idxContent.xml",
+  "zipFile" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003020_g1_rec_turismo/opendata/0000003020_g1_rec_turismo.zip"
 }, {
   "documentName" : "Playa de Alkolea",
   "turismDescription" : "Alkolea es una playa de rocas muy frecuentada por surfistas y por aficionados a la pesca submarin...",
@@ -443,11 +443,11 @@ jsonCallback([ {
   "phone" : "",
   "email" : "",
   "webpage" : "",
-  "friendlyUrl" : "https://opendata.euskadi.eus/datos/-/es/playas-embalses-rios/playa-de-alkolea/",
-  "physicalUrl" : "https://opendata.euskadi.eus/datos/contenidos/g_naturaleza/0000057741_g1_rec_turismo/es_57741/57741-ficha2.html",
-  "dataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000057741_g1_rec_turismo/es_57741/data/57741_openData.xml",
-  "metadataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000057741_g1_rec_turismo/r01Index/0000057741_g1_rec_turismo-idxContent.xml",
-  "zipFile" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000057741_g1_rec_turismo/opendata/0000057741_g1_rec_turismo.zip"
+  "friendlyUrl" : "https://turismoa.euskadi.eus/es/playas-embalses-rios/playa-de-alkolea/aa30-12375/es/",
+  "physicalUrl" : "https://turismoa.euskadi.eus/aa30-12375/es/contenidos/g_naturaleza/0000057741_g1_rec_turismo/es_57741/57741-ficha2.html",
+  "dataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000057741_g1_rec_turismo/es_57741/data/57741_openData.xml",
+  "metadataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000057741_g1_rec_turismo/r01Index/0000057741_g1_rec_turismo-idxContent.xml",
+  "zipFile" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000057741_g1_rec_turismo/opendata/0000057741_g1_rec_turismo.zip"
 }, {
   "documentName" : "Playa de Antilla",
   "turismDescription" : "La principal playa de Orio se encuentra en un entorno excepcional, junto a la desembocadura del O...",
@@ -493,11 +493,11 @@ jsonCallback([ {
   "phone" : "",
   "email" : "",
   "webpage" : "",
-  "friendlyUrl" : "https://opendata.euskadi.eus/datos/-/es/playas-embalses-rios/playa-de-antilla/",
-  "physicalUrl" : "https://opendata.euskadi.eus/datos/contenidos/g_naturaleza/0000003008_g1_rec_turismo/es_3008/3008-ficha2.html",
-  "dataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003008_g1_rec_turismo/es_3008/data/3008_openData.xml",
-  "metadataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003008_g1_rec_turismo/r01Index/0000003008_g1_rec_turismo-idxContent.xml",
-  "zipFile" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003008_g1_rec_turismo/opendata/0000003008_g1_rec_turismo.zip"
+  "friendlyUrl" : "https://turismoa.euskadi.eus/es/playas-embalses-rios/playa-de-antilla/aa30-12375/es/",
+  "physicalUrl" : "https://turismoa.euskadi.eus/aa30-12375/es/contenidos/g_naturaleza/0000003008_g1_rec_turismo/es_3008/3008-ficha2.html",
+  "dataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003008_g1_rec_turismo/es_3008/data/3008_openData.xml",
+  "metadataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003008_g1_rec_turismo/r01Index/0000003008_g1_rec_turismo-idxContent.xml",
+  "zipFile" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003008_g1_rec_turismo/opendata/0000003008_g1_rec_turismo.zip"
 }, {
   "documentName" : "Playa de Aritxatxu",
   "turismDescription" : "La playa de Aritxatxu, situada en el municipio vizcaíno de Bermeo, forma una pequeñ...",
@@ -543,11 +543,11 @@ jsonCallback([ {
   "phone" : "",
   "email" : "",
   "webpage" : "",
-  "friendlyUrl" : "https://opendata.euskadi.eus/datos/-/es/playas-embalses-rios/playa-de-aritzatxu/",
-  "physicalUrl" : "https://opendata.euskadi.eus/datos/contenidos/g_naturaleza/0000002983_g1_rec_turismo/es_2983/2983-ficha2.html",
-  "dataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000002983_g1_rec_turismo/es_2983/data/2983_openData.xml",
-  "metadataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000002983_g1_rec_turismo/r01Index/0000002983_g1_rec_turismo-idxContent.xml",
-  "zipFile" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000002983_g1_rec_turismo/opendata/0000002983_g1_rec_turismo.zip"
+  "friendlyUrl" : "https://turismoa.euskadi.eus/es/playas-embalses-rios/playa-de-aritzatxu/aa30-12375/es/",
+  "physicalUrl" : "https://turismoa.euskadi.eus/aa30-12375/es/contenidos/g_naturaleza/0000002983_g1_rec_turismo/es_2983/2983-ficha2.html",
+  "dataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000002983_g1_rec_turismo/es_2983/data/2983_openData.xml",
+  "metadataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000002983_g1_rec_turismo/r01Index/0000002983_g1_rec_turismo-idxContent.xml",
+  "zipFile" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000002983_g1_rec_turismo/opendata/0000002983_g1_rec_turismo.zip"
 }, {
   "documentName" : "Playa de Armintza",
   "turismDescription" : "Pequeño barrio pesquero del municipio de Lemoiz, un lugar con mucho encanto donde se suced...",
@@ -593,11 +593,11 @@ jsonCallback([ {
   "phone" : "",
   "email" : "",
   "webpage" : "",
-  "friendlyUrl" : "https://opendata.euskadi.eus/datos/-/es/playas-embalses-rios/playa-de-armintza/",
-  "physicalUrl" : "https://opendata.euskadi.eus/datos/contenidos/g_naturaleza/0000009282_g1_rec_turismo/es_9282/9282-ficha2.html",
-  "dataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000009282_g1_rec_turismo/es_9282/data/9282_openData.xml",
-  "metadataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000009282_g1_rec_turismo/r01Index/0000009282_g1_rec_turismo-idxContent.xml",
-  "zipFile" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000009282_g1_rec_turismo/opendata/0000009282_g1_rec_turismo.zip"
+  "friendlyUrl" : "https://turismoa.euskadi.eus/es/playas-embalses-rios/playa-de-armintza/aa30-12375/es/",
+  "physicalUrl" : "https://turismoa.euskadi.eus/aa30-12375/es/contenidos/g_naturaleza/0000009282_g1_rec_turismo/es_9282/9282-ficha2.html",
+  "dataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000009282_g1_rec_turismo/es_9282/data/9282_openData.xml",
+  "metadataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000009282_g1_rec_turismo/r01Index/0000009282_g1_rec_turismo-idxContent.xml",
+  "zipFile" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000009282_g1_rec_turismo/opendata/0000009282_g1_rec_turismo.zip"
 }, {
   "documentName" : "Playa de Arrigorri",
   "turismDescription" : "La playa de Arrigorri está situada en el municipio de Ondarroa, en Bizkaia. Además ...",
@@ -643,11 +643,11 @@ jsonCallback([ {
   "phone" : "",
   "email" : "",
   "webpage" : "",
-  "friendlyUrl" : "https://opendata.euskadi.eus/datos/-/es/playas-embalses-rios/playa-de-arrigorri/",
-  "physicalUrl" : "https://opendata.euskadi.eus/datos/contenidos/g_naturaleza/0000002993_g1_rec_turismo/es_2993/2993-ficha2.html",
-  "dataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000002993_g1_rec_turismo/es_2993/data/2993_openData.xml",
-  "metadataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000002993_g1_rec_turismo/r01Index/0000002993_g1_rec_turismo-idxContent.xml",
-  "zipFile" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000002993_g1_rec_turismo/opendata/0000002993_g1_rec_turismo.zip"
+  "friendlyUrl" : "https://turismoa.euskadi.eus/es/playas-embalses-rios/playa-de-arrigorri/aa30-12375/es/",
+  "physicalUrl" : "https://turismoa.euskadi.eus/aa30-12375/es/contenidos/g_naturaleza/0000002993_g1_rec_turismo/es_2993/2993-ficha2.html",
+  "dataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000002993_g1_rec_turismo/es_2993/data/2993_openData.xml",
+  "metadataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000002993_g1_rec_turismo/r01Index/0000002993_g1_rec_turismo-idxContent.xml",
+  "zipFile" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000002993_g1_rec_turismo/opendata/0000002993_g1_rec_turismo.zip"
 }, {
   "documentName" : "Playa de Arrigunaga",
   "turismDescription" : "La playa de Arrigunaga se encuentra en el municipio de Getxo, en Bizkaia. Ubicada bajo los acanti...",
@@ -693,11 +693,11 @@ jsonCallback([ {
   "phone" : "",
   "email" : "",
   "webpage" : "",
-  "friendlyUrl" : "https://opendata.euskadi.eus/datos/-/es/playas-embalses-rios/playa-de-arrigunaga/",
-  "physicalUrl" : "https://opendata.euskadi.eus/datos/contenidos/g_naturaleza/0000003011_g1_rec_turismo/es_3011/3011-ficha2.html",
-  "dataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003011_g1_rec_turismo/es_3011/data/3011_openData.xml",
-  "metadataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003011_g1_rec_turismo/r01Index/0000003011_g1_rec_turismo-idxContent.xml",
-  "zipFile" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003011_g1_rec_turismo/opendata/0000003011_g1_rec_turismo.zip"
+  "friendlyUrl" : "https://turismoa.euskadi.eus/es/playas-embalses-rios/playa-de-arrigunaga/aa30-12375/es/",
+  "physicalUrl" : "https://turismoa.euskadi.eus/aa30-12375/es/contenidos/g_naturaleza/0000003011_g1_rec_turismo/es_3011/3011-ficha2.html",
+  "dataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003011_g1_rec_turismo/es_3011/data/3011_openData.xml",
+  "metadataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003011_g1_rec_turismo/r01Index/0000003011_g1_rec_turismo-idxContent.xml",
+  "zipFile" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003011_g1_rec_turismo/opendata/0000003011_g1_rec_turismo.zip"
 }, {
   "documentName" : "Playa de Bakio",
   "turismDescription" : "La hermosa playa de Bakio, situada en el municipio vizcaíno del mismo nombre, cuenta con u...",
@@ -743,11 +743,11 @@ jsonCallback([ {
   "phone" : "",
   "email" : "",
   "webpage" : "",
-  "friendlyUrl" : "https://opendata.euskadi.eus/datos/-/es/playas-embalses-rios/playa-de-bakio/",
-  "physicalUrl" : "https://opendata.euskadi.eus/datos/contenidos/g_naturaleza/0000003003_g1_rec_turismo/es_3003/3003-ficha2.html",
-  "dataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003003_g1_rec_turismo/es_3003/data/3003_openData.xml",
-  "metadataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003003_g1_rec_turismo/r01Index/0000003003_g1_rec_turismo-idxContent.xml",
-  "zipFile" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003003_g1_rec_turismo/opendata/0000003003_g1_rec_turismo.zip"
+  "friendlyUrl" : "https://turismoa.euskadi.eus/es/playas-embalses-rios/playa-de-bakio/aa30-12375/es/",
+  "physicalUrl" : "https://turismoa.euskadi.eus/aa30-12375/es/contenidos/g_naturaleza/0000003003_g1_rec_turismo/es_3003/3003-ficha2.html",
+  "dataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003003_g1_rec_turismo/es_3003/data/3003_openData.xml",
+  "metadataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003003_g1_rec_turismo/r01Index/0000003003_g1_rec_turismo-idxContent.xml",
+  "zipFile" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003003_g1_rec_turismo/opendata/0000003003_g1_rec_turismo.zip"
 }, {
   "documentName" : "Playa de Barinatxe",
   "turismDescription" : "Enclavada entre los municipios vizcaínos de Sopela y Getxo, la playa de Barinatxe est&aacu...",
@@ -793,11 +793,11 @@ jsonCallback([ {
   "phone" : "",
   "email" : "",
   "webpage" : "",
-  "friendlyUrl" : "https://opendata.euskadi.eus/datos/-/es/playas-embalses-rios/playa-de-barinatxe/",
-  "physicalUrl" : "https://opendata.euskadi.eus/datos/contenidos/g_naturaleza/0000003019_g1_rec_turismo/es_3019/3019-ficha2.html",
-  "dataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003019_g1_rec_turismo/es_3019/data/3019_openData.xml",
-  "metadataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003019_g1_rec_turismo/r01Index/0000003019_g1_rec_turismo-idxContent.xml",
-  "zipFile" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003019_g1_rec_turismo/opendata/0000003019_g1_rec_turismo.zip"
+  "friendlyUrl" : "https://turismoa.euskadi.eus/es/playas-embalses-rios/playa-de-barinatxe/aa30-12375/es/",
+  "physicalUrl" : "https://turismoa.euskadi.eus/aa30-12375/es/contenidos/g_naturaleza/0000003019_g1_rec_turismo/es_3019/3019-ficha2.html",
+  "dataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003019_g1_rec_turismo/es_3019/data/3019_openData.xml",
+  "metadataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003019_g1_rec_turismo/r01Index/0000003019_g1_rec_turismo-idxContent.xml",
+  "zipFile" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003019_g1_rec_turismo/opendata/0000003019_g1_rec_turismo.zip"
 }, {
   "documentName" : "Playa de Barrika",
   "turismDescription" : "La playa de Barrika, enclavada en el municipio del mismo nombre y a 25 km de Bilbao, es una playa...",
@@ -843,11 +843,11 @@ jsonCallback([ {
   "phone" : "",
   "email" : "",
   "webpage" : "",
-  "friendlyUrl" : "https://opendata.euskadi.eus/datos/-/es/playas-embalses-rios/playa-de-barrika/",
-  "physicalUrl" : "https://opendata.euskadi.eus/datos/contenidos/g_naturaleza/0000003022_g1_rec_turismo/es_3022/3022-ficha2.html",
-  "dataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003022_g1_rec_turismo/es_3022/data/3022_openData.xml",
-  "metadataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003022_g1_rec_turismo/r01Index/0000003022_g1_rec_turismo-idxContent.xml",
-  "zipFile" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003022_g1_rec_turismo/opendata/0000003022_g1_rec_turismo.zip"
+  "friendlyUrl" : "https://turismoa.euskadi.eus/es/playas-embalses-rios/playa-de-barrika/aa30-12375/es/",
+  "physicalUrl" : "https://turismoa.euskadi.eus/aa30-12375/es/contenidos/g_naturaleza/0000003022_g1_rec_turismo/es_3022/3022-ficha2.html",
+  "dataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003022_g1_rec_turismo/es_3022/data/3022_openData.xml",
+  "metadataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003022_g1_rec_turismo/r01Index/0000003022_g1_rec_turismo-idxContent.xml",
+  "zipFile" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003022_g1_rec_turismo/opendata/0000003022_g1_rec_turismo.zip"
 }, {
   "documentName" : "Playa de Ea",
   "turismDescription" : "La playa de Ea se halla en el municipio del mismo nombre, en la costa oriental de Bizkaia.  Al ...",
@@ -893,11 +893,11 @@ jsonCallback([ {
   "phone" : "",
   "email" : "",
   "webpage" : "",
-  "friendlyUrl" : "https://opendata.euskadi.eus/datos/-/es/playas-embalses-rios/playa-de-ea/",
-  "physicalUrl" : "https://opendata.euskadi.eus/datos/contenidos/g_naturaleza/0000009312_g1_rec_turismo/es_9312/9312-ficha2.html",
-  "dataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000009312_g1_rec_turismo/es_9312/data/9312_openData.xml",
-  "metadataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000009312_g1_rec_turismo/r01Index/0000009312_g1_rec_turismo-idxContent.xml",
-  "zipFile" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000009312_g1_rec_turismo/opendata/0000009312_g1_rec_turismo.zip"
+  "friendlyUrl" : "https://turismoa.euskadi.eus/es/playas-embalses-rios/playa-de-ea/aa30-12375/es/",
+  "physicalUrl" : "https://turismoa.euskadi.eus/aa30-12375/es/contenidos/g_naturaleza/0000009312_g1_rec_turismo/es_9312/9312-ficha2.html",
+  "dataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000009312_g1_rec_turismo/es_9312/data/9312_openData.xml",
+  "metadataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000009312_g1_rec_turismo/r01Index/0000009312_g1_rec_turismo-idxContent.xml",
+  "zipFile" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000009312_g1_rec_turismo/opendata/0000009312_g1_rec_turismo.zip"
 }, {
   "documentName" : "Playa de Ereaga",
   "turismDescription" : "La playa de Ereaga se encuentra en el municipio de Getxo, entre el puerto viejo de Algorta y el e...",
@@ -943,11 +943,11 @@ jsonCallback([ {
   "phone" : "",
   "email" : "",
   "webpage" : "",
-  "friendlyUrl" : "https://opendata.euskadi.eus/datos/-/es/playas-embalses-rios/playa-de-ereaga/",
-  "physicalUrl" : "https://opendata.euskadi.eus/datos/contenidos/g_naturaleza/0000002994_g1_rec_turismo/es_2994/2994-ficha2.html",
-  "dataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000002994_g1_rec_turismo/es_2994/data/2994_openData.xml",
-  "metadataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000002994_g1_rec_turismo/r01Index/0000002994_g1_rec_turismo-idxContent.xml",
-  "zipFile" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000002994_g1_rec_turismo/opendata/0000002994_g1_rec_turismo.zip"
+  "friendlyUrl" : "https://turismoa.euskadi.eus/es/playas-embalses-rios/playa-de-ereaga/aa30-12375/es/",
+  "physicalUrl" : "https://turismoa.euskadi.eus/aa30-12375/es/contenidos/g_naturaleza/0000002994_g1_rec_turismo/es_2994/2994-ficha2.html",
+  "dataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000002994_g1_rec_turismo/es_2994/data/2994_openData.xml",
+  "metadataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000002994_g1_rec_turismo/r01Index/0000002994_g1_rec_turismo-idxContent.xml",
+  "zipFile" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000002994_g1_rec_turismo/opendata/0000002994_g1_rec_turismo.zip"
 }, {
   "documentName" : "Playa de Gaztetape",
   "turismDescription" : "La playa de Gaztetape se esconde al oeste del monte San Antón, más conocido por el ...",
@@ -993,11 +993,11 @@ jsonCallback([ {
   "phone" : "",
   "email" : "",
   "webpage" : "",
-  "friendlyUrl" : "https://opendata.euskadi.eus/datos/-/es/playas-embalses-rios/playa-de-gaztetape/",
-  "physicalUrl" : "https://opendata.euskadi.eus/datos/contenidos/g_naturaleza/0000002992_g1_rec_turismo/es_2992/2992-ficha2.html",
-  "dataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000002992_g1_rec_turismo/es_2992/data/2992_openData.xml",
-  "metadataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000002992_g1_rec_turismo/r01Index/0000002992_g1_rec_turismo-idxContent.xml",
-  "zipFile" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000002992_g1_rec_turismo/opendata/0000002992_g1_rec_turismo.zip"
+  "friendlyUrl" : "https://turismoa.euskadi.eus/es/playas-embalses-rios/playa-de-gaztetape/aa30-12375/es/",
+  "physicalUrl" : "https://turismoa.euskadi.eus/aa30-12375/es/contenidos/g_naturaleza/0000002992_g1_rec_turismo/es_2992/2992-ficha2.html",
+  "dataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000002992_g1_rec_turismo/es_2992/data/2992_openData.xml",
+  "metadataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000002992_g1_rec_turismo/r01Index/0000002992_g1_rec_turismo-idxContent.xml",
+  "zipFile" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000002992_g1_rec_turismo/opendata/0000002992_g1_rec_turismo.zip"
 }, {
   "documentName" : "Playa de Gorliz",
   "turismDescription" : "Sus extensas arenas y la seguridad de su baño hacen que esta playa sea preferida por las f...",
@@ -1043,11 +1043,11 @@ jsonCallback([ {
   "phone" : "",
   "email" : "",
   "webpage" : "",
-  "friendlyUrl" : "https://opendata.euskadi.eus/datos/-/es/playas-embalses-rios/playa-de-gorliz/",
-  "physicalUrl" : "https://opendata.euskadi.eus/datos/contenidos/g_naturaleza/0000002998_g1_rec_turismo/es_2998/2998-ficha2.html",
-  "dataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000002998_g1_rec_turismo/es_2998/data/2998_openData.xml",
-  "metadataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000002998_g1_rec_turismo/r01Index/0000002998_g1_rec_turismo-idxContent.xml",
-  "zipFile" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000002998_g1_rec_turismo/opendata/0000002998_g1_rec_turismo.zip"
+  "friendlyUrl" : "https://turismoa.euskadi.eus/es/playas-embalses-rios/playa-de-gorliz/aa30-12375/es/",
+  "physicalUrl" : "https://turismoa.euskadi.eus/aa30-12375/es/contenidos/g_naturaleza/0000002998_g1_rec_turismo/es_2998/2998-ficha2.html",
+  "dataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000002998_g1_rec_turismo/es_2998/data/2998_openData.xml",
+  "metadataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000002998_g1_rec_turismo/r01Index/0000002998_g1_rec_turismo-idxContent.xml",
+  "zipFile" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000002998_g1_rec_turismo/opendata/0000002998_g1_rec_turismo.zip"
 }, {
   "documentName" : "Playa de Gorrondatxe (Azkorri)",
   "turismDescription" : "Gorrondatxe es la cuarta playa de Getxo y quizá la menos accesible, pero la m&aa...",
@@ -1093,11 +1093,11 @@ jsonCallback([ {
   "phone" : "",
   "email" : "",
   "webpage" : "",
-  "friendlyUrl" : "https://opendata.euskadi.eus/datos/-/es/playas-embalses-rios/playa-de-gorrondatxe-aizkorri/",
-  "physicalUrl" : "https://opendata.euskadi.eus/datos/contenidos/g_naturaleza/0000002988_g1_rec_turismo/es_2988/2988-ficha2.html",
-  "dataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000002988_g1_rec_turismo/es_2988/data/2988_openData.xml",
-  "metadataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000002988_g1_rec_turismo/r01Index/0000002988_g1_rec_turismo-idxContent.xml",
-  "zipFile" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000002988_g1_rec_turismo/opendata/0000002988_g1_rec_turismo.zip"
+  "friendlyUrl" : "https://turismoa.euskadi.eus/es/playas-embalses-rios/playa-de-gorrondatxe-aizkorri/aa30-12375/es/",
+  "physicalUrl" : "https://turismoa.euskadi.eus/aa30-12375/es/contenidos/g_naturaleza/0000002988_g1_rec_turismo/es_2988/2988-ficha2.html",
+  "dataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000002988_g1_rec_turismo/es_2988/data/2988_openData.xml",
+  "metadataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000002988_g1_rec_turismo/r01Index/0000002988_g1_rec_turismo-idxContent.xml",
+  "zipFile" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000002988_g1_rec_turismo/opendata/0000002988_g1_rec_turismo.zip"
 }, {
   "documentName" : "Playa de Hondarribia",
   "turismDescription" : "La playa de Hondarribia está ubicada en el extremo oriental del litoral guipuzcoano, concr...",
@@ -1143,11 +1143,11 @@ jsonCallback([ {
   "phone" : "",
   "email" : "",
   "webpage" : "",
-  "friendlyUrl" : "https://opendata.euskadi.eus/datos/-/es/playas-embalses-rios/playa-de-hondarribia/",
-  "physicalUrl" : "https://opendata.euskadi.eus/datos/contenidos/g_naturaleza/0000003007_g1_rec_turismo/es_3007/3007-ficha2.html",
-  "dataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003007_g1_rec_turismo/es_3007/data/3007_openData.xml",
-  "metadataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003007_g1_rec_turismo/r01Index/0000003007_g1_rec_turismo-idxContent.xml",
-  "zipFile" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003007_g1_rec_turismo/opendata/0000003007_g1_rec_turismo.zip"
+  "friendlyUrl" : "https://turismoa.euskadi.eus/es/playas-embalses-rios/playa-de-hondarribia/aa30-12375/es/",
+  "physicalUrl" : "https://turismoa.euskadi.eus/aa30-12375/es/contenidos/g_naturaleza/0000003007_g1_rec_turismo/es_3007/3007-ficha2.html",
+  "dataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003007_g1_rec_turismo/es_3007/data/3007_openData.xml",
+  "metadataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003007_g1_rec_turismo/r01Index/0000003007_g1_rec_turismo-idxContent.xml",
+  "zipFile" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003007_g1_rec_turismo/opendata/0000003007_g1_rec_turismo.zip"
 }, {
   "documentName" : "Playa de Hondartzape",
   "turismDescription" : "La playa de Hondartzape está ubicada en el municipio vizcaíno de Mundaka, a 36 km d...",
@@ -1193,11 +1193,11 @@ jsonCallback([ {
   "phone" : "",
   "email" : "",
   "webpage" : "",
-  "friendlyUrl" : "https://opendata.euskadi.eus/datos/-/es/playas-embalses-rios/playa-de-hondartzape/",
-  "physicalUrl" : "https://opendata.euskadi.eus/datos/contenidos/g_naturaleza/0000003014_g1_rec_turismo/es_3014/3014-ficha2.html",
-  "dataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003014_g1_rec_turismo/es_3014/data/3014_openData.xml",
-  "metadataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003014_g1_rec_turismo/r01Index/0000003014_g1_rec_turismo-idxContent.xml",
-  "zipFile" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003014_g1_rec_turismo/opendata/0000003014_g1_rec_turismo.zip"
+  "friendlyUrl" : "https://turismoa.euskadi.eus/es/playas-embalses-rios/playa-de-hondartzape/aa30-12375/es/",
+  "physicalUrl" : "https://turismoa.euskadi.eus/aa30-12375/es/contenidos/g_naturaleza/0000003014_g1_rec_turismo/es_3014/3014-ficha2.html",
+  "dataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003014_g1_rec_turismo/es_3014/data/3014_openData.xml",
+  "metadataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003014_g1_rec_turismo/r01Index/0000003014_g1_rec_turismo-idxContent.xml",
+  "zipFile" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003014_g1_rec_turismo/opendata/0000003014_g1_rec_turismo.zip"
 }, {
   "documentName" : "Playa de Isuntza",
   "turismDescription" : "La playa de Isuntza se encuentra en el municipio de Lekeitio, al este del litoral vizcaíno...",
@@ -1243,11 +1243,11 @@ jsonCallback([ {
   "phone" : "",
   "email" : "",
   "webpage" : "",
-  "friendlyUrl" : "https://opendata.euskadi.eus/datos/-/es/playas-embalses-rios/playa-de-isuntza/",
-  "physicalUrl" : "https://opendata.euskadi.eus/datos/contenidos/g_naturaleza/0000002987_g1_rec_turismo/es_2987/2987-ficha2.html",
-  "dataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000002987_g1_rec_turismo/es_2987/data/2987_openData.xml",
-  "metadataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000002987_g1_rec_turismo/r01Index/0000002987_g1_rec_turismo-idxContent.xml",
-  "zipFile" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000002987_g1_rec_turismo/opendata/0000002987_g1_rec_turismo.zip"
+  "friendlyUrl" : "https://turismoa.euskadi.eus/es/playas-embalses-rios/playa-de-isuntza/aa30-12375/es/",
+  "physicalUrl" : "https://turismoa.euskadi.eus/aa30-12375/es/contenidos/g_naturaleza/0000002987_g1_rec_turismo/es_2987/2987-ficha2.html",
+  "dataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000002987_g1_rec_turismo/es_2987/data/2987_openData.xml",
+  "metadataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000002987_g1_rec_turismo/r01Index/0000002987_g1_rec_turismo-idxContent.xml",
+  "zipFile" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000002987_g1_rec_turismo/opendata/0000002987_g1_rec_turismo.zip"
 }, {
   "documentName" : "Playa de Itzurun",
   "turismDescription" : "La playa de Itzurun, en Zumaia, forma parte de uno de los tramos más espectaculares del li...",
@@ -1293,11 +1293,11 @@ jsonCallback([ {
   "phone" : "",
   "email" : "",
   "webpage" : "",
-  "friendlyUrl" : "https://opendata.euskadi.eus/datos/-/es/playas-embalses-rios/playa-de-itzurun/",
-  "physicalUrl" : "https://opendata.euskadi.eus/datos/contenidos/g_naturaleza/0000003021_g1_rec_turismo/es_3021/3021-ficha2.html",
-  "dataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003021_g1_rec_turismo/es_3021/data/3021_openData.xml",
-  "metadataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003021_g1_rec_turismo/r01Index/0000003021_g1_rec_turismo-idxContent.xml",
-  "zipFile" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003021_g1_rec_turismo/opendata/0000003021_g1_rec_turismo.zip"
+  "friendlyUrl" : "https://turismoa.euskadi.eus/es/playas-embalses-rios/playa-de-itzurun/aa30-12375/es/",
+  "physicalUrl" : "https://turismoa.euskadi.eus/aa30-12375/es/contenidos/g_naturaleza/0000003021_g1_rec_turismo/es_3021/3021-ficha2.html",
+  "dataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003021_g1_rec_turismo/es_3021/data/3021_openData.xml",
+  "metadataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003021_g1_rec_turismo/r01Index/0000003021_g1_rec_turismo-idxContent.xml",
+  "zipFile" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003021_g1_rec_turismo/opendata/0000003021_g1_rec_turismo.zip"
 }, {
   "documentName" : "Playa de Kanala",
   "turismDescription" : "La playa de Kanala está ubicada en el municipio vizcaíno de Gautegiz-Arteaga, en la...",
@@ -1343,11 +1343,11 @@ jsonCallback([ {
   "phone" : "",
   "email" : "",
   "webpage" : "",
-  "friendlyUrl" : "https://opendata.euskadi.eus/datos/-/es/playas-embalses-rios/playa-de-kanala/",
-  "physicalUrl" : "https://opendata.euskadi.eus/datos/contenidos/g_naturaleza/0000003006_g1_rec_turismo/es_3006/3006-ficha2.html",
-  "dataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003006_g1_rec_turismo/es_3006/data/3006_openData.xml",
-  "metadataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003006_g1_rec_turismo/r01Index/0000003006_g1_rec_turismo-idxContent.xml",
-  "zipFile" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003006_g1_rec_turismo/opendata/0000003006_g1_rec_turismo.zip"
+  "friendlyUrl" : "https://turismoa.euskadi.eus/es/playas-embalses-rios/playa-de-kanala/aa30-12375/es/",
+  "physicalUrl" : "https://turismoa.euskadi.eus/aa30-12375/es/contenidos/g_naturaleza/0000003006_g1_rec_turismo/es_3006/3006-ficha2.html",
+  "dataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003006_g1_rec_turismo/es_3006/data/3006_openData.xml",
+  "metadataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003006_g1_rec_turismo/r01Index/0000003006_g1_rec_turismo-idxContent.xml",
+  "zipFile" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003006_g1_rec_turismo/opendata/0000003006_g1_rec_turismo.zip"
 }, {
   "documentName" : "Playa de Kanalape",
   "turismDescription" : "La playa de Kanalape es uno de los arenales que se forman en la ría de Gernika. Est&aacute...",
@@ -1393,11 +1393,11 @@ jsonCallback([ {
   "phone" : "",
   "email" : "",
   "webpage" : "",
-  "friendlyUrl" : "https://opendata.euskadi.eus/datos/-/es/playas-embalses-rios/playa-de-kanalape/",
-  "physicalUrl" : "https://opendata.euskadi.eus/datos/contenidos/g_naturaleza/0000003000_g1_rec_turismo/es_3000/3000-ficha2.html",
-  "dataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003000_g1_rec_turismo/es_3000/data/3000_openData.xml",
-  "metadataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003000_g1_rec_turismo/r01Index/0000003000_g1_rec_turismo-idxContent.xml",
-  "zipFile" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003000_g1_rec_turismo/opendata/0000003000_g1_rec_turismo.zip"
+  "friendlyUrl" : "https://turismoa.euskadi.eus/es/playas-embalses-rios/playa-de-kanalape/aa30-12375/es/",
+  "physicalUrl" : "https://turismoa.euskadi.eus/aa30-12375/es/contenidos/g_naturaleza/0000003000_g1_rec_turismo/es_3000/3000-ficha2.html",
+  "dataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003000_g1_rec_turismo/es_3000/data/3000_openData.xml",
+  "metadataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003000_g1_rec_turismo/r01Index/0000003000_g1_rec_turismo-idxContent.xml",
+  "zipFile" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003000_g1_rec_turismo/opendata/0000003000_g1_rec_turismo.zip"
 }, {
   "documentName" : "Playa de Karraspio",
   "turismDescription" : "La hermosa playa de Karraspio pertenece al municipio de Mendexa, aunque prácticamente se e...",
@@ -1443,11 +1443,11 @@ jsonCallback([ {
   "phone" : "",
   "email" : "",
   "webpage" : "",
-  "friendlyUrl" : "https://opendata.euskadi.eus/datos/-/es/playas-embalses-rios/playa-de-karraspio/",
-  "physicalUrl" : "https://opendata.euskadi.eus/datos/contenidos/g_naturaleza/0000003012_g1_rec_turismo/es_3012/3012-ficha2.html",
-  "dataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003012_g1_rec_turismo/es_3012/data/3012_openData.xml",
-  "metadataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003012_g1_rec_turismo/r01Index/0000003012_g1_rec_turismo-idxContent.xml",
-  "zipFile" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003012_g1_rec_turismo/opendata/0000003012_g1_rec_turismo.zip"
+  "friendlyUrl" : "https://turismoa.euskadi.eus/es/playas-embalses-rios/playa-de-karraspio/aa30-12375/es/",
+  "physicalUrl" : "https://turismoa.euskadi.eus/aa30-12375/es/contenidos/g_naturaleza/0000003012_g1_rec_turismo/es_3012/3012-ficha2.html",
+  "dataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003012_g1_rec_turismo/es_3012/data/3012_openData.xml",
+  "metadataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003012_g1_rec_turismo/r01Index/0000003012_g1_rec_turismo-idxContent.xml",
+  "zipFile" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003012_g1_rec_turismo/opendata/0000003012_g1_rec_turismo.zip"
 }, {
   "documentName" : "Playa de La Arena",
   "turismDescription" : "Situada entre Muskiz y Zierbena, la hermosa playa de La Arena tiene 966 metros de longitud y es u...",
@@ -1493,11 +1493,11 @@ jsonCallback([ {
   "phone" : "",
   "email" : "",
   "webpage" : "",
-  "friendlyUrl" : "https://opendata.euskadi.eus/datos/-/es/playas-embalses-rios/playa-de-la-arena/",
-  "physicalUrl" : "https://opendata.euskadi.eus/datos/contenidos/g_naturaleza/0000002984_g1_rec_turismo/es_2984/2984-ficha2.html",
-  "dataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000002984_g1_rec_turismo/es_2984/data/2984_openData.xml",
-  "metadataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000002984_g1_rec_turismo/r01Index/0000002984_g1_rec_turismo-idxContent.xml",
-  "zipFile" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000002984_g1_rec_turismo/opendata/0000002984_g1_rec_turismo.zip"
+  "friendlyUrl" : "https://turismoa.euskadi.eus/es/playas-embalses-rios/playa-de-la-arena/aa30-12375/es/",
+  "physicalUrl" : "https://turismoa.euskadi.eus/aa30-12375/es/contenidos/g_naturaleza/0000002984_g1_rec_turismo/es_2984/2984-ficha2.html",
+  "dataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000002984_g1_rec_turismo/es_2984/data/2984_openData.xml",
+  "metadataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000002984_g1_rec_turismo/r01Index/0000002984_g1_rec_turismo-idxContent.xml",
+  "zipFile" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000002984_g1_rec_turismo/opendata/0000002984_g1_rec_turismo.zip"
 }, {
   "documentName" : "Playa de La Concha",
   "turismDescription" : "La incomparable playa de La Concha es una de las señas de identidad de San Sebastiá...",
@@ -1543,11 +1543,11 @@ jsonCallback([ {
   "phone" : "",
   "email" : "",
   "webpage" : "",
-  "friendlyUrl" : "https://opendata.euskadi.eus/datos/-/es/playas/playa-de-la-concha-san-sebastian/",
-  "physicalUrl" : "https://opendata.euskadi.eus/datos/contenidos/g_naturaleza/0000003001_g1_rec_turismo/es_3001/3001-ficha2.html",
-  "dataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003001_g1_rec_turismo/es_3001/data/3001_openData.xml",
-  "metadataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003001_g1_rec_turismo/r01Index/0000003001_g1_rec_turismo-idxContent.xml",
-  "zipFile" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003001_g1_rec_turismo/opendata/0000003001_g1_rec_turismo.zip"
+  "friendlyUrl" : "https://turismoa.euskadi.eus/es/playas/playa-de-la-concha-san-sebastian/aa30-12375/es/",
+  "physicalUrl" : "https://turismoa.euskadi.eus/aa30-12375/es/contenidos/g_naturaleza/0000003001_g1_rec_turismo/es_3001/3001-ficha2.html",
+  "dataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003001_g1_rec_turismo/es_3001/data/3001_openData.xml",
+  "metadataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003001_g1_rec_turismo/r01Index/0000003001_g1_rec_turismo-idxContent.xml",
+  "zipFile" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003001_g1_rec_turismo/opendata/0000003001_g1_rec_turismo.zip"
 }, {
   "documentName" : "Playa de Laga",
   "turismDescription" : "La hermosa playa dunar de Laga, enclavada en la Reserva de la Biosfera de Urdaibai y junto al cab...",
@@ -1593,11 +1593,11 @@ jsonCallback([ {
   "phone" : "",
   "email" : "",
   "webpage" : "",
-  "friendlyUrl" : "https://opendata.euskadi.eus/datos/-/es/playas-embalses-rios/playa-de-laga/",
-  "physicalUrl" : "https://opendata.euskadi.eus/datos/contenidos/g_naturaleza/0000002991_g1_rec_turismo/es_2991/2991-ficha2.html",
-  "dataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000002991_g1_rec_turismo/es_2991/data/2991_openData.xml",
-  "metadataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000002991_g1_rec_turismo/r01Index/0000002991_g1_rec_turismo-idxContent.xml",
-  "zipFile" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000002991_g1_rec_turismo/opendata/0000002991_g1_rec_turismo.zip"
+  "friendlyUrl" : "https://turismoa.euskadi.eus/es/playas-embalses-rios/playa-de-laga/aa30-12375/es/",
+  "physicalUrl" : "https://turismoa.euskadi.eus/aa30-12375/es/contenidos/g_naturaleza/0000002991_g1_rec_turismo/es_2991/2991-ficha2.html",
+  "dataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000002991_g1_rec_turismo/es_2991/data/2991_openData.xml",
+  "metadataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000002991_g1_rec_turismo/r01Index/0000002991_g1_rec_turismo-idxContent.xml",
+  "zipFile" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000002991_g1_rec_turismo/opendata/0000002991_g1_rec_turismo.zip"
 }, {
   "documentName" : "Playa de Laida",
   "turismDescription" : "La playa de Laida pertenece al municipio vizcaíno de Ibarrangelu y está ubicada en ...",
@@ -1643,11 +1643,11 @@ jsonCallback([ {
   "phone" : "",
   "email" : "",
   "webpage" : "",
-  "friendlyUrl" : "https://opendata.euskadi.eus/datos/-/es/playas-embalses-rios/playa-de-laida/",
-  "physicalUrl" : "https://opendata.euskadi.eus/datos/contenidos/g_naturaleza/0000002997_g1_rec_turismo/es_2997/2997-ficha2.html",
-  "dataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000002997_g1_rec_turismo/es_2997/data/2997_openData.xml",
-  "metadataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000002997_g1_rec_turismo/r01Index/0000002997_g1_rec_turismo-idxContent.xml",
-  "zipFile" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000002997_g1_rec_turismo/opendata/0000002997_g1_rec_turismo.zip"
+  "friendlyUrl" : "https://turismoa.euskadi.eus/es/playas-embalses-rios/playa-de-laida/aa30-12375/es/",
+  "physicalUrl" : "https://turismoa.euskadi.eus/aa30-12375/es/contenidos/g_naturaleza/0000002997_g1_rec_turismo/es_2997/2997-ficha2.html",
+  "dataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000002997_g1_rec_turismo/es_2997/data/2997_openData.xml",
+  "metadataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000002997_g1_rec_turismo/r01Index/0000002997_g1_rec_turismo-idxContent.xml",
+  "zipFile" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000002997_g1_rec_turismo/opendata/0000002997_g1_rec_turismo.zip"
 }, {
   "documentName" : "Playa de Laidatxu",
   "turismDescription" : "La playa de Laidatxu se halla en el municipio vizcaíno de Mundaka, muy cerca del casco urb...",
@@ -1693,11 +1693,11 @@ jsonCallback([ {
   "phone" : "",
   "email" : "",
   "webpage" : "",
-  "friendlyUrl" : "https://opendata.euskadi.eus/datos/-/es/playas-embalses-rios/playa-de-laidatxu/",
-  "physicalUrl" : "https://opendata.euskadi.eus/datos/contenidos/g_naturaleza/0000003004_g1_rec_turismo/es_3004/3004-ficha2.html",
-  "dataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003004_g1_rec_turismo/es_3004/data/3004_openData.xml",
-  "metadataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003004_g1_rec_turismo/r01Index/0000003004_g1_rec_turismo-idxContent.xml",
-  "zipFile" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003004_g1_rec_turismo/opendata/0000003004_g1_rec_turismo.zip"
+  "friendlyUrl" : "https://turismoa.euskadi.eus/es/playas-embalses-rios/playa-de-laidatxu/aa30-12375/es/",
+  "physicalUrl" : "https://turismoa.euskadi.eus/aa30-12375/es/contenidos/g_naturaleza/0000003004_g1_rec_turismo/es_3004/3004-ficha2.html",
+  "dataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003004_g1_rec_turismo/es_3004/data/3004_openData.xml",
+  "metadataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003004_g1_rec_turismo/r01Index/0000003004_g1_rec_turismo-idxContent.xml",
+  "zipFile" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003004_g1_rec_turismo/opendata/0000003004_g1_rec_turismo.zip"
 }, {
   "documentName" : "Playa de Landa",
   "turismDescription" : "Situada en el embalse de Ullibarri-Gamboa tiene 40 Ha y 500 metros de playa. El pantano al que se...",
@@ -1743,11 +1743,11 @@ jsonCallback([ {
   "phone" : "",
   "email" : "",
   "webpage" : "",
-  "friendlyUrl" : "https://opendata.euskadi.eus/datos/-/es/playas-embalses-rios/playa-de-landa/",
-  "physicalUrl" : "https://opendata.euskadi.eus/datos/contenidos/g_naturaleza/0000085181_g1_rec_turismo/es_85181/85181-ficha2.html",
-  "dataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000085181_g1_rec_turismo/es_85181/data/85181_openData.xml",
-  "metadataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000085181_g1_rec_turismo/r01Index/0000085181_g1_rec_turismo-idxContent.xml",
-  "zipFile" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000085181_g1_rec_turismo/opendata/0000085181_g1_rec_turismo.zip"
+  "friendlyUrl" : "https://turismoa.euskadi.eus/es/playas-embalses-rios/playa-de-landa/aa30-12375/es/",
+  "physicalUrl" : "https://turismoa.euskadi.eus/aa30-12375/es/contenidos/g_naturaleza/0000085181_g1_rec_turismo/es_85181/85181-ficha2.html",
+  "dataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000085181_g1_rec_turismo/es_85181/data/85181_openData.xml",
+  "metadataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000085181_g1_rec_turismo/r01Index/0000085181_g1_rec_turismo-idxContent.xml",
+  "zipFile" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000085181_g1_rec_turismo/opendata/0000085181_g1_rec_turismo.zip"
 }, {
   "documentName" : "Playa de Las Arenas",
   "turismDescription" : "La playa de Las Arenas se encuentra en el municipio vizcaíno de Getxo, en el Abra de Bilba...",
@@ -1793,11 +1793,11 @@ jsonCallback([ {
   "phone" : "",
   "email" : "",
   "webpage" : "",
-  "friendlyUrl" : "https://opendata.euskadi.eus/datos/-/es/playas-embalses-rios/playa-de-las-arenas/",
-  "physicalUrl" : "https://opendata.euskadi.eus/datos/contenidos/g_naturaleza/0000002989_g1_rec_turismo/es_2989/2989-ficha2.html",
-  "dataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000002989_g1_rec_turismo/es_2989/data/2989_openData.xml",
-  "metadataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000002989_g1_rec_turismo/r01Index/0000002989_g1_rec_turismo-idxContent.xml",
-  "zipFile" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000002989_g1_rec_turismo/opendata/0000002989_g1_rec_turismo.zip"
+  "friendlyUrl" : "https://turismoa.euskadi.eus/es/playas-embalses-rios/playa-de-las-arenas/aa30-12375/es/",
+  "physicalUrl" : "https://turismoa.euskadi.eus/aa30-12375/es/contenidos/g_naturaleza/0000002989_g1_rec_turismo/es_2989/2989-ficha2.html",
+  "dataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000002989_g1_rec_turismo/es_2989/data/2989_openData.xml",
+  "metadataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000002989_g1_rec_turismo/r01Index/0000002989_g1_rec_turismo-idxContent.xml",
+  "zipFile" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000002989_g1_rec_turismo/opendata/0000002989_g1_rec_turismo.zip"
 }, {
   "documentName" : "Playa de Malkorbe",
   "turismDescription" : "La playa de Malkorbe es uno de los dos arenales que tiene Getaria. Está situada cerca del ...",
@@ -1843,11 +1843,11 @@ jsonCallback([ {
   "phone" : "",
   "email" : "",
   "webpage" : "",
-  "friendlyUrl" : "https://opendata.euskadi.eus/datos/-/es/playas-embalses-rios/playa-de-malkorbe/",
-  "physicalUrl" : "https://opendata.euskadi.eus/datos/contenidos/g_naturaleza/0000003002_g1_rec_turismo/es_3002/3002-ficha2.html",
-  "dataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003002_g1_rec_turismo/es_3002/data/3002_openData.xml",
-  "metadataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003002_g1_rec_turismo/r01Index/0000003002_g1_rec_turismo-idxContent.xml",
-  "zipFile" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003002_g1_rec_turismo/opendata/0000003002_g1_rec_turismo.zip"
+  "friendlyUrl" : "https://turismoa.euskadi.eus/es/playas-embalses-rios/playa-de-malkorbe/aa30-12375/es/",
+  "physicalUrl" : "https://turismoa.euskadi.eus/aa30-12375/es/contenidos/g_naturaleza/0000003002_g1_rec_turismo/es_3002/3002-ficha2.html",
+  "dataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003002_g1_rec_turismo/es_3002/data/3002_openData.xml",
+  "metadataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003002_g1_rec_turismo/r01Index/0000003002_g1_rec_turismo-idxContent.xml",
+  "zipFile" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003002_g1_rec_turismo/opendata/0000003002_g1_rec_turismo.zip"
 }, {
   "documentName" : "Playa de Meñakoz",
   "turismDescription" : "Ideal para quienes busquen espacios solitarios y tranquilos, la playa salvaje de Meñakoz p...",
@@ -1893,11 +1893,11 @@ jsonCallback([ {
   "phone" : "",
   "email" : "",
   "webpage" : "",
-  "friendlyUrl" : "https://opendata.euskadi.eus/datos/-/es/playas-embalses-rios/playa-de-menakoz/",
-  "physicalUrl" : "https://opendata.euskadi.eus/datos/contenidos/g_naturaleza/0000009566_g1_rec_turismo/es_9566/9566-ficha2.html",
-  "dataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000009566_g1_rec_turismo/es_9566/data/9566_openData.xml",
-  "metadataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000009566_g1_rec_turismo/r01Index/0000009566_g1_rec_turismo-idxContent.xml",
-  "zipFile" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000009566_g1_rec_turismo/opendata/0000009566_g1_rec_turismo.zip"
+  "friendlyUrl" : "https://turismoa.euskadi.eus/es/playas-embalses-rios/playa-de-menakoz/aa30-12375/es/",
+  "physicalUrl" : "https://turismoa.euskadi.eus/aa30-12375/es/contenidos/g_naturaleza/0000009566_g1_rec_turismo/es_9566/9566-ficha2.html",
+  "dataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000009566_g1_rec_turismo/es_9566/data/9566_openData.xml",
+  "metadataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000009566_g1_rec_turismo/r01Index/0000009566_g1_rec_turismo-idxContent.xml",
+  "zipFile" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000009566_g1_rec_turismo/opendata/0000009566_g1_rec_turismo.zip"
 }, {
   "documentName" : "Playa de Muriola",
   "turismDescription" : "También conocida como La Cantera, está playa nudista está ubicada a 10 minut...",
@@ -1943,11 +1943,11 @@ jsonCallback([ {
   "phone" : "",
   "email" : "",
   "webpage" : "",
-  "friendlyUrl" : "https://opendata.euskadi.eus/datos/-/es/playas-embalses-rios/playa-de-muriola/",
-  "physicalUrl" : "https://opendata.euskadi.eus/datos/contenidos/g_naturaleza/0000003010_g1_rec_turismo/es_3010/3010-ficha2.html",
-  "dataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003010_g1_rec_turismo/es_3010/data/3010_openData.xml",
-  "metadataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003010_g1_rec_turismo/r01Index/0000003010_g1_rec_turismo-idxContent.xml",
-  "zipFile" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003010_g1_rec_turismo/opendata/0000003010_g1_rec_turismo.zip"
+  "friendlyUrl" : "https://turismoa.euskadi.eus/es/playas-embalses-rios/playa-de-muriola/aa30-12375/es/",
+  "physicalUrl" : "https://turismoa.euskadi.eus/aa30-12375/es/contenidos/g_naturaleza/0000003010_g1_rec_turismo/es_3010/3010-ficha2.html",
+  "dataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003010_g1_rec_turismo/es_3010/data/3010_openData.xml",
+  "metadataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003010_g1_rec_turismo/r01Index/0000003010_g1_rec_turismo-idxContent.xml",
+  "zipFile" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003010_g1_rec_turismo/opendata/0000003010_g1_rec_turismo.zip"
 }, {
   "documentName" : "Playa de Ogeia",
   "turismDescription" : "La playa de Ogeia se halla en el municipio de Ispaster, en la costa oriental de Bizkaia. Esta apa...",
@@ -1993,11 +1993,11 @@ jsonCallback([ {
   "phone" : "",
   "email" : "",
   "webpage" : "",
-  "friendlyUrl" : "https://opendata.euskadi.eus/datos/-/es/playas-embalses-rios/playa-de-ogella/",
-  "physicalUrl" : "https://opendata.euskadi.eus/datos/contenidos/g_naturaleza/0000003027_g1_rec_turismo/es_3027/3027-ficha2.html",
-  "dataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003027_g1_rec_turismo/es_3027/data/3027_openData.xml",
-  "metadataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003027_g1_rec_turismo/r01Index/0000003027_g1_rec_turismo-idxContent.xml",
-  "zipFile" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003027_g1_rec_turismo/opendata/0000003027_g1_rec_turismo.zip"
+  "friendlyUrl" : "https://turismoa.euskadi.eus/es/playas-embalses-rios/playa-de-ogella/aa30-12375/es/",
+  "physicalUrl" : "https://turismoa.euskadi.eus/aa30-12375/es/contenidos/g_naturaleza/0000003027_g1_rec_turismo/es_3027/3027-ficha2.html",
+  "dataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003027_g1_rec_turismo/es_3027/data/3027_openData.xml",
+  "metadataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003027_g1_rec_turismo/r01Index/0000003027_g1_rec_turismo-idxContent.xml",
+  "zipFile" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003027_g1_rec_turismo/opendata/0000003027_g1_rec_turismo.zip"
 }, {
   "documentName" : "Playa de Ondarbeltz",
   "turismDescription" : "Tal y como indica su nombre en euskera, esta playa de aguas tranquilas está compuesta de u...",
@@ -2043,11 +2043,11 @@ jsonCallback([ {
   "phone" : "",
   "email" : "",
   "webpage" : "",
-  "friendlyUrl" : "https://opendata.euskadi.eus/datos/-/es/playas-embalses-rios/playa-de-ondarbeltz/",
-  "physicalUrl" : "https://opendata.euskadi.eus/datos/contenidos/g_naturaleza/0000002986_g1_rec_turismo/es_2986/2986-ficha2.html",
-  "dataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000002986_g1_rec_turismo/es_2986/data/2986_openData.xml",
-  "metadataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000002986_g1_rec_turismo/r01Index/0000002986_g1_rec_turismo-idxContent.xml",
-  "zipFile" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000002986_g1_rec_turismo/opendata/0000002986_g1_rec_turismo.zip"
+  "friendlyUrl" : "https://turismoa.euskadi.eus/es/playas-embalses-rios/playa-de-ondarbeltz/aa30-12375/es/",
+  "physicalUrl" : "https://turismoa.euskadi.eus/aa30-12375/es/contenidos/g_naturaleza/0000002986_g1_rec_turismo/es_2986/2986-ficha2.html",
+  "dataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000002986_g1_rec_turismo/es_2986/data/2986_openData.xml",
+  "metadataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000002986_g1_rec_turismo/r01Index/0000002986_g1_rec_turismo-idxContent.xml",
+  "zipFile" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000002986_g1_rec_turismo/opendata/0000002986_g1_rec_turismo.zip"
 }, {
   "documentName" : "Playa de Ondarreta",
   "turismDescription" : "Situada en el extremo oeste de la capital donostiarra, al abrigo del monte Igeldo y frente a la i...",
@@ -2093,11 +2093,11 @@ jsonCallback([ {
   "phone" : "",
   "email" : "",
   "webpage" : "",
-  "friendlyUrl" : "https://opendata.euskadi.eus/datos/-/es/playas-embalses-rios/playa-de-ondarreta/",
-  "physicalUrl" : "https://opendata.euskadi.eus/datos/contenidos/g_naturaleza/0000002990_g1_rec_turismo/es_2990/2990-ficha2.html",
-  "dataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000002990_g1_rec_turismo/es_2990/data/2990_openData.xml",
-  "metadataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000002990_g1_rec_turismo/r01Index/0000002990_g1_rec_turismo-idxContent.xml",
-  "zipFile" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000002990_g1_rec_turismo/opendata/0000002990_g1_rec_turismo.zip"
+  "friendlyUrl" : "https://turismoa.euskadi.eus/es/playas-embalses-rios/playa-de-ondarreta/aa30-12375/es/",
+  "physicalUrl" : "https://turismoa.euskadi.eus/aa30-12375/es/contenidos/g_naturaleza/0000002990_g1_rec_turismo/es_2990/2990-ficha2.html",
+  "dataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000002990_g1_rec_turismo/es_2990/data/2990_openData.xml",
+  "metadataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000002990_g1_rec_turismo/r01Index/0000002990_g1_rec_turismo-idxContent.xml",
+  "zipFile" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000002990_g1_rec_turismo/opendata/0000002990_g1_rec_turismo.zip"
 }, {
   "documentName" : "Playa de Plentzia",
   "turismDescription" : "Contigua a la playa de Gorliz, es uno de los arenales más frecuentados de la costa vizca&i...",
@@ -2143,11 +2143,11 @@ jsonCallback([ {
   "phone" : "",
   "email" : "",
   "webpage" : "",
-  "friendlyUrl" : "https://opendata.euskadi.eus/datos/-/es/playas-embalses-rios/playa-de-plentzia/",
-  "physicalUrl" : "https://opendata.euskadi.eus/datos/contenidos/g_naturaleza/0000003024_g1_rec_turismo/es_3024/3024-ficha2.html",
-  "dataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003024_g1_rec_turismo/es_3024/data/3024_openData.xml",
-  "metadataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003024_g1_rec_turismo/r01Index/0000003024_g1_rec_turismo-idxContent.xml",
-  "zipFile" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003024_g1_rec_turismo/opendata/0000003024_g1_rec_turismo.zip"
+  "friendlyUrl" : "https://turismoa.euskadi.eus/es/playas-embalses-rios/playa-de-plentzia/aa30-12375/es/",
+  "physicalUrl" : "https://turismoa.euskadi.eus/aa30-12375/es/contenidos/g_naturaleza/0000003024_g1_rec_turismo/es_3024/3024-ficha2.html",
+  "dataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003024_g1_rec_turismo/es_3024/data/3024_openData.xml",
+  "metadataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003024_g1_rec_turismo/r01Index/0000003024_g1_rec_turismo-idxContent.xml",
+  "zipFile" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003024_g1_rec_turismo/opendata/0000003024_g1_rec_turismo.zip"
 }, {
   "documentName" : "Playa de San Antonio",
   "turismDescription" : "La playa de San Antonio se encuentra entre las localidades de Busturia y Sukarrieta, en la margen...",
@@ -2193,11 +2193,11 @@ jsonCallback([ {
   "phone" : "",
   "email" : "",
   "webpage" : "",
-  "friendlyUrl" : "https://opendata.euskadi.eus/datos/-/es/playas-embalses-rios/playa-de-san-antonio/",
-  "physicalUrl" : "https://opendata.euskadi.eus/datos/contenidos/g_naturaleza/0000003025_g1_rec_turismo/es_3025/3025-ficha2.html",
-  "dataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003025_g1_rec_turismo/es_3025/data/3025_openData.xml",
-  "metadataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003025_g1_rec_turismo/r01Index/0000003025_g1_rec_turismo-idxContent.xml",
-  "zipFile" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003025_g1_rec_turismo/opendata/0000003025_g1_rec_turismo.zip"
+  "friendlyUrl" : "https://turismoa.euskadi.eus/es/playas-embalses-rios/playa-de-san-antonio/aa30-12375/es/",
+  "physicalUrl" : "https://turismoa.euskadi.eus/aa30-12375/es/contenidos/g_naturaleza/0000003025_g1_rec_turismo/es_3025/3025-ficha2.html",
+  "dataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003025_g1_rec_turismo/es_3025/data/3025_openData.xml",
+  "metadataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003025_g1_rec_turismo/r01Index/0000003025_g1_rec_turismo-idxContent.xml",
+  "zipFile" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003025_g1_rec_turismo/opendata/0000003025_g1_rec_turismo.zip"
 }, {
   "documentName" : "Playa de Santiago",
   "turismDescription" : "La playa de Santiago está situada en las afueras de Zumaia, entre las marismas de la desem...",
@@ -2243,11 +2243,11 @@ jsonCallback([ {
   "phone" : "",
   "email" : "",
   "webpage" : "",
-  "friendlyUrl" : "https://opendata.euskadi.eus/datos/-/es/playas-embalses-rios/playa-de-santiago/",
-  "physicalUrl" : "https://opendata.euskadi.eus/datos/contenidos/g_naturaleza/0000003016_g1_rec_turismo/es_3016/3016-ficha2.html",
-  "dataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003016_g1_rec_turismo/es_3016/data/3016_openData.xml",
-  "metadataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003016_g1_rec_turismo/r01Index/0000003016_g1_rec_turismo-idxContent.xml",
-  "zipFile" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003016_g1_rec_turismo/opendata/0000003016_g1_rec_turismo.zip"
+  "friendlyUrl" : "https://turismoa.euskadi.eus/es/playas-embalses-rios/playa-de-santiago/aa30-12375/es/",
+  "physicalUrl" : "https://turismoa.euskadi.eus/aa30-12375/es/contenidos/g_naturaleza/0000003016_g1_rec_turismo/es_3016/3016-ficha2.html",
+  "dataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003016_g1_rec_turismo/es_3016/data/3016_openData.xml",
+  "metadataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003016_g1_rec_turismo/r01Index/0000003016_g1_rec_turismo-idxContent.xml",
+  "zipFile" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003016_g1_rec_turismo/opendata/0000003016_g1_rec_turismo.zip"
 }, {
   "documentName" : "Playa de Saturraran",
   "turismDescription" : "Emplazado en el extremo occidental del litoral guipuzcoano, lindando con Bizkaia, la playa de Sat...",
@@ -2293,11 +2293,11 @@ jsonCallback([ {
   "phone" : "",
   "email" : "",
   "webpage" : "",
-  "friendlyUrl" : "https://opendata.euskadi.eus/datos/-/es/playas-embalses-rios/playa-de-saturraran/",
-  "physicalUrl" : "https://opendata.euskadi.eus/datos/contenidos/g_naturaleza/0000003015_g1_rec_turismo/es_3015/3015-ficha2.html",
-  "dataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003015_g1_rec_turismo/es_3015/data/3015_openData.xml",
-  "metadataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003015_g1_rec_turismo/r01Index/0000003015_g1_rec_turismo-idxContent.xml",
-  "zipFile" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003015_g1_rec_turismo/opendata/0000003015_g1_rec_turismo.zip"
+  "friendlyUrl" : "https://turismoa.euskadi.eus/es/playas-embalses-rios/playa-de-saturraran/aa30-12375/es/",
+  "physicalUrl" : "https://turismoa.euskadi.eus/aa30-12375/es/contenidos/g_naturaleza/0000003015_g1_rec_turismo/es_3015/3015-ficha2.html",
+  "dataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003015_g1_rec_turismo/es_3015/data/3015_openData.xml",
+  "metadataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003015_g1_rec_turismo/r01Index/0000003015_g1_rec_turismo-idxContent.xml",
+  "zipFile" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003015_g1_rec_turismo/opendata/0000003015_g1_rec_turismo.zip"
 }, {
   "documentName" : "Playa de Toña",
   "turismDescription" : "Protegida por la isla de Txatxarramendi, esta tranquila y acogedora cala se asoma a la ría...",
@@ -2343,11 +2343,11 @@ jsonCallback([ {
   "phone" : "",
   "email" : "",
   "webpage" : "",
-  "friendlyUrl" : "https://opendata.euskadi.eus/datos/-/es/playas-embalses-rios/playa-de-tona/",
-  "physicalUrl" : "https://opendata.euskadi.eus/datos/contenidos/g_naturaleza/0000002985_g1_rec_turismo/es_2985/2985-ficha2.html",
-  "dataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000002985_g1_rec_turismo/es_2985/data/2985_openData.xml",
-  "metadataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000002985_g1_rec_turismo/r01Index/0000002985_g1_rec_turismo-idxContent.xml",
-  "zipFile" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000002985_g1_rec_turismo/opendata/0000002985_g1_rec_turismo.zip"
+  "friendlyUrl" : "https://turismoa.euskadi.eus/es/playas-embalses-rios/playa-de-tona/aa30-12375/es/",
+  "physicalUrl" : "https://turismoa.euskadi.eus/aa30-12375/es/contenidos/g_naturaleza/0000002985_g1_rec_turismo/es_2985/2985-ficha2.html",
+  "dataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000002985_g1_rec_turismo/es_2985/data/2985_openData.xml",
+  "metadataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000002985_g1_rec_turismo/r01Index/0000002985_g1_rec_turismo-idxContent.xml",
+  "zipFile" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000002985_g1_rec_turismo/opendata/0000002985_g1_rec_turismo.zip"
 }, {
   "documentName" : "Playa de Zarautz",
   "turismDescription" : "La playa de Zarautz llama especialmente la atención por su extensa longitud, con 2.500 met...",
@@ -2393,11 +2393,11 @@ jsonCallback([ {
   "phone" : "",
   "email" : "",
   "webpage" : "",
-  "friendlyUrl" : "https://opendata.euskadi.eus/datos/-/es/playas-embalses-rios/playa-de-zarautz/",
-  "physicalUrl" : "https://opendata.euskadi.eus/datos/contenidos/g_naturaleza/0000005282_g1_rec_turismo/es_5282/5282-ficha2.html",
-  "dataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000005282_g1_rec_turismo/es_5282/data/5282_openData.xml",
-  "metadataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000005282_g1_rec_turismo/r01Index/0000005282_g1_rec_turismo-idxContent.xml",
-  "zipFile" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000005282_g1_rec_turismo/opendata/0000005282_g1_rec_turismo.zip"
+  "friendlyUrl" : "https://turismoa.euskadi.eus/es/playas-embalses-rios/playa-de-zarautz/aa30-12375/es/",
+  "physicalUrl" : "https://turismoa.euskadi.eus/aa30-12375/es/contenidos/g_naturaleza/0000005282_g1_rec_turismo/es_5282/5282-ficha2.html",
+  "dataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000005282_g1_rec_turismo/es_5282/data/5282_openData.xml",
+  "metadataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000005282_g1_rec_turismo/r01Index/0000005282_g1_rec_turismo-idxContent.xml",
+  "zipFile" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000005282_g1_rec_turismo/opendata/0000005282_g1_rec_turismo.zip"
 }, {
   "documentName" : "Playa de la Isla de Santa Clara",
   "turismDescription" : "Este pequeño arenal se encuentra en el costado del embarcadero de la Isla de Santa Clara, ...",
@@ -2443,11 +2443,11 @@ jsonCallback([ {
   "phone" : "",
   "email" : "",
   "webpage" : "",
-  "friendlyUrl" : "https://opendata.euskadi.eus/datos/-/es/playas-embalses-rios/playa-de-la-isla-de-santa-clara/",
-  "physicalUrl" : "https://opendata.euskadi.eus/datos/contenidos/g_naturaleza/0000056581_g1_rec_turismo/es_56581/56581-ficha2.html",
-  "dataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000056581_g1_rec_turismo/es_56581/data/56581_openData.xml",
-  "metadataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000056581_g1_rec_turismo/r01Index/0000056581_g1_rec_turismo-idxContent.xml",
-  "zipFile" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000056581_g1_rec_turismo/opendata/0000056581_g1_rec_turismo.zip"
+  "friendlyUrl" : "https://turismoa.euskadi.eus/es/playas-embalses-rios/playa-de-la-isla-de-santa-clara/aa30-12375/es/",
+  "physicalUrl" : "https://turismoa.euskadi.eus/aa30-12375/es/contenidos/g_naturaleza/0000056581_g1_rec_turismo/es_56581/56581-ficha2.html",
+  "dataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000056581_g1_rec_turismo/es_56581/data/56581_openData.xml",
+  "metadataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000056581_g1_rec_turismo/r01Index/0000056581_g1_rec_turismo-idxContent.xml",
+  "zipFile" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000056581_g1_rec_turismo/opendata/0000056581_g1_rec_turismo.zip"
 }, {
   "documentName" : "Playa de la Zurriola",
   "turismDescription" : "La playa de la Zurriola se halla en el barrio donostiarra de Gros, bajo la atenta mirada del Pala...",
@@ -2493,11 +2493,11 @@ jsonCallback([ {
   "phone" : "",
   "email" : "",
   "webpage" : "",
-  "friendlyUrl" : "https://opendata.euskadi.eus/datos/-/es/playas-embalses-rios/playa-de-la-zurriola/",
-  "physicalUrl" : "https://opendata.euskadi.eus/datos/contenidos/g_naturaleza/0000002999_g1_rec_turismo/es_2999/2999-ficha2.html",
-  "dataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000002999_g1_rec_turismo/es_2999/data/2999_openData.xml",
-  "metadataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000002999_g1_rec_turismo/r01Index/0000002999_g1_rec_turismo-idxContent.xml",
-  "zipFile" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000002999_g1_rec_turismo/opendata/0000002999_g1_rec_turismo.zip"
+  "friendlyUrl" : "https://turismoa.euskadi.eus/es/playas-embalses-rios/playa-de-la-zurriola/aa30-12375/es/",
+  "physicalUrl" : "https://turismoa.euskadi.eus/aa30-12375/es/contenidos/g_naturaleza/0000002999_g1_rec_turismo/es_2999/2999-ficha2.html",
+  "dataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000002999_g1_rec_turismo/es_2999/data/2999_openData.xml",
+  "metadataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000002999_g1_rec_turismo/r01Index/0000002999_g1_rec_turismo-idxContent.xml",
+  "zipFile" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000002999_g1_rec_turismo/opendata/0000002999_g1_rec_turismo.zip"
 }, {
   "documentName" : "Playa del Puerto (Mutriku)",
   "turismDescription" : "Tal y como su propio nombre indica, esta pequeña playa urbana se sitúa junto al pue...",
@@ -2543,11 +2543,11 @@ jsonCallback([ {
   "phone" : "",
   "email" : "",
   "webpage" : "",
-  "friendlyUrl" : "https://opendata.euskadi.eus/datos/-/es/playas-embalses-rios/playa-del-puerto-mutriku/",
-  "physicalUrl" : "https://opendata.euskadi.eus/datos/contenidos/g_naturaleza/0000003009_g1_rec_turismo/es_3009/3009-ficha2.html",
-  "dataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003009_g1_rec_turismo/es_3009/data/3009_openData.xml",
-  "metadataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003009_g1_rec_turismo/r01Index/0000003009_g1_rec_turismo-idxContent.xml",
-  "zipFile" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003009_g1_rec_turismo/opendata/0000003009_g1_rec_turismo.zip"
+  "friendlyUrl" : "https://turismoa.euskadi.eus/es/playas-embalses-rios/playa-del-puerto-mutriku/aa30-12375/es/",
+  "physicalUrl" : "https://turismoa.euskadi.eus/aa30-12375/es/contenidos/g_naturaleza/0000003009_g1_rec_turismo/es_3009/3009-ficha2.html",
+  "dataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003009_g1_rec_turismo/es_3009/data/3009_openData.xml",
+  "metadataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003009_g1_rec_turismo/r01Index/0000003009_g1_rec_turismo-idxContent.xml",
+  "zipFile" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003009_g1_rec_turismo/opendata/0000003009_g1_rec_turismo.zip"
 }, {
   "documentName" : "Playas de Arrietara y Atxabiribil",
   "turismDescription" : "Las amplias y tranquilas playas Sopela, Arrietara y Atxabiribil, comparten arena, aunque no hay d...",
@@ -2593,11 +2593,11 @@ jsonCallback([ {
   "phone" : "",
   "email" : "",
   "webpage" : "",
-  "friendlyUrl" : "https://opendata.euskadi.eus/datos/-/es/playas-embalses-rios/playas-de-arrietara-y-atxabiribil/",
-  "physicalUrl" : "https://opendata.euskadi.eus/datos/contenidos/g_naturaleza/0000003005_g1_rec_turismo/es_3005/3005-ficha2.html",
-  "dataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003005_g1_rec_turismo/es_3005/data/3005_openData.xml",
-  "metadataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003005_g1_rec_turismo/r01Index/0000003005_g1_rec_turismo-idxContent.xml",
-  "zipFile" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003005_g1_rec_turismo/opendata/0000003005_g1_rec_turismo.zip"
+  "friendlyUrl" : "https://turismoa.euskadi.eus/es/playas-embalses-rios/playas-de-arrietara-y-atxabiribil/aa30-12375/es/",
+  "physicalUrl" : "https://turismoa.euskadi.eus/aa30-12375/es/contenidos/g_naturaleza/0000003005_g1_rec_turismo/es_3005/3005-ficha2.html",
+  "dataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003005_g1_rec_turismo/es_3005/data/3005_openData.xml",
+  "metadataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003005_g1_rec_turismo/r01Index/0000003005_g1_rec_turismo-idxContent.xml",
+  "zipFile" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003005_g1_rec_turismo/opendata/0000003005_g1_rec_turismo.zip"
 }, {
   "documentName" : "Playas de Garaio",
   "turismDescription" : "En Euskadi no es imprescindible acercarse al mar para disfrutar de magníficas playas. A un...",
@@ -2643,11 +2643,11 @@ jsonCallback([ {
   "phone" : "",
   "email" : "",
   "webpage" : "",
-  "friendlyUrl" : "https://opendata.euskadi.eus/datos/-/es/playas-embalses-rios/playa-de-garaio/",
-  "physicalUrl" : "https://opendata.euskadi.eus/datos/contenidos/g_naturaleza/0000085221_g1_rec_turismo/es_85221/85221-ficha2.html",
-  "dataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000085221_g1_rec_turismo/es_85221/data/85221_openData.xml",
-  "metadataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000085221_g1_rec_turismo/r01Index/0000085221_g1_rec_turismo-idxContent.xml",
-  "zipFile" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000085221_g1_rec_turismo/opendata/0000085221_g1_rec_turismo.zip"
+  "friendlyUrl" : "https://turismoa.euskadi.eus/es/playas-embalses-rios/playa-de-garaio/aa30-12375/es/",
+  "physicalUrl" : "https://turismoa.euskadi.eus/aa30-12375/es/contenidos/g_naturaleza/0000085221_g1_rec_turismo/es_85221/85221-ficha2.html",
+  "dataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000085221_g1_rec_turismo/es_85221/data/85221_openData.xml",
+  "metadataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000085221_g1_rec_turismo/r01Index/0000085221_g1_rec_turismo-idxContent.xml",
+  "zipFile" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000085221_g1_rec_turismo/opendata/0000085221_g1_rec_turismo.zip"
 }, {
   "documentName" : "Zierbena-Puerto",
   "turismDescription" : "Situada en la costa occidental de Bizkaia, esta playa artificial de tan sólo 100 metros de...",
@@ -2693,9 +2693,9 @@ jsonCallback([ {
   "phone" : "",
   "email" : "",
   "webpage" : "",
-  "friendlyUrl" : "https://opendata.euskadi.eus/datos/-/es/playas-embalses-rios/zierbena-puerto/",
-  "physicalUrl" : "https://opendata.euskadi.eus/datos/contenidos/g_naturaleza/0000003023_g1_rec_turismo/es_3023/3023-ficha2.html",
-  "dataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003023_g1_rec_turismo/es_3023/data/3023_openData.xml",
-  "metadataXML" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003023_g1_rec_turismo/r01Index/0000003023_g1_rec_turismo-idxContent.xml",
-  "zipFile" : "https://opendata.euskadi.eus/contenidos/g_naturaleza/0000003023_g1_rec_turismo/opendata/0000003023_g1_rec_turismo.zip"
+  "friendlyUrl" : "https://turismoa.euskadi.eus/es/playas-embalses-rios/zierbena-puerto/aa30-12375/es/",
+  "physicalUrl" : "https://turismoa.euskadi.eus/aa30-12375/es/contenidos/g_naturaleza/0000003023_g1_rec_turismo/es_3023/3023-ficha2.html",
+  "dataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003023_g1_rec_turismo/es_3023/data/3023_openData.xml",
+  "metadataXML" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003023_g1_rec_turismo/r01Index/0000003023_g1_rec_turismo-idxContent.xml",
+  "zipFile" : "https://turismoa.euskadi.eus/contenidos/g_naturaleza/0000003023_g1_rec_turismo/opendata/0000003023_g1_rec_turismo.zip"
 } ]);

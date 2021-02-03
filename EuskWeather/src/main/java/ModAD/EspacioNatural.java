@@ -18,12 +18,15 @@ public class EspacioNatural implements Serializable{
 	@Column(name = "idEspNat", unique = true, nullable = false)
 	private int idEspacioNat;
 	
+	@Id
 	@Column(name = "nombreEspNat", unique = true, nullable = false)
 	private String nombreEspacioNat;
 	
+	@Id
 	@Column(name = "descripcion", unique = true, nullable = false)
 	private String descripcion;
 	
+	@Id
 	@Column(name = "tipoEspNat", unique = true, nullable = false)
 	private String tipo;
 	

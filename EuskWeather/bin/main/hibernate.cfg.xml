@@ -19,7 +19,6 @@
 		<mapping class="ModAD.EstacionMeteorologica"></mapping>
 		<mapping class="ModAD.Foto"></mapping>
 		<mapping class="ModAD.InformacionMeteorologica"></mapping>
-		<mapping class="ModAD.Hashes"></mapping>
 
 
 	</session-factory>

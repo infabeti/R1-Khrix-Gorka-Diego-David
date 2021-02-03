@@ -2,6 +2,8 @@ package EuskWeather;
 
 import static org.junit.Assert.*;
 
+import java.io.IOException;
+
 import org.junit.Test;
 
 import ModAD.convertirJSONXML;
@@ -41,6 +43,10 @@ public class convertirJSONXMLTest {
 		assertEquals(resultado, resultadoEsperado);
 	}
 	
+	@Test
+	public void testPrincipal() throws IOException {
+		conversor.principal();
+	}
 	
 
 }
