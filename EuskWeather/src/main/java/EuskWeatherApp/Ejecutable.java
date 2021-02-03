@@ -23,7 +23,7 @@ import VistaAD.vistaActualizarBBDD;
 
 public class Ejecutable {
 
-	public static void main(String[] args) throws IOException {
+	public static void ejecutable() throws IOException {
 		// TODO Auto-generated method stub
 		//DESCARGAR FICHEROS PRINCIPALES
 		

@@ -8,6 +8,7 @@ import java.net.Socket;
 import java.util.ArrayList;
 import java.util.List;
 
+import EuskWeatherApp.Ejecutable;
 import VistaPSP.VentanaCliente;
 
 public class Servidor extends Thread{
@@ -15,6 +16,13 @@ private int PUERTO = 5000;
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		Ejecutable ej = new Ejecutable();
+		try {
+			ej.ejecutable();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		Servidor s = new Servidor();
 		s.start();
 	}

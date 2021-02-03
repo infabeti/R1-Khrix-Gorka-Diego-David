@@ -13,11 +13,12 @@
 			<attribute name="gradle_used_by_scope" value="test"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-14">
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-14/">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.buildship.core.gradleclasspathcontainer"/>
 	<classpathentry kind="lib" path="librerias/antlr-2.7.7.jar"/>
 	<classpathentry kind="lib" path="librerias/byte-buddy-1.10.17.jar"/>
 	<classpathentry kind="lib" path="librerias/classmate-1.5.1.jar"/>
@@ -40,6 +41,5 @@
 	<classpathentry kind="lib" path="librerias/mysql-connector-java-5.1.49-bin.jar"/>
 	<classpathentry kind="lib" path="librerias/stax-ex-1.8.jar"/>
 	<classpathentry kind="lib" path="librerias/txw2-2.3.1.jar"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="output" path="bin/default"/>
 </classpath>

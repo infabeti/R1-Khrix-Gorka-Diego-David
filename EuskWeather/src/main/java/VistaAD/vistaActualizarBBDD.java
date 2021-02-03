@@ -20,6 +20,7 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JTextField;
+import javax.swing.JLabel;
 
 public class vistaActualizarBBDD extends JFrame {
 
@@ -31,7 +32,6 @@ public class vistaActualizarBBDD extends JFrame {
 	private ControladorVolcarEspaciosNaturales contVEN;
 	private ControladorVolcarInformacionMeteo contVIM;
 	private JPanel contentPane;
-	private JTextField textField;
 
 	/**
 	 * Create the frame.
@@ -52,9 +52,17 @@ public class vistaActualizarBBDD extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
+		JLabel lblMensaje = new JLabel("New label");
+		lblMensaje.setBounds(128, 103, 161, 14);
+		contentPane.add(lblMensaje);
+		lblMensaje.setVisible(false);
+		
 		JButton btnNewButton = new JButton("Actualizar Base de Datos");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				btnNewButton.setEnabled(false);
+				lblMensaje.setText("BASE DE DATOS ACTUALIZADA");
+				lblMensaje.setVisible(true);
 				contDP.descPrinciples();
 				contConvert.convertirJsonXml();
 				contDI.descargarIndex();
@@ -63,15 +71,26 @@ public class vistaActualizarBBDD extends JFrame {
 				contVEN.volcarEspNatur();
 				contVIM.volcarInfor();
 				
-				System.exit(0);
+				//System.exit(0);
 			}
 		});
-		btnNewButton.setBounds(10, 11, 166, 23);
+		btnNewButton.setBounds(100, 76, 214, 23);
 		contentPane.add(btnNewButton);
 		
-		textField = new JTextField();
-		textField.setBounds(10, 45, 414, 20);
-		contentPane.add(textField);
-		textField.setColumns(10);
+		JButton btnSalir = new JButton("APAGAR SERVIDOR");
+		btnSalir.setBounds(100, 128, 214, 23);
+		contentPane.add(btnSalir);
+		
+		
+		btnSalir.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				// TODO Auto-generated method stub
+				System.out.println("Servidor apagado");
+				System.exit(0);
+			}
+			
+		});
 	}
 }

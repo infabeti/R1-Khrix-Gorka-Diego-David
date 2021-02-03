@@ -249,7 +249,7 @@ public class VolcarInfoMeteorologica {
 			session.close();
 			
 		}
-		HibernateUtil.shutdown();
+		//HibernateUtil.shutdown();
 	}
 
 }
