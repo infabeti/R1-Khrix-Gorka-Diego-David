@@ -17,10 +17,6 @@ create table Municipios
     idProvincia int not null,
     constraint fk_idProvincia foreign key(idProvincia) references Provincias(idProv) on update cascade on delete cascade);
 
-create table indexLinks
-	(idIndex int primary key auto_increment, nombreMuni varchar(40) not null, enlace varchar(100) not null,
-    constraint fk_nombreMuni_2_ foreign key(nombreMuni) references municipios(nombreMuni) on update cascade on delete cascade);
-    
 create table EstacionMeteorologica
 	(idEstacion int, nombreEstacion varchar(40) primary key,
     latitud double not null, longitud double not null,
@@ -36,7 +32,8 @@ create table InformacionMeteorologica
 create table EspaciosNaturales
 	(idEspNat int, nombreEspNat varchar(50) primary key,
     descripcion varchar(150) not null, 
-    tipoEspNat enum('Playas', 'Pantanos', 'Rios') not null);
+    tipoEspNat enum('Playas', 'Pantanos', 'Rios') not null, nomMunicipio varchar(40) not null,
+	constraint fk_nombreMunicipio_espnat foreign key(nomMunicipio) references Municipios(nombreMuni));
     
 create table ContieneEspNat
 	(nombreMunicipio varchar(40), nomEspNat varchar(50),
@@ -49,7 +46,7 @@ create table Usuarios
     mail varchar(50) not null, nickUsuario varchar(40) not null, contrasenia varchar(40) not null);
     
 create table Fotos
-	(idFoto int primary key auto_increment, fotoString text not null, nombreMunicipio varchar(40) not null, nombreUsuario varchar(40) not null,
+	(fotoString text not null, nombreMunicipio varchar(40) not null,
     constraint fk_nombreMunicipio_2 foreign key(nombreMunicipio) references Municipios(nombreMuni) on update cascade on delete cascade);
 
 create table favoritos
